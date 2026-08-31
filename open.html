@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opening App...</title>
+</head>
+<body>
+
+<script>
+// App open karne ki try
+window.location.href = "myapp://open";
+
+// Agar app install nahi hai to APK download
+setTimeout(function() {
+  window.location.href = "app.apk";
+}, 2000);
+</script>
+
+<h2>Opening app...</h2>
+<p>Agar app open nahi hua to download start ho jayega.</p>
+
+</body>
+</html>
