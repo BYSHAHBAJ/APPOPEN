@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening NextGen Leaks...</title>
+</head>
+<body>
+  <h2>Opening NextGen Leaks...</h2>
+  <p>If the app does not open, the APK download will start automatically.</p>
+
+  <script>
+    // Try to open the installed Android app.
+    window.location.href = "myapp://open";
+
+    // If the app is not installed (or the custom scheme cannot be opened),
+    // fall back to the GitHub Release APK after a short delay.
+    setTimeout(function () {
+      window.location.href = "https://github.com/BYSHAHBAJ/APPOPEN/releases/download/V1/app.apk";
+    }, 2000);
+  </script>
+</body>
+</html>
