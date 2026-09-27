@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FPS BOOSTER — Open Feature</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d0d11;color:#fff;font-family:Arial,sans-serif;padding:24px 16px}
+.box{max-width:620px;margin:0 auto;background:#17171d;border:1px solid #2b2b34;border-radius:20px;padding:22px}
+h1{margin:0 0 8px;font-size:26px}
+p{color:#aaa;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+a{display:block;text-decoration:none;color:#fff;background:#22222a;border:1px solid #30303a;border-radius:14px;padding:16px;font-weight:700}
+a small{display:block;color:#9d9da8;font-weight:400;margin-top:5px}
+.primary{background:#6f45ff;border-color:#6f45ff}
+#status{margin-top:18px;color:#bcbcc8;font-size:13px}
+@media(max-width:430px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>FPS BOOSTER</h1>
+<p>Select a feature. The link launches the installed FPS BOOSTER app directly into that section.</p>
+<div class="grid">
+<a class="primary" data-section="home" href="fpsbooster://open?section=home">HOME<small>Main screen</small></a>
+<a data-section="fps" href="fpsbooster://open?section=fps">UNLOCK FPS<small>FPS / PAK tools</small></a>
+<a data-section="gfx" href="fpsbooster://open?section=gfx">GFX TOOL<small>Graphics tools</small></a>
+<a data-section="flash" href="fpsbooster://open?section=flash">FLASH EXCLUSIVE<small>Game + Graphics + FPS</small></a>
+<a data-section="events" href="fpsbooster://open?section=events">GAME EVENTS<small>Events / free leaks</small></a>
+<a data-section="game-mode" href="fpsbooster://open?section=game-mode">GAME MODE<small>Game mode tools</small></a>
+<a data-section="tutorial" href="fpsbooster://open?section=tutorial">TUTORIAL<small>Guides / help</small></a>
+<a data-section="permission" href="fpsbooster://open?section=permission">PERMISSIONS<small>Access & Shizuku</small></a>
+<a data-section="vip" href="fpsbooster://open?section=vip">VIP FEATURES<small>VIP login / content</small></a>
+</div>
+<p id="status">If the app is not installed, these links cannot open FPS BOOSTER.</p>
+</div>
+<script>
+const params=new URLSearchParams(location.search);
+const section=params.get("section");
+if(section){
+  const key=section.toLowerCase();
+  const link=document.querySelector('[data-section="'+CSS.escape(key)+'"]');
+  if(link){
+    document.getElementById("status").textContent="Opening "+key.toUpperCase()+"…";
+    window.location.href=link.href;
+  }
+}
+</script>
+</body>
+</html>
