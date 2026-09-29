@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070812">
+<meta name="description" content="FPS BOOSTER — smooth gameplay, higher FPS and a cleaner gaming experience.">
+<title>FPS BOOSTER — Official</title>
+<style>
+:root{
+  --bg:#05060b;
+  --panel:rgba(17,19,31,.72);
+  --panel2:rgba(12,14,24,.9);
+  --text:#f7f8ff;
+  --muted:#9ca3b7;
+  --accent:#8b5cf6;
+  --accent2:#22d3ee;
+  --line:rgba(255,255,255,.09);
+  --shadow:0 30px 90px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(139,92,246,.20),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(34,211,238,.13),transparent 28%),
+    radial-gradient(circle at 50% 90%,rgba(124,58,237,.12),transparent 35%),
+    var(--bg);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1080px,calc(100% - 36px));margin:auto}
+.nav{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  background:rgba(5,6,11,.62);border-bottom:1px solid var(--line);
+}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.7px}
+.logo{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 10px 30px rgba(139,92,246,.3);
+  font-size:18px;
+}
+.navpill{font-size:12px;color:#d8d9e5;border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.035)}
+.hero{padding:82px 0 48px;text-align:center;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid var(--line);
+  border-radius:999px;background:rgba(255,255,255,.035);color:#c9cbe0;font-size:12px;font-weight:700;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 14px #34d399}
+h1{font-size:clamp(48px,10vw,92px);line-height:.94;letter-spacing:-4px;margin:25px 0 18px;font-weight:950}
+.gradient{background:linear-gradient(100deg,#fff 5%,#c4b5fd 42%,#67e8f9 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:650px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.7}
+.hero-card{
+  width:min(760px,100%);margin:38px auto 0;padding:10px;border:1px solid var(--line);
+  border-radius:28px;background:linear-gradient(135deg,rgba(139,92,246,.13),rgba(34,211,238,.06));
+  box-shadow:var(--shadow);
+}
+.hero-inner{padding:28px;border-radius:21px;background:rgba(8,9,16,.8);border:1px solid rgba(255,255,255,.06)}
+.status{display:flex;align-items:center;justify-content:center;gap:8px;color:#b7b9ca;font-size:13px;min-height:22px}
+.cta{
+  margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+}
+button,.btn{
+  border:0;cursor:pointer;color:#fff;font:inherit;font-weight:850;
+  padding:15px 23px;border-radius:14px;transition:.2s transform,.2s box-shadow,.2s opacity;
+}
+.primary{
+  background:linear-gradient(135deg,#8b5cf6,#6d28d9);box-shadow:0 14px 34px rgba(109,40,217,.35);
+}
+.primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(109,40,217,.48)}
+.secondary{background:rgba(255,255,255,.055);border:1px solid var(--line);color:#e7e8f2}
+.small{margin-top:13px;color:#777c91;font-size:11px}
+#fallback{display:none}
+.section{padding:58px 0}
+.section-title{text-align:center;font-size:28px;letter-spacing:-1px;margin:0 0 9px}
+.section-sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:600px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{
+  padding:23px;border:1px solid var(--line);border-radius:20px;background:var(--panel);
+  backdrop-filter:blur(12px);box-shadow:0 15px 50px rgba(0,0,0,.18);
+}
+.icon{font-size:23px;margin-bottom:15px}
+.card h3{margin:0 0 8px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.fps{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px;
+}
+.fps div{
+  text-align:center;padding:19px 8px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid var(--line);
+}
+.fps b{display:block;font-size:20px}.fps span{font-size:10px;color:#85899d}
+.note{
+  margin-top:30px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;
+  color:#aeb2c4;background:rgba(255,255,255,.025);font-size:12px;line-height:1.6;text-align:center;
+}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-size:12px;text-align:center}
+@media(max-width:720px){
+  .container{width:min(100% - 24px,1080px)}
+  .navin{height:64px}.navpill{display:none}
+  .hero{padding:64px 0 32px}
+  h1{letter-spacing:-2.5px;font-size:58px}
+  .lead{font-size:15px}
+  .grid{grid-template-columns:1fr}
+  .fps{grid-template-columns:repeat(3,1fr)}
+  .hero-inner{padding:22px 15px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero{animation:fade .7s ease both}.card{animation:rise .7s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container navin">
+    <a class="brand" href="#"><span class="logo">⚡</span><span>FPS BOOSTER</span></a>
+    <span class="navpill">OFFICIAL DOWNLOAD</span>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow"><span class="dot"></span> Latest version available</div>
+    <h1><span class="gradient">FPS BOOSTER</span></h1>
+    <p class="lead">A cleaner way to access FPS tools and gaming optimizations. Built for a smoother, more responsive gameplay experience.</p>
+
+    <div class="hero-card">
+      <div class="hero-inner">
+        <div class="status" id="status">Opening FPS BOOSTER…</div>
+        <div id="fallback">
+          <div class="cta">
+            <button class="primary" id="download">DOWNLOAD LATEST APK</button>
+          </div>
+          <div class="small">If the app is already installed, it will open automatically.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Built for smoother gameplay</h2>
+    <p class="section-sub">Everything important is kept simple, fast and easy to access.</p>
+    <div class="grid">
+      <article class="card"><div class="icon">🚀</div><h3>Higher FPS</h3><p>Access supported FPS options for a smoother gaming experience.</p></article>
+      <article class="card"><div class="icon">⚙️</div><h3>Easy to use</h3><p>A straightforward interface designed to keep the important actions one tap away.</p></article>
+      <article class="card"><div class="icon">🔄</div><h3>Latest updates</h3><p>Use the official download button to get the latest published APK version.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="container">
+    <h2 class="section-title">FPS options</h2>
+    <p class="section-sub">Availability can depend on your device and game version.</p>
+    <div class="fps">
+      <div><b>60</b><span>FPS</span></div>
+      <div><b>90</b><span>FPS</span></div>
+      <div><b>120</b><span>FPS</span></div>
+      <div><b>144</b><span>FPS</span></div>
+      <div><b>165</b><span>FPS</span></div>
+    </div>
+    <div class="note">⚠️ Performance and available FPS depend on your device, game version and supported settings. Use the app responsibly and follow the game's rules.</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 FPS BOOSTER · Official download page</div>
+</footer>
+
+<script>
+// Change only this URL when you publish a new APK.
+const APK_URL = "https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.0.0.apk";
+const APP_URL = "fpsbooster://open";
+
+const status = document.getElementById('status');
+const fallback = document.getElementById('fallback');
+const download = document.getElementById('download');
+let leftPage = false;
+
+function showFallback(){
+  if(leftPage) return;
+  fallback.style.display='block';
+  status.textContent='If the app did not open, FPS BOOSTER may not be installed.';
+}
+
+// Android/browser policy does not allow a webpage to silently install an APK.
+// If the app is installed, this opens it. If not, the timeout exposes the APK
+// download button. The Android installer will still require the user's approval.
+try { window.location.href = APP_URL; } catch(e) {}
+setTimeout(showFallback, 1800);
+
+download.addEventListener('click', function(){
+  window.location.href = APK_URL;
+});
+</script>
+</body>
+</body>
+</html>
