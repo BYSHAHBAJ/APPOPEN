@@ -143,7 +143,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
         <div class="status" id="status">Opening FPS BOOSTER…</div>
         <div id="fallback">
           <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button><button class="secondary chrome-btn" id="chromeOpenHero" type="button">OPEN IN CHROME ↗</button></div>
-          <div class="small">If the app is already installed, it will open automatically.</div>
+          <div class="small">If the app is already installed, it will open automatically.</div><div class="small">If your current app blocks external links, use its <b>Open in browser</b> option.</div>
         </div>
       </div>
     </div>
@@ -184,46 +184,72 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 
 <script>
 /*
-  Try to open this page in Google Chrome on Android.
-  Android/host apps may block external intents, so a normal browser fallback remains.
+  Best-effort external Chrome opener.
+  Some embedded browsers/WebViews block intent:// navigation completely,
+  so we also provide a normal HTTPS fallback.
 */
 (function () {
-  const pageUrl = window.location.href;
-  const chromePackage = "com.android.chrome";
-
   function openChrome() {
+    const pageUrl = window.location.href;
     const ua = navigator.userAgent || "";
     const isAndroid = /Android/i.test(ua);
 
     if (!isAndroid) {
-      // On non-Android devices, use the browser's normal share/open behavior.
+      // On desktop/iOS, simply open the current page normally.
       window.open(pageUrl, "_blank", "noopener,noreferrer");
       return;
     }
 
-    try {
-      const cleanUrl = pageUrl.replace(/^https?:\/\//i, "");
-      const intentUrl =
-        "intent://" + cleanUrl +
-        "#Intent;scheme=https;package=" + chromePackage +
-        ";action=android.intent.action.VIEW;end";
+    const cleanUrl = pageUrl.replace(/^https?:\/\//i, "");
 
-      window.location.href = intentUrl;
-    } catch (e) {
-      // If an embedded browser blocks the intent, simply remain on the page.
-    }
+    // Chrome's Android package + browser fallback.
+    const intentUrl =
+      "intent://" + cleanUrl +
+      "#Intent;" +
+      "scheme=https;" +
+      "package=com.android.chrome;" +
+      "action=android.intent.action.VIEW;" +
+      "S.browser_fallback_url=" + encodeURIComponent(pageUrl) +
+      ";end";
+
+    let opened = false;
+
+    try {
+      window.location.assign(intentUrl);
+      opened = true;
+    } catch (e) {}
+
+    // Some WebViews ignore intent://. Give them a normal external navigation
+    // fallback instead of leaving the button apparently dead.
+    setTimeout(function () {
+      if (document.visibilityState === "visible") {
+        try {
+          window.location.assign("googlechrome://navigate?url=" + encodeURIComponent(pageUrl));
+        } catch (e) {}
+
+        setTimeout(function () {
+          if (document.visibilityState === "visible") {
+            window.location.assign(pageUrl);
+          }
+        }, 500);
+      }
+    }, 700);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = [
+  function bindChromeButtons() {
+    [
       document.getElementById("chromeOpen"),
       document.getElementById("chromeOpenHero")
-    ].filter(Boolean);
-
-    buttons.forEach(function (button) {
-      button.addEventListener("click", openChrome);
+    ].filter(Boolean).forEach(function (button) {
+      button.addEventListener("click", openChrome, {passive: true});
     });
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindChromeButtons);
+  } else {
+    bindChromeButtons();
+  }
 })();
 </script>
 
