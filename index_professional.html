@@ -142,6 +142,22 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
   text-align:center;color:#8e93a8;font-size:11px;
   margin-top:14px;
 }
+
+.hero-visual{
+  width:min(900px,100%);margin:34px auto 0;padding:9px;
+  border-radius:28px;
+  background:linear-gradient(135deg,rgba(139,92,246,.20),rgba(34,211,238,.12));
+  border:1px solid rgba(255,255,255,.11);
+  box-shadow:0 30px 100px rgba(0,0,0,.45);
+}
+.hero-visual-frame{
+  overflow:hidden;border-radius:20px;background:#080910;
+  border:1px solid rgba(255,255,255,.07);
+}
+.hero-visual img{
+  display:block;width:100%;height:auto;max-height:680px;
+  object-fit:contain;
+}
 </style>
 </head>
 <body>
@@ -166,6 +182,16 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
           <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button></div>
           <div class="small">If the app is already installed, it will open automatically.</div>
         </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img
+          src="https://github.com/user-attachments/assets/c1b70a70-1722-4fe6-bbcd-d04a33150895"
+          alt="FPS BOOSTER preview"
+          fetchpriority="high"
+          decoding="async">
       </div>
     </div>
   </div>
@@ -199,23 +225,6 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 </section>
 </main>
 
-
-<section class="showcase">
-  <div class="container">
-    <h2 class="section-title">FPS BOOSTER</h2>
-    <p class="section-sub">Explore the latest FPS BOOSTER experience.</p>
-    <div class="showcase-card">
-      <div class="showcase-frame">
-        <img
-          src="https://github.com/user-attachments/assets/c1b70a70-1722-4fe6-bbcd-d04a33150895"
-          alt="FPS BOOSTER preview"
-          loading="lazy"
-          decoding="async">
-      </div>
-    </div>
-    <div class="showcase-caption">Official FPS BOOSTER preview</div>
-  </div>
-</section>
 
 <footer>
   <div class="container">© 2026 FPS BOOSTER · Official download page</div>
