@@ -158,6 +158,92 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
   display:block;width:100%;height:auto;max-height:680px;
   object-fit:contain;
 }
+
+/* Cinematic download CTA */
+#download{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-width:250px;
+  padding:17px 28px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:15px;
+  background:linear-gradient(110deg,#6d28d9 0%,#8b5cf6 38%,#06b6d4 100%);
+  background-size:200% 100%;
+  color:#fff;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.7px;
+  text-shadow:0 1px 8px rgba(0,0,0,.25);
+  box-shadow:
+    0 0 0 1px rgba(139,92,246,.18),
+    0 10px 30px rgba(109,40,217,.38),
+    0 0 45px rgba(139,92,246,.18);
+  transition:transform .22s ease,box-shadow .22s ease,background-position .45s ease;
+  animation:downloadPulse 2.4s ease-in-out infinite;
+}
+#download:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:-40%;
+  left:-55%;
+  width:42%;
+  height:180%;
+  transform:rotate(22deg);
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.06) 25%,
+    rgba(255,255,255,.75) 50%,
+    rgba(255,255,255,.06) 75%,
+    transparent 100%
+  );
+  filter:blur(1px);
+  animation:downloadShine 2.6s ease-in-out infinite;
+}
+#download:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 120%,rgba(255,255,255,.28),transparent 48%);
+  opacity:.7;
+}
+#download:hover{
+  transform:translateY(-3px) scale(1.025);
+  background-position:100% 0;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.22),
+    0 16px 40px rgba(109,40,217,.48),
+    0 0 65px rgba(34,211,238,.25);
+}
+#download:active{
+  transform:translateY(1px) scale(.985);
+}
+@keyframes downloadShine{
+  0%,28%{left:-55%;opacity:0}
+  42%{opacity:1}
+  68%,100%{left:125%;opacity:0}
+}
+@keyframes downloadPulse{
+  0%,100%{
+    box-shadow:
+      0 0 0 1px rgba(139,92,246,.18),
+      0 10px 30px rgba(109,40,217,.38),
+      0 0 45px rgba(139,92,246,.18);
+  }
+  50%{
+    box-shadow:
+      0 0 0 1px rgba(139,92,246,.30),
+      0 12px 36px rgba(109,40,217,.46),
+      0 0 58px rgba(34,211,238,.22);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #download,#download:before{animation:none}
+}
 </style>
 </head>
 <body>
@@ -179,7 +265,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
       <div class="hero-inner">
         <div class="status" id="status">Opening FPS BOOSTER…</div>
         <div id="fallback">
-          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button></div>
+          <div class="cta"><button class="primary" id="download"><span aria-hidden="true">⚡</span>&nbsp; DOWNLOAD LATEST APK</button></div>
           <div class="small">If the app is already installed, it will open automatically.</div>
         </div>
       </div>
