@@ -122,35 +122,33 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
 
-.copy-modal{
-  position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
-  padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
+.showcase{padding:25px 0 70px}
+.showcase-card{
+  width:min(900px,100%);margin:0 auto;padding:10px;
+  border-radius:26px;
+  background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.10));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 30px 90px rgba(0,0,0,.35);
 }
-.copy-modal.show{display:flex}
-.copy-dialog{
-  width:min(430px,100%);padding:26px;border-radius:24px;
-  background:linear-gradient(145deg,rgba(25,27,43,.98),rgba(10,11,19,.98));
-  border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 90px rgba(0,0,0,.6);
-  text-align:center;animation:modalIn .2s ease-out
+.showcase-frame{
+  overflow:hidden;border-radius:19px;background:#080910;
+  border:1px solid rgba(255,255,255,.07);
 }
-.copy-dialog .copy-icon{font-size:38px;margin-bottom:10px}
-.copy-dialog h3{margin:0 0 8px;font-size:21px}
-.copy-dialog p{margin:0;color:#a9aec1;font-size:13px;line-height:1.6}
-.copy-url{
-  margin:18px 0;padding:13px 14px;border-radius:12px;background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.08);color:#cdd0df;font-size:11px;
-  word-break:break-all;text-align:left
+.showcase-frame img{
+  display:block;width:100%;height:auto;max-height:720px;
+  object-fit:contain;
 }
-.copy-actions{display:flex;gap:10px}
-.copy-actions button{flex:1}
-@keyframes modalIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.showcase-caption{
+  text-align:center;color:#8e93a8;font-size:11px;
+  margin-top:14px;
+}
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="container navin">
     <a class="brand" href="#"><span class="logo">⚡</span><span>FPS BOOSTER</span></a>
-    <button class="navpill chrome-btn" id="copyLink" type="button">COPY LINK FOR CHROME ↗</button>
+    <span class="navpill">OFFICIAL DOWNLOAD</span>
   </div>
 </nav>
 
@@ -165,8 +163,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
       <div class="hero-inner">
         <div class="status" id="status">Opening FPS BOOSTER…</div>
         <div id="fallback">
-          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button><button class="secondary chrome-btn" id="copyLinkHero" type="button">COPY LINK FOR CHROME ↗</button></div>
-          <div class="small">If the app is already installed, it will open automatically.</div><div class="small">If your current app blocks external links, use its <b>Open in browser</b> option.</div>
+          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button></div>
+          <div class="small">If the app is already installed, it will open automatically.</div>
         </div>
       </div>
     </div>
@@ -201,94 +199,29 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 </section>
 </main>
 
+
+<section class="showcase">
+  <div class="container">
+    <h2 class="section-title">FPS BOOSTER</h2>
+    <p class="section-sub">Explore the latest FPS BOOSTER experience.</p>
+    <div class="showcase-card">
+      <div class="showcase-frame">
+        <img
+          src="https://github.com/user-attachments/assets/c1b70a70-1722-4fe6-bbcd-d04a33150895"
+          alt="FPS BOOSTER preview"
+          loading="lazy"
+          decoding="async">
+      </div>
+    </div>
+    <div class="showcase-caption">Official FPS BOOSTER preview</div>
+  </div>
+</section>
+
 <footer>
   <div class="container">© 2026 FPS BOOSTER · Official download page</div>
 </footer>
 
 
-<div class="copy-modal" id="copyModal" role="dialog" aria-modal="true" aria-labelledby="copyTitle">
-  <div class="copy-dialog">
-    <div class="copy-icon">📋</div>
-    <h3 id="copyTitle">Paste this link in Chrome</h3>
-    <p>The link has been copied. Open Google Chrome and paste it into the address bar.</p>
-    <div class="copy-url" id="copyUrl"></div>
-    <div class="copy-actions">
-      <button class="primary" id="copyAgain" type="button">COPY AGAIN</button>
-      <button class="secondary" id="closeCopy" type="button">CLOSE</button>
-    </div>
-  </div>
-</div>
-
-<script>
-/* Copy the page URL and show a clear Chrome instruction popup. */
-(function () {
-  const pageUrl = window.location.href;
-  const modal = document.getElementById("copyModal");
-  const copyUrl = document.getElementById("copyUrl");
-  const copyAgain = document.getElementById("copyAgain");
-  const closeCopy = document.getElementById("closeCopy");
-
-  function showPopup() {
-    copyUrl.textContent = pageUrl;
-    modal.classList.add("show");
-  }
-
-  async function copyLink() {
-    let copied = false;
-
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(pageUrl);
-        copied = true;
-      }
-    } catch (e) {}
-
-    if (!copied) {
-      try {
-        const input = document.createElement("textarea");
-        input.value = pageUrl;
-        input.setAttribute("readonly", "");
-        input.style.position = "fixed";
-        input.style.opacity = "0";
-        document.body.appendChild(input);
-        input.select();
-        copied = document.execCommand("copy");
-        input.remove();
-      } catch (e) {}
-    }
-
-    showPopup();
-  }
-
-  function bind() {
-    [
-      document.getElementById("copyLink"),
-      document.getElementById("copyLinkHero")
-    ].filter(Boolean).forEach(function (button) {
-      button.addEventListener("click", copyLink);
-    });
-
-    if (copyAgain) copyAgain.addEventListener("click", copyLink);
-    if (closeCopy) closeCopy.addEventListener("click", function () {
-      modal.classList.remove("show");
-    });
-
-    modal.addEventListener("click", function (event) {
-      if (event.target === modal) modal.classList.remove("show");
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") modal.classList.remove("show");
-    });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bind);
-  } else {
-    bind();
-  }
-})();
-</script>
 
 <script>
 // Change only this URL when you publish a new APK.
