@@ -121,13 +121,36 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
   @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
+
+.copy-modal{
+  position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
+}
+.copy-modal.show{display:flex}
+.copy-dialog{
+  width:min(430px,100%);padding:26px;border-radius:24px;
+  background:linear-gradient(145deg,rgba(25,27,43,.98),rgba(10,11,19,.98));
+  border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 90px rgba(0,0,0,.6);
+  text-align:center;animation:modalIn .2s ease-out
+}
+.copy-dialog .copy-icon{font-size:38px;margin-bottom:10px}
+.copy-dialog h3{margin:0 0 8px;font-size:21px}
+.copy-dialog p{margin:0;color:#a9aec1;font-size:13px;line-height:1.6}
+.copy-url{
+  margin:18px 0;padding:13px 14px;border-radius:12px;background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.08);color:#cdd0df;font-size:11px;
+  word-break:break-all;text-align:left
+}
+.copy-actions{display:flex;gap:10px}
+.copy-actions button{flex:1}
+@keyframes modalIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="container navin">
     <a class="brand" href="#"><span class="logo">⚡</span><span>FPS BOOSTER</span></a>
-    <button class="navpill chrome-btn" id="chromeOpen" type="button">OPEN IN CHROME ↗</button>
+    <button class="navpill chrome-btn" id="copyLink" type="button">COPY LINK FOR CHROME ↗</button>
   </div>
 </nav>
 
@@ -142,7 +165,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
       <div class="hero-inner">
         <div class="status" id="status">Opening FPS BOOSTER…</div>
         <div id="fallback">
-          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button><button class="secondary chrome-btn" id="chromeOpenHero" type="button">OPEN IN CHROME ↗</button></div>
+          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button><button class="secondary chrome-btn" id="copyLinkHero" type="button">COPY LINK FOR CHROME ↗</button></div>
           <div class="small">If the app is already installed, it will open automatically.</div><div class="small">If your current app blocks external links, use its <b>Open in browser</b> option.</div>
         </div>
       </div>
@@ -182,73 +205,87 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
   <div class="container">© 2026 FPS BOOSTER · Official download page</div>
 </footer>
 
+
+<div class="copy-modal" id="copyModal" role="dialog" aria-modal="true" aria-labelledby="copyTitle">
+  <div class="copy-dialog">
+    <div class="copy-icon">📋</div>
+    <h3 id="copyTitle">Paste this link in Chrome</h3>
+    <p>The link has been copied. Open Google Chrome and paste it into the address bar.</p>
+    <div class="copy-url" id="copyUrl"></div>
+    <div class="copy-actions">
+      <button class="primary" id="copyAgain" type="button">COPY AGAIN</button>
+      <button class="secondary" id="closeCopy" type="button">CLOSE</button>
+    </div>
+  </div>
+</div>
+
 <script>
-/*
-  Best-effort external Chrome opener.
-  Some embedded browsers/WebViews block intent:// navigation completely,
-  so we also provide a normal HTTPS fallback.
-*/
+/* Copy the page URL and show a clear Chrome instruction popup. */
 (function () {
-  function openChrome() {
-    const pageUrl = window.location.href;
-    const ua = navigator.userAgent || "";
-    const isAndroid = /Android/i.test(ua);
+  const pageUrl = window.location.href;
+  const modal = document.getElementById("copyModal");
+  const copyUrl = document.getElementById("copyUrl");
+  const copyAgain = document.getElementById("copyAgain");
+  const closeCopy = document.getElementById("closeCopy");
 
-    if (!isAndroid) {
-      // On desktop/iOS, simply open the current page normally.
-      window.open(pageUrl, "_blank", "noopener,noreferrer");
-      return;
-    }
-
-    const cleanUrl = pageUrl.replace(/^https?:\/\//i, "");
-
-    // Chrome's Android package + browser fallback.
-    const intentUrl =
-      "intent://" + cleanUrl +
-      "#Intent;" +
-      "scheme=https;" +
-      "package=com.android.chrome;" +
-      "action=android.intent.action.VIEW;" +
-      "S.browser_fallback_url=" + encodeURIComponent(pageUrl) +
-      ";end";
-
-    let opened = false;
-
-    try {
-      window.location.assign(intentUrl);
-      opened = true;
-    } catch (e) {}
-
-    // Some WebViews ignore intent://. Give them a normal external navigation
-    // fallback instead of leaving the button apparently dead.
-    setTimeout(function () {
-      if (document.visibilityState === "visible") {
-        try {
-          window.location.assign("googlechrome://navigate?url=" + encodeURIComponent(pageUrl));
-        } catch (e) {}
-
-        setTimeout(function () {
-          if (document.visibilityState === "visible") {
-            window.location.assign(pageUrl);
-          }
-        }, 500);
-      }
-    }, 700);
+  function showPopup() {
+    copyUrl.textContent = pageUrl;
+    modal.classList.add("show");
   }
 
-  function bindChromeButtons() {
+  async function copyLink() {
+    let copied = false;
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(pageUrl);
+        copied = true;
+      }
+    } catch (e) {}
+
+    if (!copied) {
+      try {
+        const input = document.createElement("textarea");
+        input.value = pageUrl;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+        copied = document.execCommand("copy");
+        input.remove();
+      } catch (e) {}
+    }
+
+    showPopup();
+  }
+
+  function bind() {
     [
-      document.getElementById("chromeOpen"),
-      document.getElementById("chromeOpenHero")
+      document.getElementById("copyLink"),
+      document.getElementById("copyLinkHero")
     ].filter(Boolean).forEach(function (button) {
-      button.addEventListener("click", openChrome, {passive: true});
+      button.addEventListener("click", copyLink);
+    });
+
+    if (copyAgain) copyAgain.addEventListener("click", copyLink);
+    if (closeCopy) closeCopy.addEventListener("click", function () {
+      modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) modal.classList.remove("show");
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") modal.classList.remove("show");
     });
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bindChromeButtons);
+    document.addEventListener("DOMContentLoaded", bind);
   } else {
-    bindChromeButtons();
+    bind();
   }
 })();
 </script>
