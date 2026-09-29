@@ -53,7 +53,7 @@ a{color:inherit;text-decoration:none}
   box-shadow:0 10px 30px rgba(139,92,246,.3);
   font-size:18px;
 }
-.navpill{font-size:12px;color:#d8d9e5;border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.035)}
+.navpill{font-size:12px;color:#d8d9e5;border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.035)}.chrome-btn{cursor:pointer;font-weight:800;transition:.2s;border-color:rgba(139,92,246,.35)}.chrome-btn:hover{transform:translateY(-1px);background:rgba(139,92,246,.12);color:#fff}
 .hero{padding:82px 0 48px;text-align:center;position:relative}
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid var(--line);
@@ -127,7 +127,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 <nav class="nav">
   <div class="container navin">
     <a class="brand" href="#"><span class="logo">⚡</span><span>FPS BOOSTER</span></a>
-    <span class="navpill">OFFICIAL DOWNLOAD</span>
+    <button class="navpill chrome-btn" id="chromeOpen" type="button">OPEN IN CHROME ↗</button>
   </div>
 </nav>
 
@@ -142,9 +142,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
       <div class="hero-inner">
         <div class="status" id="status">Opening FPS BOOSTER…</div>
         <div id="fallback">
-          <div class="cta">
-            <button class="primary" id="download">DOWNLOAD LATEST APK</button>
-          </div>
+          <div class="cta"><button class="primary" id="download">DOWNLOAD LATEST APK</button><button class="secondary chrome-btn" id="chromeOpenHero" type="button">OPEN IN CHROME ↗</button></div>
           <div class="small">If the app is already installed, it will open automatically.</div>
         </div>
       </div>
@@ -183,6 +181,51 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 <footer>
   <div class="container">© 2026 FPS BOOSTER · Official download page</div>
 </footer>
+
+<script>
+/*
+  Try to open this page in Google Chrome on Android.
+  Android/host apps may block external intents, so a normal browser fallback remains.
+*/
+(function () {
+  const pageUrl = window.location.href;
+  const chromePackage = "com.android.chrome";
+
+  function openChrome() {
+    const ua = navigator.userAgent || "";
+    const isAndroid = /Android/i.test(ua);
+
+    if (!isAndroid) {
+      // On non-Android devices, use the browser's normal share/open behavior.
+      window.open(pageUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    try {
+      const cleanUrl = pageUrl.replace(/^https?:\/\//i, "");
+      const intentUrl =
+        "intent://" + cleanUrl +
+        "#Intent;scheme=https;package=" + chromePackage +
+        ";action=android.intent.action.VIEW;end";
+
+      window.location.href = intentUrl;
+    } catch (e) {
+      // If an embedded browser blocks the intent, simply remain on the page.
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = [
+      document.getElementById("chromeOpen"),
+      document.getElementById("chromeOpenHero")
+    ].filter(Boolean);
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", openChrome);
+    });
+  });
+})();
+</script>
 
 <script>
 // Change only this URL when you publish a new APK.
