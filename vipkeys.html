@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIP Keys — Local Key Manager</title>
+<style>
+:root{color-scheme:dark;--bg:#080b12;--panel:#111827;--line:#283347;--text:#f1f5fb;--muted:#9aa8bc;--accent:#8b5cf6;--green:#31d0a0;--red:#fb7185;--amber:#fbbf24}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1c2040 0,var(--bg) 55%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:1300px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}.brand{font-size:24px;font-weight:900;letter-spacing:.5px}.brand span{color:#b6a0ff}.muted{color:var(--muted)}.small{font-size:12px}.panel{background:#111827ed;border:1px solid var(--line);border-radius:15px;padding:18px;margin-bottom:16px}.warning{border:1px solid #72531b;background:#322810;color:#ffe2a0;padding:13px;border-radius:10px;margin-bottom:16px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:16px}.stat{background:#0b1220;border:1px solid var(--line);padding:15px;border-radius:12px}.stat b{display:block;font-size:26px;margin-top:4px}.layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field.full{grid-column:1/-1}label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px}input,select,textarea{width:100%;padding:11px;background:#090f1b;color:var(--text);border:1px solid var(--line);border-radius:9px;font:inherit}button{border:0;border-radius:9px;padding:10px 13px;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#2b374c}button.danger{background:#a12c48}button.green{background:#137856}button:hover{filter:brightness(1.12)}h2{font-size:17px;margin:0 0 14px}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row input{flex:1;min-width:130px}.tablewrap{overflow:auto}table{width:100%;min-width:850px;border-collapse:collapse}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted)}.badge{display:inline-block;padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800;text-transform:uppercase;background:#263348}.active{color:#76e8bd;background:#12392f}.blocked,.ended,.expired{color:#ff9eaf;background:#48202c}.used{color:#ffe09a;background:#453617}.actions{display:flex;gap:5px;flex-wrap:wrap}.actions button{font-size:12px;padding:7px 9px}.result{white-space:pre-wrap;overflow-wrap:anywhere;background:#090f1b;border:1px solid var(--line);padding:12px;border-radius:9px;margin-top:12px}.hidden{display:none!important}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tabs button{background:#253147}.tabs button.on{background:var(--accent)}.tabpane{display:none}.tabpane.on{display:block}.foot{text-align:center;color:var(--muted);font-size:12px;padding:20px}.check{display:flex;align-items:center;gap:8px}.check input{width:auto}.dangertext{color:var(--red)}@media(max-width:900px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:12px}}@media(max-width:480px){.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand{font-size:20px}.panel{padding:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><div class="brand">VIP <span>KEYS</span></div><div class="muted small">Single-file local license manager</div></div>
+  <div class="row"><button class="secondary" id="exportBtn">Export Backup</button><button class="secondary" id="importBtn">Import Backup</button><button class="danger" id="wipeBtn">Clear All</button><input id="importFile" type="file" accept="application/json" class="hidden"></div>
+</header>
+<div class="warning"><b>Important:</b> This single HTML file stores keys in this browser's localStorage. It is useful for a personal/offline key list, but it is <b>not secure authentication</b>. GitHub Pages and plain HTML cannot reliably enforce expiry, device limits, blocks, or revoke access on another website. Users can inspect/modify browser code or local storage. Do not use this version to protect paid/private content.</div>
+<div class="grid" id="stats"></div>
+<div class="tabs"><button class="on" data-tab="manage">Manage Keys</button><button data-tab="login">Test Key Login</button><button data-tab="integration">HTML Integration</button></div>
+<section id="manage" class="tabpane on">
+<div class="layout">
+  <div class="panel">
+    <h2 id="formTitle">Generate keys</h2>
+    <form id="keyForm"><div class="formgrid">
+      <div class="field full"><label>Product / App code</label><input name="product" value="FPSBOOSTER" maxlength="60" required></div>
+      <div class="field full"><label>Label / customer</label><input name="label" maxlength="100" placeholder="VIP member / batch name"></div>
+      <div class="field"><label>Quantity</label><input name="quantity" type="number" min="1" max="100" value="1" required></div>
+      <div class="field"><label>Validity</label><select name="days"><option value="1">1 day</option><option value="7">7 days</option><option value="30" selected>30 days</option><option value="90">90 days</option><option value="180">180 days</option><option value="365">365 days</option><option value="lifetime">Lifetime</option></select></div>
+      <div class="field"><label>Allowed users</label><input name="users" type="number" min="1" max="100000" value="1" required></div>
+      <div class="field"><label>Devices per user</label><input name="devices" type="number" min="1" max="100" value="1" required></div>
+      <div class="field full"><label>Maximum total activations</label><input name="activations" type="number" min="1" max="100000" value="1" required></div>
+    </div><button style="width:100%;margin-top:14px" id="submitBtn">GENERATE KEY(S)</button></form>
+    <div id="generated" class="result hidden"></div>
+    <p class="muted small">Generated keys are shown once in the result area. Export a backup before clearing browser data.</p>
+  </div>
+  <div class="panel">
+    <div class="row" style="justify-content:space-between;margin-bottom:12px"><h2 style="margin:0">Saved keys</h2><span class="muted small" id="countLabel"></span></div>
+    <div class="row" style="margin-bottom:12px"><input id="search" placeholder="Search key, product, label…"><select id="statusFilter" style="max-width:145px"><option value="">All statuses</option><option>active</option><option>blocked</option><option>ended</option><option>expired</option></select></div>
+    <div class="tablewrap"><table><thead><tr><th>Key</th><th>Product</th><th>Status</th><th>Expiry</th><th>Usage limits</th><th>Actions</th></tr></thead><tbody id="keysBody"></tbody></table></div>
+  </div>
+</div>
+</section>
+<section id="login" class="tabpane">
+<div class="panel" style="max-width:650px"><h2>Test a key</h2><p class="muted">This checks the local copy in this browser only. It does not authenticate users on another device or website.</p>
+<form id="testForm"><div style="margin:12px 0"><label>License key</label><input name="key" placeholder="VIP-XXXXXX-XXXXXX-XXXXXX" required></div><div style="margin:12px 0"><label>Product code</label><input name="product" value="FPSBOOSTER" required></div><div style="margin:12px 0"><label>User reference (demo only)</label><input name="user" value="demo-user" required></div><div style="margin:12px 0"><label>Device reference (demo only)</label><input name="device" value="demo-device-001" required></div><button>VERIFY KEY</button></form><div id="testResult" class="result hidden"></div></div>
+</section>
+<section id="integration" class="tabpane">
+<div class="panel"><h2>Using this on another GitHub Pages HTML</h2>
+<p>This file can be committed to GitHub as <code>vipkeys.html</code>. However, another HTML page cannot safely ask this file to verify keys globally: each browser has separate localStorage, and users can change client-side checks.</p>
+<p>For a harmless demo, copy the <b>local test</b> pattern from this file. For a real system where blocking a key must disable login across users and websites, a trusted backend/database or an authentication/license service is required. GitHub Pages alone is static hosting and cannot provide a private server-side key authority.</p>
+<h3>Key statuses</h3><p><span class="badge active">active</span> Can pass local demo verification · <span class="badge blocked">blocked</span> Temporarily denied · <span class="badge ended">ended</span> Manually ended · <span class="badge expired">expired</span> Past expiry.</p>
+<p class="dangertext small">Do not place admin passwords, secret tokens, or private API keys in this HTML file.</p>
+</div></section>
+</div>
+<div class="foot">VIP KEYS • Local browser storage • Export backups regularly</div>
+<script>
+const STORE="vipkeys_local_v1";
+let keys=load();
+function load(){try{const x=JSON.parse(localStorage.getItem(STORE)||"[]");return Array.isArray(x)?x:[]}catch{return []}}
+function save(){localStorage.setItem(STORE,JSON.stringify(keys));render()}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function makeKey(){const p=()=>Array.from(crypto.getRandomValues(new Uint8Array(3)),n=>n.toString(16).padStart(2,"0")).join("").toUpperCase();return `VIP-${p()}-${p()}-${p()}-${p()}`}
+function effective(k){if(k.status==="blocked"||k.status==="ended")return k.status;if(k.expiresAt&&Date.now()>=k.expiresAt)return "expired";return "active"}
+function date(t){return t?new Date(t).toLocaleString():"Lifetime"}
+function render(){
+ const stats={total:keys.length,active:0,blocked:0,ended:0,expired:0};keys.forEach(k=>stats[effective(k)]++);
+ document.querySelector("#stats").innerHTML=[["Total keys",stats.total],["Active",stats.active],["Blocked",stats.blocked],["Ended / expired",stats.ended+stats.expired]].map(([a,b])=>`<div class="stat"><span class="muted">${a}</span><b>${b}</b></div>`).join("");
+ const q=document.querySelector("#search").value.toLowerCase(),s=document.querySelector("#statusFilter").value;
+ const list=keys.filter(k=>(!q||[k.key,k.product,k.label].join(" ").toLowerCase().includes(q))&&(!s||effective(k)===s));
+ document.querySelector("#countLabel").textContent=`${list.length} shown / ${keys.length} total`;
+ document.querySelector("#keysBody").innerHTML=list.map(k=>{const st=effective(k);return `<tr><td><b>${esc(k.key)}</b><br><span class="muted small">${esc(k.label||"No label")}</span><br><span class="muted small">${esc(k.id)}</span></td><td>${esc(k.product)}</td><td><span class="badge ${st}">${st}</span></td><td>${esc(date(k.expiresAt))}</td><td>${k.usedUsers.length}/${k.users} users<br>${k.usedDevices.length}/${k.activations} activations<br><span class="muted small">${k.devices} devices/user</span></td><td><div class="actions"><button class="secondary" onclick="toggleKey('${k.id}')">${st==="blocked"?"Unblock":"Block"}</button><button class="secondary" onclick="extendKey('${k.id}')">Extend</button><button class="secondary" onclick="endKey('${k.id}')">End</button><button class="secondary" onclick="resetUsage('${k.id}')">Reset usage</button><button class="danger" onclick="removeKey('${k.id}')">Remove</button></div></td></tr>`}).join("")||'<tr><td colspan="6" class="muted">No matching keys.</td></tr>';
+}
+document.querySelector("#keyForm").addEventListener("submit",e=>{
+ e.preventDefault();const f=Object.fromEntries(new FormData(e.target));const qty=+f.quantity,users=+f.users,devices=+f.devices,activations=+f.activations;
+ if(!/^[A-Za-z0-9_-]{2,60}$/.test(f.product))return alert("Product code: use 2–60 letters, numbers, _ or -.");
+ if(qty<1||qty>100||users<1||devices<1||activations<1)return alert("Please check the limits.");
+ const days=f.days==="lifetime"?null:+f.days,now=Date.now(),out=[];
+ for(let i=0;i<qty;i++){const key=makeKey();const k={id:crypto.randomUUID(),key,product:f.product.trim(),label:f.label.trim(),status:"active",createdAt:now,expiresAt:days===null?null:now+days*86400000,users,devices,activations,usedUsers:[],usedDevices:[],audit:[{at:now,action:"created"}]};keys.unshift(k);out.push(key)}
+ save();const box=document.querySelector("#generated");box.classList.remove("hidden");box.textContent="Generated — copy and back up these keys now:\n"+out.join("\n");const b=document.createElement("button");b.textContent="Copy keys";b.style.marginTop="10px";b.onclick=()=>navigator.clipboard?.writeText(out.join("\n"));box.append(document.createElement("br"),b);
+});
+window.toggleKey=id=>{const k=keys.find(x=>x.id===id);if(!k)return;const next=k.status==="blocked"?"active":"blocked";if(confirm(`${next.toUpperCase()} this key?`)){k.status=next;k.audit.push({at:Date.now(),action:next});save()}};
+window.endKey=id=>{const k=keys.find(x=>x.id===id);if(k&&confirm("End this key immediately?")){k.status="ended";k.audit.push({at:Date.now(),action:"ended"});save()}};
+window.removeKey=id=>{if(confirm("Permanently remove this key from this browser?")){keys=keys.filter(k=>k.id!==id);save()}};
+window.extendKey=id=>{const k=keys.find(x=>x.id===id);if(!k)return;const d=prompt("Set expiry to how many days from now? Enter 1–36500, or 0 for lifetime.");if(d===null)return;const n=Number(d);if(!Number.isInteger(n)||n<0||n>36500)return alert("Invalid number.");k.expiresAt=n===0?null:Date.now()+n*86400000;k.status="active";k.audit.push({at:Date.now(),action:"expiry_updated"});save()};
+window.resetUsage=id=>{const k=keys.find(x=>x.id===id);if(k&&confirm("Reset local demo user/device usage for this key?")){k.usedUsers=[];k.usedDevices=[];k.audit.push({at:Date.now(),action:"usage_reset"});save()}};
+document.querySelector("#search").addEventListener("input",render);document.querySelector("#statusFilter").addEventListener("change",render);
+document.querySelector("#testForm").addEventListener("submit",e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),k=keys.find(x=>x.key.toUpperCase()===f.key.trim().toUpperCase()&&x.product.toLowerCase()===f.product.trim().toLowerCase()),box=document.querySelector("#testResult");box.classList.remove("hidden");let msg="";
+ if(!k)msg="LOGIN DENIED — key not found for this product.";
+ else if(effective(k)!=="active")msg="LOGIN DENIED — key is "+effective(k)+".";
+ else{const device=f.user+"|"+f.device;const userAlready=k.usedUsers.includes(f.user),deviceAlready=k.usedDevices.includes(device);if(!userAlready&&k.usedUsers.length>=k.users)msg="LOGIN DENIED — maximum user limit reached.";else if(!deviceAlready&&k.usedDevices.length>=k.activations)msg="LOGIN DENIED — maximum activation limit reached.";else{const devicesForUser=k.usedDevices.filter(x=>x.startsWith(f.user+"|"));if(!deviceAlready&&devicesForUser.length>=k.devices)msg="LOGIN DENIED — device limit reached for this user.";else{if(!userAlready)k.usedUsers.push(f.user);if(!deviceAlready)k.usedDevices.push(device);k.audit.push({at:Date.now(),action:"test_login",user:f.user});save();msg="LOGIN SUCCESS — local demo check passed.\nProduct: "+k.product+"\nExpiry: "+date(k.expiresAt)+"\n\nNote: this result is not a secure server-issued session.";}}}
+ box.textContent=msg;box.className="result "+(msg.startsWith("LOGIN SUCCESS")?"ok":"dangertext");
+});
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".tabpane").forEach(x=>x.classList.toggle("on",x.id===b.dataset.tab))});
+document.querySelector("#exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({format:"vipkeys-backup-v1",exportedAt:new Date().toISOString(),keys},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="vipkeys-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+document.querySelector("#importBtn").onclick=()=>document.querySelector("#importFile").click();
+document.querySelector("#importFile").onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const data=JSON.parse(await file.text());const incoming=Array.isArray(data)?data:data.keys;if(!Array.isArray(incoming)||!incoming.every(k=>k&&typeof k.key==="string"&&typeof k.product==="string"))throw Error("Invalid backup format");if(confirm(`Import ${incoming.length} keys? Existing keys with the same ID will be replaced.`)){const map=new Map(keys.map(k=>[k.id,k]));incoming.forEach(k=>map.set(k.id||crypto.randomUUID(),k));keys=[...map.values()];save();alert("Backup imported.")}}catch(err){alert("Import failed: "+err.message)}e.target.value=""};
+document.querySelector("#wipeBtn").onclick=()=>{if(confirm("Delete ALL keys saved in this browser? Export a backup first if needed.")&&confirm("Last confirmation: permanently clear local key list?")){keys=[];save();document.querySelector("#generated").classList.add("hidden")}};
+render();
+</script>
+</body>
+</html>
