@@ -271,10 +271,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 
     <div class="hero-card">
       <div class="hero-inner">
-        <div class="status" id="status">Opening FPS BOOSTER…</div>
-        <div id="fallback">
+        <div class="status" id="status">Download the latest FPS BOOSTER APK below.</div>
+        <div id="fallback" style="display:block">
           <div class="cta"><button class="primary" id="download"><span aria-hidden="true">⚡</span>&nbsp; DOWNLOAD LATEST APK</button></div>
-          <div class="small">If the app is already installed, it will open automatically.</div>
+          <div class="small">If the app is already installed, open it from your device.</div>
         </div>
       </div>
     </div>
@@ -357,23 +357,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:#777b8e;font-s
 const APK_URL = "https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk";
 const APP_URL = "fpsbooster://open";
 
-const status = document.getElementById('status');
-const fallback = document.getElementById('fallback');
 const download = document.getElementById('download');
-let leftPage = false;
 
-function showFallback(){
-  if(leftPage) return;
-  fallback.style.display='block';
-  status.textContent='If the app did not open, FPS BOOSTER may not be installed.';
-}
-
-// Android/browser policy does not allow a webpage to silently install an APK.
-// If the app is installed, this opens it. If not, the timeout exposes the APK
-// download button. The Android installer will still require the user's approval.
-try { window.location.href = APP_URL; } catch(e) {}
-setTimeout(showFallback, 1800);
-
+// Keep the homepage accessible to visitors and search crawlers.
+// Do not automatically redirect to a custom app scheme on page load.
 download.addEventListener('click', function(){
   window.location.href = APK_URL;
 });
