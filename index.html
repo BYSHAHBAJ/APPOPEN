@@ -145,7 +145,7 @@ h1{font-size:clamp(39px,11.8vw,60px);letter-spacing:-1.8px;line-height:.98}
       <span class="brandname">FPS <span>BOOSTER</span><small>PLAY SMOOTHER</small></span>
     </a>
     <nav class="navlinks" id="navlinks" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#games">Games</a><a href="#nextgen">NextGen SHAHBAJ</a><a href="#download-section">Download</a><a href="#official-socials">Official Social Media</a>
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="screenshots.html">Screenshots</a><a href="index.html#games">Games</a><a href="videos.html">NextGen SHAHBAJ</a><a href="download.html">Download</a><a href="index.html#official-socials">Official Social Media</a>
     </nav>
     <a class="nav-cta" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk" aria-label="Download FPS BOOSTER APK"><span>↓</span> DOWNLOAD APP</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -162,8 +162,8 @@ h1{font-size:clamp(39px,11.8vw,60px);letter-spacing:-1.8px;line-height:.98}
       <p class="lead">Explore FPS options, graphics tools and gaming updates in one place. Check real BGMI screenshots and find the right app version for your game.</p>
       <div class="hero-actions">
         <a class="btn btn-primary download-hero" id="downloadTopButton" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk">⬇ &nbsp; DOWNLOAD LATEST APK</a>
-        <a class="btn btn-ghost" href="#screenshots">▣ &nbsp; EXPLORE SCREENSHOTS</a>
-        <a class="btn btn-ghost" href="#features">VIEW FEATURES &nbsp; ↘</a>
+        <a class="btn btn-ghost" href="screenshots.html">▣ &nbsp; EXPLORE SCREENSHOTS</a>
+        <a class="btn btn-ghost" href="features.html">VIEW FEATURES &nbsp; ↘</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b>60–165</b><span>FPS OPTIONS*</span></div>
@@ -268,6 +268,7 @@ const menuToggle=document.getElementById('menuToggle');
 const navlinks=document.getElementById('navlinks');
 menuToggle.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
 navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+// Internal page links intentionally use the current tab, preserving normal browser Back navigation.
 const imageLightbox=document.getElementById('imageLightbox');
 const lightboxImage=document.getElementById('lightboxImage');
 const lightboxClose=document.getElementById('lightboxClose');
