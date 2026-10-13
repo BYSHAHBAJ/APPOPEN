@@ -94,6 +94,21 @@ footer{border-top:1px solid var(--line);padding:27px 0 34px;color:#8193a9;font-s
 @media(max-width:850px){.navlinks{gap:14px}.navlinks a{font-size:12px}.hero-logo{right:4%;top:150px;width:130px}.hero-content{max-width:680px}.feature-grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:repeat(2,1fr)}.download-inner{grid-template-columns:1fr}.download-panel{max-width:480px}.gallery{grid-template-columns:1fr 1fr}.shot:first-child{grid-column:span 2}.shot:first-child img{max-height:330px}}
 @media(max-width:620px){.container{width:calc(100% - 24px)}.nav{height:65px}.brand img{width:41px;height:41px}.brandname{font-size:16px}.brand{gap:8px}.brand img{width:37px;height:37px}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;padding:17px 18px 20px;background:#050c19f7;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 0}.nav-cta{display:inline-flex;align-items:center;padding:9px 10px;font-size:10px;letter-spacing:0}.nav-cta span{margin-right:4px}.menu-toggle{display:block;padding:7px 9px}.nav{gap:8px}.hero-content{padding:48px 0 0}.hero-logo{position:relative;top:auto;right:auto;display:block;width:104px;margin:24px 0 0}.hero-bg{background-position:58% center;inset:0 0 110px}h1{font-size:clamp(43px,13vw,66px);letter-spacing:-2.5px}.lead{font-size:14px;max-width:470px}.hero-actions .btn{flex:1;min-width:0;padding:13px 10px;font-size:10px}.hero-actions .download-hero{flex:1 0 100%;font-size:12px;padding:15px 12px}.hero-stats{gap:8px}.stat{min-width:calc(33.333% - 6px);padding:9px}.stat b{font-size:17px}.stat span{font-size:9px}.gallery-wrap{margin-top:30px}.gallery-heading{align-items:start;flex-direction:column}.gallery{gap:8px}.shot{border-radius:11px}.shot img{height:auto;min-height:0;max-height:none;aspect-ratio:4/3;object-fit:cover}.shot:first-child img{aspect-ratio:16/9;max-height:none}.shot-label{left:6px;bottom:6px;padding:5px 7px;font-size:9px}.section{padding:48px 0}.feature-grid{gap:9px}.feature{padding:16px;min-height:165px}.feature-icon{width:37px;height:37px;font-size:19px;margin-bottom:13px}.feature h3{font-size:13px}.feature p{font-size:11px}.fps-strip{padding:14px}.fps-pills{gap:5px}.fps-pills span{min-width:48px;padding:9px 5px}.download-band{padding:23px 16px;border-radius:17px}.download-panel{padding:16px}.game-grid{gap:8px}.game{padding:12px 10px;gap:8px}.game b{font-size:12px}.game small{font-size:10px}.trust-row{grid-template-columns:repeat(2,1fr)}.trust{justify-content:flex-start}.footer-inner{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Official social links */
+.footer-social{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 auto 22px;padding:0}
+.footer-social .social-title{width:100%;text-align:center;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:linear-gradient(135deg,#0c1b30,#07101e);color:#e9f8ff;font-size:12px;font-weight:800;transition:transform .2s,border-color .2s,box-shadow .2s}
+.footer-social a:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 0 22px #00cfff25}
+.footer-social .social-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+#imageLightbox{width:min(96vw,1200px);max-width:none;max-height:94vh;padding:12px;border:1px solid #2b7ba3;border-radius:18px;background:#050914;color:#fff;box-shadow:0 25px 100px #000c;overflow:hidden}
+#imageLightbox::backdrop{background:rgba(1,4,12,.88);backdrop-filter:blur(8px)}
+.lightbox-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 2px 10px;color:#9fb2c9;font-size:12px;font-weight:800;letter-spacing:1px}
+#lightboxClose{border:1px solid #28445f;border-radius:10px;background:#0a1728;color:#fff;font-size:22px;line-height:1;padding:7px 12px;cursor:pointer}
+#lightboxImage{display:block;width:100%;height:auto;max-height:calc(94vh - 65px);object-fit:contain;border-radius:10px}
+.image-preview{cursor:zoom-in}
+@media(max-width:620px){.footer-social{gap:7px}.footer-social a{padding:10px 12px;font-size:11px}#imageLightbox{padding:8px;border-radius:12px}.lightbox-top{font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -134,9 +149,9 @@ footer{border-top:1px solid var(--line);padding:27px 0 34px;color:#8193a9;font-s
     <div class="gallery-wrap" id="screenshots">
       <div class="gallery-heading"><div><div class="kicker">IN-GAME PREVIEWS</div><h2>See it in action.</h2></div><p class="sub">Real screenshots from the game and FPS BOOSTER settings.</p></div>
       <div class="gallery">
-        <a class="shot" href="gameplay-preview.jpg" target="_blank" rel="noopener"><img src="gameplay-preview.jpg" alt="BGMI gameplay screenshot" fetchpriority="high"><span class="shot-label">GAMEPLAY PREVIEW</span></a>
-        <a class="shot" href="bgmi-lobby.jpg" target="_blank" rel="noopener"><img src="bgmi-lobby.jpg" alt="BGMI character lobby screenshot" loading="lazy"><span class="shot-label">BGMI LOBBY</span></a>
-        <a class="shot" href="performance-165fps.jpg" target="_blank" rel="noopener"><img src="performance-165fps.jpg" alt="Performance panel showing 165 FPS" loading="lazy"><span class="shot-label">165 FPS DISPLAY</span></a>
+        <a class="shot image-preview" href="gameplay-preview.jpg" aria-label="Open screenshot preview"><img src="gameplay-preview.jpg" alt="BGMI gameplay screenshot" fetchpriority="high"><span class="shot-label">GAMEPLAY PREVIEW</span></a>
+        <a class="shot image-preview" href="bgmi-lobby.jpg" aria-label="Open screenshot preview"><img src="bgmi-lobby.jpg" alt="BGMI character lobby screenshot" loading="lazy"><span class="shot-label">BGMI LOBBY</span></a>
+        <a class="shot image-preview" href="performance-165fps.jpg" aria-label="Open screenshot preview"><img src="performance-165fps.jpg" alt="Performance panel showing 165 FPS" loading="lazy"><span class="shot-label">165 FPS DISPLAY</span></a>
       </div>
     </div>
   </div>
@@ -159,9 +174,9 @@ footer{border-top:1px solid var(--line);padding:27px 0 34px;color:#8193a9;font-s
   <div class="container">
     <div class="section-head"><div class="kicker">SETTINGS PREVIEW</div><h2>Built around the real interface.</h2><p class="sub">Preview graphics and frame-rate settings before opening the app.</p></div>
     <div class="gallery">
-      <a class="shot" href="fps-settings-165.jpg" target="_blank" rel="noopener"><img src="fps-settings-165.jpg" alt="Advanced frame rate settings preview" loading="lazy"><span class="shot-label">FRAME RATE SETTINGS</span></a>
-      <a class="shot" href="graphics-style-settings.jpg" target="_blank" rel="noopener"><img src="graphics-style-settings.jpg" alt="Graphics style settings preview" loading="lazy"><span class="shot-label">GRAPHICS STYLE</span></a>
-      <a class="shot" href="graphics-settings.jpg" target="_blank" rel="noopener"><img src="graphics-settings.jpg" alt="Graphics settings preview" loading="lazy"><span class="shot-label">GRAPHICS OPTIONS</span></a>
+      <a class="shot image-preview" href="fps-settings-165.jpg" aria-label="Open screenshot preview"><img src="fps-settings-165.jpg" alt="Advanced frame rate settings preview" loading="lazy"><span class="shot-label">FRAME RATE SETTINGS</span></a>
+      <a class="shot image-preview" href="graphics-style-settings.jpg" aria-label="Open screenshot preview"><img src="graphics-style-settings.jpg" alt="Graphics style settings preview" loading="lazy"><span class="shot-label">GRAPHICS STYLE</span></a>
+      <a class="shot image-preview" href="graphics-settings.jpg" aria-label="Open screenshot preview"><img src="graphics-settings.jpg" alt="Graphics settings preview" loading="lazy"><span class="shot-label">GRAPHICS OPTIONS</span></a>
     </div>
   </div>
 </section>
@@ -197,12 +212,41 @@ footer{border-top:1px solid var(--line);padding:27px 0 34px;color:#8193a9;font-s
 </section>
 </main>
 
-<footer><div class="container footer-inner"><div>© 2026 FPS BOOSTER. All rights reserved.</div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="#screenshots">Screenshots</a><a href="#download-section">Download</a></div></div></footer>
+<footer>
+<div class="container">
+  <div class="footer-social" aria-label="Official social media links">
+    <div class="social-title">Official Socials</div>
+    <a href="https://t.me/+tiUqklwHuIZmNmFl" target="_blank" rel="noopener noreferrer"><span class="social-dot"></span> Telegram</a>
+    <a href="https://www.instagram.com/wildsoulfury?exln=MWRqcXBxenQ1eHJsNw==" target="_blank" rel="noopener noreferrer"><span class="social-dot"></span> Instagram</a>
+    <a href="https://youtube.com/@wildsoulfury?si=kxrikDOzRGtpbMvI" target="_blank" rel="noopener noreferrer"><span class="social-dot"></span> YouTube</a>
+  </div>
+</div>
+<div class="container footer-inner"><div>© 2026 FPS BOOSTER. All rights reserved.</div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="#screenshots">Screenshots</a><a href="#download-section">Download</a></div></div></footer>
+<dialog id="imageLightbox" aria-label="Screenshot preview">
+  <div class="lightbox-top"><span>SCREENSHOT PREVIEW</span><button id="lightboxClose" type="button" aria-label="Close screenshot preview">×</button></div>
+  <img id="lightboxImage" src="" alt="Expanded screenshot preview">
+</dialog>
 <script>
 const menuToggle=document.getElementById('menuToggle');
 const navlinks=document.getElementById('navlinks');
 menuToggle.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
 navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+const imageLightbox=document.getElementById('imageLightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+const lightboxClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.image-preview').forEach(link=>{
+  link.addEventListener('click',event=>{
+    event.preventDefault();
+    const img=link.querySelector('img');
+    lightboxImage.src=img.currentSrc||img.src;
+    lightboxImage.alt=img.alt||'Screenshot preview';
+    if(typeof imageLightbox.showModal==='function') imageLightbox.showModal();
+  });
+});
+lightboxClose.addEventListener('click',()=>imageLightbox.close());
+imageLightbox.addEventListener('click',event=>{if(event.target===imageLightbox) imageLightbox.close();});
+imageLightbox.addEventListener('close',()=>{lightboxImage.src='';});
+
 </script>
 </body>
 </html>
