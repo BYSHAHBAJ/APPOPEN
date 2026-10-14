@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050914">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Explore Apna FPS Booster, FPS settings, graphics tools, BGMI gameplay screenshots, supported game editions and the latest Android APK.">
+<meta property="og:title" content="Apna FPS Booster — FPS Settings & Gaming Tools">
+<meta property="og:description" content="Explore FPS options, graphics tools, BGMI screenshots, app information and the latest FPS BOOSTER APK.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://apnafpsbooster.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Apna FPS Booster | BGMI &amp; PUBG MOBILE Gaming Tools</title>
+<style>
+:root{--bg:#080e1a;--panel:#101a2b;--panel2:#13243a;--text:#f5f7fb;--muted:#aebbd0;--blue:#2787f5;--cyan:#50c9f5;--violet:#7d78ee;--line:rgba(145,174,211,.19);--gold:#ffc95c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 50% -15%,#172b48 0,transparent 48%),linear-gradient(180deg,#080e1a,#060a12 78%);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 36px));margin:auto}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(7,13,24,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:.5px}
+.brand img{width:50px;height:50px;object-fit:cover;border-radius:50%;border:1px solid #1baeff;box-shadow:0 0 22px #007bff55}
+.brandname{font-size:20px;line-height:1}
+.brandname span{display:block;color:var(--cyan);font-style:italic}
+.brand small{display:block;font-size:9px;letter-spacing:2px;color:#92b9dc;margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:25px;color:#d0deef;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--cyan)}
+.nav-cta{border:1px solid #168bff;border-radius:999px;padding:11px 16px;background:#08182b;box-shadow:0 0 22px #087bff24;font-size:12px;font-weight:850;white-space:nowrap}
+.nav-cta span{color:#39f6a0;margin-right:7px}
+.nav-cta:hover{border-color:var(--cyan);box-shadow:0 0 24px #087bff55;color:#fff}
+.menu-toggle{display:none;background:transparent;color:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px}
+.hero{position:relative;isolation:isolate;padding:0 0 36px;overflow:hidden}
+.hero-bg{position:absolute;z-index:-2;inset:0 0 140px;background:linear-gradient(90deg,rgba(3,8,18,.78),rgba(3,8,18,.12) 55%,rgba(3,8,18,.62)),linear-gradient(0deg,#050914 0,transparent 45%),url('gameplay-preview.jpg') center 42%/cover no-repeat;filter:saturate(1.08)}
+.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,22,.1),rgba(4,10,22,.2) 55%,#050914)}
+.hero-content{padding:78px 0 12px;max-width:760px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid #2a8bba88;background:#051527c9;border-radius:999px;color:#d8f5ff;font-size:11px;font-weight:850;letter-spacing:1.2px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#35f4a1;box-shadow:0 0 12px #35f4a1}
+h1{margin:22px 0 12px;font-size:clamp(46px,8vw,88px);line-height:.91;letter-spacing:-3px;font-weight:1000;text-transform:uppercase;text-shadow:0 5px 35px #000}
+h1 .line2{display:block;background:linear-gradient(95deg,#fff 0,#a4edff 30%,#1abaff 62%,#7562ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:590px;color:#d5e1f1;font-size:17px;line-height:1.7;margin:20px 0 0;text-shadow:0 2px 12px #000}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.download-hero{box-shadow:0 12px 32px #008cff66,0 0 28px #05c8ff2b}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border-radius:12px;font-weight:950;font-size:13px;letter-spacing:.4px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{color:white;background:linear-gradient(105deg,#176fe0,#159bc5);border:1px solid #8ceaff;box-shadow:0 8px 22px #087bff35}
+.btn-ghost{background:#071324cf;border:1px solid #8eb8d766;color:#edf9ff}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.stat{padding:10px 14px;border-radius:12px;background:#071425cf;border:1px solid #8bbbe52b;min-width:105px}
+.stat b{display:block;font-size:19px;color:#fff}.stat span{font-size:10px;color:#9fb6cf;letter-spacing:.7px}
+.hero-logo{position:absolute;right:max(5%,calc((100vw - 1180px)/2));top:118px;width:clamp(130px,19vw,245px);aspect-ratio:1;border-radius:50%;filter:drop-shadow(0 0 26px #008cff77);border:2px solid #12baff;object-fit:cover;background:#020817}
+.gallery-wrap{position:relative;margin-top:38px}
+.gallery-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.kicker{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:950}
+h2{font-size:clamp(25px,4vw,38px);letter-spacing:-1px;line-height:1.1;margin:8px 0 0}
+.sub{color:var(--muted);font-size:14px;line-height:1.7;margin:10px 0 0;max-width:650px}
+.gallery{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:13px}
+.shot{position:relative;display:block;overflow:hidden;border:1px solid #2b7ba3;border-radius:16px;background:#091426;box-shadow:0 12px 30px #0006;min-height:160px}
+.shot img{width:100%;height:100%;min-height:190px;max-height:270px;display:block;object-fit:cover;transition:transform .35s}
+.shot:hover img{transform:scale(1.045)}
+.shot-label{position:absolute;left:10px;bottom:10px;padding:7px 10px;border:1px solid #8edfff66;background:#04101bd9;border-radius:8px;font-size:10px;font-weight:850;letter-spacing:.5px}
+.section{padding:74px 0}
+.section-head{text-align:center;margin:0 auto 30px;max-width:760px}
+.section-head .sub{margin-left:auto;margin-right:auto}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature{position:relative;padding:22px 20px;border-radius:17px;border:1px solid var(--line);background:linear-gradient(145deg,#0b1c31dd,#070d18f2);min-height:180px;overflow:hidden}
+.feature:before{content:"";position:absolute;width:100px;height:100px;right:-42px;top:-42px;border-radius:50%;background:#00aaff16;filter:blur(2px)}
+.feature-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;color:var(--cyan);background:#0b8bff19;border:1px solid #14baff55;font-size:22px;margin-bottom:17px}
+.feature h3{margin:0 0 8px;font-size:15px}.feature p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.fps-strip{margin-top:22px;padding:18px;border:1px solid #1c8dbd55;border-radius:16px;background:linear-gradient(100deg,#07182b,#0a1121);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fps-strip strong{font-size:13px}.fps-strip p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.fps-pills{display:flex;gap:8px;flex-wrap:wrap}.fps-pills span{min-width:57px;text-align:center;padding:10px 8px;border-radius:9px;border:1px solid #19aaff66;background:#06172b;color:#7de8ff;font-weight:950;font-size:14px}
+.download-band{position:relative;isolation:isolate;overflow:hidden;border:1px solid #168dff;border-radius:22px;padding:34px;background:linear-gradient(100deg,#061225ed,#07182be8),url('bgmi-lobby.jpg') center/cover;box-shadow:0 0 45px #007bff1c}
+.download-band:after{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 100% 0,#00bfff26,transparent 45%)}
+.download-inner{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:30px}
+.download-band h2{font-size:clamp(29px,4.5vw,45px);text-transform:uppercase}
+.download-band h2 span{color:var(--cyan)}
+.download-band .sub{max-width:520px}
+.download-panel{padding:22px;border:1px solid #48cfff57;border-radius:16px;background:#030a15dc;text-align:center}
+.download-panel .btn{width:100%;font-size:14px;padding:17px 12px}
+.download-meta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px;color:#b5cce1;font-size:11px}
+.download-meta span{padding:6px 0}
+.game-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.game{display:flex;align-items:center;gap:12px;padding:17px 15px;border:1px solid var(--line);border-radius:14px;background:#081324}
+.game-icon{font-size:27px}.game b{display:block;font-size:13px}.game small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}
+.trust{display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 8px;color:#b5c9e0;font-size:11px;border-top:1px solid var(--line)}
+.trust b{font-size:17px;color:var(--cyan)}
+.disclaimer{margin-top:25px;padding:16px 18px;border:1px solid #ffffff14;border-radius:12px;color:#8394aa;font-size:11px;line-height:1.7;text-align:center}
+footer{border-top:1px solid var(--line);padding:27px 0 34px;color:#8193a9;font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:850px){.navlinks{gap:14px}.navlinks a{font-size:12px}.hero-logo{right:4%;top:150px;width:130px}.hero-content{max-width:680px}.feature-grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:repeat(2,1fr)}.download-inner{grid-template-columns:1fr}.download-panel{max-width:480px}.gallery{grid-template-columns:1fr 1fr}.shot:first-child{grid-column:span 2}.shot:first-child img{max-height:330px}}
+@media(max-width:620px){
+.container{width:calc(100% - 28px)}
+body{font-size:15px}
+.topbar{backdrop-filter:blur(12px)}
+.nav{height:62px}
+.brandname{font-size:15px}
+.nav-cta{border-radius:10px;background:#102039;border-color:#2b5c91}
+.hero-content{padding-top:38px}
+.eyebrow{font-size:9px;letter-spacing:.8px;padding:7px 10px}
+h1{font-size:clamp(39px,11.8vw,60px);letter-spacing:-1.8px;line-height:.98}
+.lead{font-size:14px;line-height:1.65}
+.hero-actions{gap:9px;margin-top:22px}
+.btn{border-radius:11px}
+.section-head{margin-bottom:23px}
+.sub{font-size:13px}
+.feature,.game,.download-panel{background:#0d1829}
+.shot{box-shadow:0 8px 20px #0004}
+.trust{font-size:10px}
+.disclaimer{font-size:10px}
+.nav{height:65px}.brand img{width:41px;height:41px}.brandname{font-size:16px}.brand{gap:8px}.brand img{width:37px;height:37px}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;padding:17px 18px 20px;background:#0b1423;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 0}.nav-cta{display:inline-flex;align-items:center;padding:9px 10px;font-size:10px;letter-spacing:0}.nav-cta span{margin-right:4px}.menu-toggle{display:block;padding:7px 9px}.nav{gap:8px}.hero-content{padding:48px 0 0}.hero-logo{position:relative;top:auto;right:auto;display:block;width:104px;margin:24px 0 0}.hero-bg{background-position:58% center;inset:0 0 110px}h1{font-size:clamp(43px,13vw,66px);letter-spacing:-2.5px}.lead{font-size:14px;max-width:470px}.hero-actions .btn{flex:1;min-width:0;padding:13px 10px;font-size:10px}.hero-actions .download-hero{flex:1 0 100%;font-size:12px;padding:15px 12px}.hero-stats{gap:8px}.stat{min-width:calc(33.333% - 6px);padding:9px}.stat b{font-size:17px}.stat span{font-size:9px}.gallery-wrap{margin-top:30px}.gallery-heading{align-items:start;flex-direction:column}.gallery{gap:8px}.shot{border-radius:11px}.shot img{height:auto;min-height:0;max-height:none;aspect-ratio:4/3;object-fit:cover}.shot:first-child img{aspect-ratio:16/9;max-height:none}.shot-label{left:6px;bottom:6px;padding:5px 7px;font-size:9px}.section{padding:48px 0}.feature-grid{gap:9px}.feature{padding:16px;min-height:165px}.feature-icon{width:37px;height:37px;font-size:19px;margin-bottom:13px}.feature h3{font-size:13px}.feature p{font-size:11px}.fps-strip{padding:14px}.fps-pills{gap:5px}.fps-pills span{min-width:48px;padding:9px 5px}.download-band{padding:23px 16px;border-radius:17px}.download-panel{padding:16px}.game-grid{gap:8px}.game{padding:12px 10px;gap:8px}.game b{font-size:12px}.game small{font-size:10px}.trust-row{grid-template-columns:repeat(2,1fr)}.trust{justify-content:flex-start}.footer-inner{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Official social links */
+.footer-social{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 auto 22px;padding:0}
+.footer-social .social-title{width:100%;text-align:center;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:linear-gradient(135deg,#0c1b30,#07101e);color:#e9f8ff;font-size:12px;font-weight:800;transition:transform .2s,border-color .2s,box-shadow .2s}
+.footer-social a:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 0 22px #00cfff25}
+.footer-social .social-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+#imageLightbox{width:min(96vw,1200px);max-width:none;max-height:94vh;padding:12px;border:1px solid #2b7ba3;border-radius:18px;background:#050914;color:#fff;box-shadow:0 25px 100px #000c;overflow:hidden}
+#imageLightbox::backdrop{background:rgba(1,4,12,.88);backdrop-filter:blur(8px)}
+.lightbox-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 2px 10px;color:#9fb2c9;font-size:12px;font-weight:800;letter-spacing:1px}
+#lightboxClose{border:1px solid #28445f;border-radius:10px;background:#0a1728;color:#fff;font-size:22px;line-height:1;padding:7px 12px;cursor:pointer}
+#lightboxImage{display:block;width:100%;height:auto;max-height:calc(94vh - 65px);object-fit:contain;border-radius:10px}
+.image-preview{cursor:zoom-in}
+@media(max-width:620px){.footer-social{gap:7px}.footer-social a{padding:10px 12px;font-size:11px}#imageLightbox{padding:8px;border-radius:12px}.lightbox-top{font-size:10px}}
+
+
+.ng-home-card{display:grid;grid-template-columns:100px 1fr auto;align-items:center;gap:22px;padding:25px;border:1px solid rgba(34,211,238,.25);border-radius:22px;background:radial-gradient(circle at 0 0,rgba(139,92,246,.2),transparent 42%),linear-gradient(130deg,rgba(10,20,39,.96),rgba(5,8,17,.96));box-shadow:0 22px 60px rgba(0,0,0,.22)}
+.ng-home-mark{width:86px;height:86px;border-radius:25px;display:grid;place-items:center;background:linear-gradient(140deg,#7c3aed,#06b6d4);font-size:29px;font-weight:1000;letter-spacing:-2px;box-shadow:0 12px 35px #06b6d430}.ng-home-mark span{color:#b9fff2}.ng-label{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:900}.ng-home-copy h3{margin:5px 0 6px;font-size:24px}.ng-home-copy p{margin:0;color:var(--muted);font-size:13px;max-width:570px}.ng-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.ng-tags span{font-size:10px;font-weight:800;color:#d9f7ff;padding:6px 9px;border:1px solid var(--line);border-radius:99px;background:#071326}.nextgen-preview .btn{white-space:nowrap}
+@media(max-width:760px){.ng-home-card{grid-template-columns:65px 1fr;padding:17px;gap:14px}.ng-home-mark{width:60px;height:60px;border-radius:18px;font-size:22px}.ng-home-copy h3{font-size:19px}.ng-home-card>.btn{grid-column:1/-1;text-align:center}}
+
+
+/* VISUAL REDESIGN: cinematic teal, ember-gold and glass panels */
+:root{--bg:#061615;--panel:#102625;--panel2:#183432;--text:#f7f1dc;--muted:#b9c8bf;--blue:#16a8ba;--cyan:#54e5e5;--violet:#168d9b;--line:rgba(174,222,208,.2);--gold:#ffd28a}
+html{scroll-padding-top:90px}
+body{background:#061413;color:#f5f3e9;background-image:radial-gradient(ellipse at 50% 0%,#16413d 0,transparent 42%),radial-gradient(ellipse at 100% 42%,#3c210e55 0,transparent 30%),linear-gradient(180deg,#061a19,#07110f 55%,#061a19)}
+.topbar{background:rgba(4,27,27,.94);border-bottom:1px solid #7ac6bd30;box-shadow:0 8px 30px #0003}
+.nav{height:82px}
+.brand img{border-radius:13px;border-color:#4ad8d0;box-shadow:0 0 22px #20c4bb44}
+.brandname span{color:#70e7df}
+.navlinks{gap:20px}
+.navlinks a:hover{color:#ffce82}
+.nav-cta{border:1px solid #4bdad0;background:linear-gradient(110deg,#ffb84e,#f86d35 48%,#15d6d0);color:#10201d;box-shadow:0 0 25px #f49a4240}
+.nav-cta span{color:#092d2b}
+.menu-toggle{border-color:#4b9b9580}
+.hero{padding-bottom:54px}
+.hero-bg{inset:0 0 100px;background:linear-gradient(90deg,rgba(2,18,19,.72),rgba(2,18,19,.24) 55%,rgba(2,18,19,.7)),linear-gradient(0deg,#061413 0,transparent 43%),url('gameplay-preview.jpg') center 42%/cover no-repeat;filter:saturate(1.18)}
+.hero-bg:after{background:linear-gradient(180deg,rgba(2,18,19,.08),rgba(2,18,19,.13) 52%,#061413)}
+.hero-content{padding:74px 0 18px;max-width:780px}
+.eyebrow{border-color:#70dcd266;background:#092625d9;color:#e1fffa;border-radius:8px;letter-spacing:1px}
+.live-dot{background:#ffc15e;box-shadow:0 0 12px #ffb64d}
+h1{font-size:clamp(45px,8vw,94px);letter-spacing:-2.5px;line-height:.94;text-shadow:0 5px 32px #000}
+h1 .line2{background:linear-gradient(100deg,#fff2bd 0,#ffca7e 42%,#ff813f 72%,#56e9df 100%);-webkit-background-clip:text;background-clip:text}
+.lead{color:#e1e9dd;max-width:610px}
+.btn{border-radius:999px}
+.btn-primary{color:#12201b;background:linear-gradient(105deg,#ffbd55,#ff7a3c 47%,#21d8d0);border:1px solid #ffe0a0;box-shadow:0 8px 26px #ff8c3850}
+.btn-ghost{background:#06201ed9;border:1px solid #8bd8ca66;color:#f5f5e9}
+.hero-stats{gap:0;align-items:stretch}
+.stat{background:transparent;border:0;border-right:1px solid #c7d8ca40;border-radius:0;min-width:110px;padding:8px 18px}
+.stat:first-child{padding-left:0}
+.stat b{font-size:23px;color:#fff0c7}
+.stat span{color:#c4d5cd}
+.hero-logo{border-color:#54e5d6;box-shadow:0 0 30px #17c8c066}
+.gallery-wrap{margin-top:46px}
+.gallery-heading{margin-bottom:18px}
+.kicker{color:#6ce8df}
+h2{color:#fff1d1}
+.sub{color:#b8c9c0}
+.gallery{gap:15px}
+.shot{border:1px solid #68c8bc70;border-radius:13px;background:#0b2220;box-shadow:0 14px 34px #0008}
+.shot img{min-height:190px}
+.shot-label{border-color:#f7c87970;background:#071b1be8;color:#ffdfa2}
+.section{padding:78px 0}
+.section-head{margin-bottom:34px}
+.feature-grid{gap:16px}
+.feature{padding:24px 20px;border-radius:18px;border:1px solid #cba96566;background:linear-gradient(145deg,#d4b86a20,#0a1e1ceF 65%);box-shadow:inset 0 1px 0 #fff2b31c,0 14px 28px #0003;min-height:195px}
+.feature:nth-child(2),.feature:nth-child(4){border-color:#d6b76b77;background:linear-gradient(145deg,#d9b85c24,#0a1d1a 68%)}
+.feature:nth-child(3){border-color:#48d8d899;background:linear-gradient(145deg,#4ad8df2d,#0a1d1d 68%);box-shadow:inset 0 1px 0 #c1ffff22,0 0 25px #2cced21a}
+.feature-icon{width:56px;height:56px;border-radius:15px;color:#ffda8b;background:linear-gradient(145deg,#ffcf7530,#17312b);border:1px solid #e5c77b88;font-size:26px;box-shadow:0 0 20px #f6b64a16}
+.feature:nth-child(3) .feature-icon{color:#78f0ed;border-color:#5ce7e0a8;background:#2bcbd21a}
+.feature h3{color:#fff0c9;font-size:16px;letter-spacing:.4px}
+.feature p{color:#c0cdc3}
+.fps-strip{border:1px solid #54d8d080;border-radius:17px;background:linear-gradient(110deg,#0b2926,#10201c);box-shadow:0 12px 28px #0003}
+.fps-strip strong{color:#fff0c9}
+.fps-pills span{border-color:#e4bd6b88;background:#e4bd6b15;color:#ffe0a0}
+.ng-home-card,.download-band{border:1px solid #56c9bd70;border-radius:24px;background:linear-gradient(125deg,#163632e8,#0b1b1a 58%,#2d1b10);box-shadow:0 20px 50px #0005}
+.ng-home-mark{background:linear-gradient(145deg,#ffd176,#f47d3f,#42ded4);color:#10201c}
+.ng-label{color:#6ce8df}
+.ng-tags span{border-color:#e4bd6b66;background:#e4bd6b10;color:#f8ddb0}
+.download-inner{gap:35px}
+.download-panel{border:1px solid #d4b56d66;background:#071a19d9;border-radius:20px}
+.game{border-color:#7ac8bd4d;background:linear-gradient(145deg,#112c29,#0a1918);border-radius:15px}
+.game-icon{background:#d4b86a19}
+.game b{color:#fff0cc}
+.trust{color:#c7d4ca}
+.trust b{color:#69e2d8}
+.disclaimer{border-color:#7ac8bd30;color:#98b1a6}
+footer{background:#041110;border-top:1px solid #6cc9be35}
+.footer-social,.footer-inner{border-color:#6cc9be30}
+.social-title{color:#fff0c9}
+.footer-social a:hover,.footer-links a:hover{color:#6ce8df}
+dialog#imageLightbox{background:#071817;border:1px solid #63d8cc;border-radius:16px;box-shadow:0 0 55px #000b}
+.lightbox-top{color:#fff0c9}
+#lightboxClose{background:#102c29;color:#fff;border:1px solid #63d8cc;border-radius:9px}
+@media(max-width:900px){
+ .navlinks{gap:12px}
+ .navlinks a{font-size:11px}
+ .hero-logo{width:clamp(95px,16vw,150px);right:4%;top:130px}
+ .hero-content{max-width:75%}
+ .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+ .container{width:min(100% - 26px,1180px)}
+ .nav{height:70px}
+ .brand img{width:42px;height:42px}
+ .brandname{font-size:17px}
+ .nav-cta{font-size:10px;padding:10px 12px}
+ .menu-toggle{display:block}
+ .navlinks{display:none;position:absolute;top:70px;left:12px;right:12px;padding:15px;background:#071b1aF7;border:1px solid #6bc9bf55;border-radius:15px;box-shadow:0 18px 35px #0009;flex-direction:column;align-items:stretch;gap:0}
+ .navlinks.open{display:flex}
+ .navlinks a{font-size:13px;padding:12px;border-bottom:1px solid #ffffff0d}
+ .hero{padding-bottom:38px}
+ .hero-content{padding:54px 0 8px;max-width:100%}
+ .hero-logo{position:relative;display:block;top:auto;right:auto;width:76px;margin:20px 0 0 auto}
+ h1{font-size:clamp(42px,12vw,68px);letter-spacing:-1.8px}
+ .lead{font-size:14px;line-height:1.65;max-width:100%}
+ .hero-actions{gap:9px;margin-top:22px}
+ .btn{font-size:11px;padding:13px 16px}
+ .hero-stats{margin-top:22px}
+ .stat{min-width:0;flex:1;padding:7px 10px}
+ .stat b{font-size:18px}
+ .stat span{font-size:8px;letter-spacing:.3px}
+ .gallery-wrap{margin-top:30px}
+ .gallery-heading{display:block}
+ .gallery-heading .sub{margin-top:8px}
+ .gallery{grid-template-columns:1fr 1fr;gap:10px}
+ .gallery .shot:first-child{grid-column:1/-1}
+ .shot img{min-height:125px;max-height:210px}
+ .gallery .shot:first-child img{min-height:190px}
+ .section{padding:58px 0}
+ .section-head{margin-bottom:24px}
+ h2{font-size:clamp(25px,7vw,34px)}
+ .feature-grid{gap:11px}
+ .feature{padding:18px 14px;min-height:174px;border-radius:15px}
+ .feature-icon{width:46px;height:46px;margin-bottom:13px;font-size:22px}
+ .feature h3{font-size:13px}
+ .feature p{font-size:11px;line-height:1.6}
+ .fps-strip{padding:15px;gap:14px}
+ .download-inner{display:block}
+ .download-panel{margin-top:24px;padding:20px}
+ .game-grid{grid-template-columns:1fr 1fr}
+ .trust-row{grid-template-columns:1fr 1fr}
+ .footer-inner{gap:12px;flex-direction:column}
+}
+@media(max-width:380px){
+ .nav-cta{display:none}
+ .feature-grid{grid-template-columns:1fr 1fr}
+ .feature{padding:15px 11px}
+ .hero-actions .btn{width:100%}
+ .game-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="FPS BOOSTER home">
+      <img src="fps-booster-logo.png" alt="FPS BOOSTER logo">
+      <span class="brandname">FPS <span>BOOSTER</span><small>PLAY SMOOTHER</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="screenshots.html">Screenshots</a><a href="index.html#games">Games</a><a href="videos.html">NextGen SHAHBAJ</a><a href="download.html">Download</a><a href="index.html#official-socials">Official Social Media</a>
+    </nav>
+    <a class="nav-cta" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk" aria-label="Download FPS BOOSTER APK"><span>↓</span> DOWNLOAD APP</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="live-dot"></span> FPS TOOLS • GAMEPLAY • UPDATES</div>
+      <h1>UNLOCK <span class="line2">MAX FPS</span></h1>
+      <p class="lead">Explore FPS options, graphics tools and gaming updates in one place. Check real BGMI screenshots and find the right app version for your game.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary download-hero" id="downloadTopButton" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk">⬇ &nbsp; DOWNLOAD LATEST APK</a>
+        <a class="btn btn-ghost" href="screenshots.html">▣ &nbsp; EXPLORE SCREENSHOTS</a>
+        <a class="btn btn-ghost" href="features.html">VIEW FEATURES &nbsp; ↘</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>60–165</b><span>FPS OPTIONS*</span></div>
+        <div class="stat"><b>BGMI</b><span>INDIA VERSION</span></div>
+        <div class="stat"><b>Multi</b><span>REGIONAL VERSIONS</span></div>
+      </div>
+    </div>
+    <img class="hero-logo" src="fps-booster-logo.png" alt="FPS BOOSTER gaming logo" loading="eager">
+    <div class="gallery-wrap" id="screenshots">
+      <div class="gallery-heading"><div><div class="kicker">IN-GAME PREVIEWS</div><h2>See it in action.</h2></div><p class="sub">Real screenshots from the game and FPS BOOSTER settings.</p></div>
+      <div class="gallery">
+        <a class="shot image-preview" href="gameplay-preview.jpg" aria-label="Open screenshot preview"><img src="gameplay-preview.jpg" alt="BGMI gameplay screenshot" fetchpriority="high"><span class="shot-label">GAMEPLAY PREVIEW</span></a>
+        <a class="shot image-preview" href="bgmi-lobby.jpg" aria-label="Open screenshot preview"><img src="bgmi-lobby.jpg" alt="BGMI character lobby screenshot" loading="lazy"><span class="shot-label">BGMI LOBBY</span></a>
+        <a class="shot image-preview" href="performance-165fps.jpg" aria-label="Open screenshot preview"><img src="performance-165fps.jpg" alt="Performance panel showing 165 FPS" loading="lazy"><span class="shot-label">165 FPS DISPLAY</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head"><div class="kicker">MADE FOR GAMERS</div><h2>Everything you need, clearly organised.</h2><p class="sub">A focused experience for checking supported FPS settings, graphics options and gaming content—without clutter.</p></div>
+    <div class="feature-grid">
+      <article class="feature"><div class="feature-icon">◉</div><h3>FPS OPTIONS</h3><p>Review available frame-rate choices supported by the app, device and game build.</p></article>
+      <article class="feature"><div class="feature-icon">⚙</div><h3>GFX TOOLS</h3><p>Find graphics configuration options and supported visual settings in one place.</p></article>
+      <article class="feature"><div class="feature-icon">ϟ</div><h3>GAMEPLAY FOCUS</h3><p>Simple navigation designed to make important app features easy to find.</p></article>
+      <article class="feature"><div class="feature-icon">↻</div><h3>GAMING UPDATES</h3><p>Explore available posts about upcoming skins, events and game updates.</p></article>
+    </div>
+    <div class="fps-strip"><div><strong>FPS OPTIONS AT A GLANCE</strong><p>*Actual availability depends on device and game version.</p></div><div class="fps-pills"><span>60</span><span>90</span><span>120</span><span>144</span><span>165</span></div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head"><div class="kicker">SETTINGS PREVIEW</div><h2>Built around the real interface.</h2><p class="sub">Preview graphics and frame-rate settings before opening the app.</p></div>
+    <div class="gallery">
+      <a class="shot image-preview" href="fps-settings-165.jpg" aria-label="Open screenshot preview"><img src="fps-settings-165.jpg" alt="Advanced frame rate settings preview" loading="lazy"><span class="shot-label">FRAME RATE SETTINGS</span></a>
+      <a class="shot image-preview" href="graphics-style-settings.jpg" aria-label="Open screenshot preview"><img src="graphics-style-settings.jpg" alt="Graphics style settings preview" loading="lazy"><span class="shot-label">GRAPHICS STYLE</span></a>
+      <a class="shot image-preview" href="graphics-settings.jpg" aria-label="Open screenshot preview"><img src="graphics-settings.jpg" alt="Graphics settings preview" loading="lazy"><span class="shot-label">GRAPHICS OPTIONS</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section nextgen-preview" id="nextgen" style="padding-top:0">
+  <div class="container">
+    <div class="section-head"><div class="kicker">CREATOR HUB</div><h2>NextGen SHAHBAJ</h2><p class="sub">Gaming videos, YouTube uploads, Shorts, posts and update highlights—all in one place.</p></div>
+    <div class="ng-home-card">
+      <div class="ng-home-mark">NG<span>+</span></div>
+      <div class="ng-home-copy"><div class="ng-label">NEXTGEN CREATOR SPACE</div><h3>Watch. Explore. Stay updated.</h3><p>Browse gaming videos, quick Shorts, creator posts and YouTube content from one dedicated hub.</p><div class="ng-tags"><span>▶ Videos</span><span>▣ Shorts</span><span>✎ Posts</span><span>◎ YouTube</span></div></div>
+      <a class="btn btn-primary" href="videos.html">OPEN NEXTGEN SHAHBAJ ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="download-section" style="padding-top:0">
+  <div class="container">
+    <div class="download-band">
+      <div class="download-inner">
+        <div><div class="kicker">READY TO PLAY?</div><h2>Get <span>FPS BOOSTER.</span></h2><p class="sub">Download the latest published APK and explore supported FPS tools, graphics options and game updates.</p></div>
+        <div class="download-panel">
+          <div class="eyebrow" style="margin-bottom:15px"><span class="live-dot"></span> APK DOWNLOAD</div>
+          <a class="btn btn-primary" id="downloadButton" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk">⬇ &nbsp; DOWNLOAD LATEST APK</a>
+          <div class="download-meta"><span>Android APK</span><span>•</span><span>Official project link</span></div>
+          <p style="color:#8195ae;font-size:10px;line-height:1.5;margin:13px 0 0">Only install APK files from sources you trust. Check the release details before installing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="games" style="padding-top:15px">
+  <div class="container">
+    <div class="section-head"><div class="kicker">SUPPORTED GAME VERSIONS</div><h2>Choose your game edition.</h2><p class="sub">Support depends on the app release, device, game build and available configuration.</p></div>
+    <div class="game-grid">
+      <div class="game"><span class="game-icon">🇮🇳</span><div><b>BGMI</b><small>India version</small></div></div>
+      <div class="game"><span class="game-icon">🌐</span><div><b>PUBG MOBILE</b><small>Global version</small></div></div>
+      <div class="game"><span class="game-icon">🇰🇷</span><div><b>PUBG MOBILE KR</b><small>Korea version</small></div></div>
+      <div class="game"><span class="game-icon">🌏</span><div><b>Regional editions</b><small>VN, TW and other supported builds</small></div></div>
+    </div>
+    <div class="trust-row"><div class="trust"><b>✓</b> Clear app information</div><div class="trust"><b>↻</b> Release-based updates</div><div class="trust"><b>▣</b> Real screenshots</div><div class="trust"><b>⚙</b> Device-dependent settings</div></div>
+    <div class="disclaimer">FPS BOOSTER is an independent project and is not affiliated with or endorsed by KRAFTON, Tencent or PUBG MOBILE. Game names and images are used to identify the relevant games. FPS performance and supported options are not guaranteed and vary by device, software and game version.</div>
+  </div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+  <div class="footer-social" id="official-socials" aria-label="Official social media links">
+    <div class="social-title">Official Socials</div>
+    <a href="https://t.me/+tiUqklwHuIZmNmFl"><span class="social-dot"></span> Telegram</a>
+    <a href="https://www.instagram.com/wildsoulfury?exln=MWRqcXBxenQ1eHJsNw=="><span class="social-dot"></span> Instagram</a>
+    <a href="https://youtube.com/@wildsoulfury?si=kxrikDOzRGtpbMvI"><span class="social-dot"></span> YouTube</a>
+  </div>
+</div>
+<div class="container footer-inner"><div>© 2026 FPS BOOSTER. All rights reserved.</div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="screenshots.html">Screenshots</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="videos.html">NextGen SHAHBAJ</a><a href="events.html">Gaming Updates</a></div></div></footer>
+<dialog id="imageLightbox" aria-label="Screenshot preview">
+  <div class="lightbox-top"><span>SCREENSHOT PREVIEW</span><button id="lightboxClose" type="button" aria-label="Close screenshot preview">×</button></div>
+  <img id="lightboxImage" src="" alt="Expanded screenshot preview">
+</dialog>
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navlinks=document.getElementById('navlinks');
+menuToggle.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+// Internal page links intentionally use the current tab, preserving normal browser Back navigation.
+const imageLightbox=document.getElementById('imageLightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+const lightboxClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.image-preview').forEach(link=>{
+  link.addEventListener('click',event=>{
+    event.preventDefault();
+    const img=link.querySelector('img');
+    lightboxImage.src=img.currentSrc||img.src;
+    lightboxImage.alt=img.alt||'Screenshot preview';
+    if(typeof imageLightbox.showModal==='function') imageLightbox.showModal();
+  });
+});
+lightboxClose.addEventListener('click',()=>imageLightbox.close());
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape' && imageLightbox.open) imageLightbox.close();
+});
+
+imageLightbox.addEventListener('click',event=>{if(event.target===imageLightbox) imageLightbox.close();});
+imageLightbox.addEventListener('close',()=>{lightboxImage.src='';});
+
+</script>
+</body>
+</html>
