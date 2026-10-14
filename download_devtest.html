@@ -51,6 +51,23 @@ header{background:#fff;border-bottom:1px solid #e8eaed;backdrop-filter:none;box-
 footer{border-top:1px solid #e8eaed;color:#5f6368}.footerlinks a:hover{color:#1a73e8}
 @media(max-width:600px){.wrap{width:calc(100% - 24px)}.nav{flex-direction:row;align-items:center;gap:10px;min-height:62px}.navlinks{gap:12px;font-size:12px;justify-content:flex-end}.navlinks a:not(.nav-cta){display:none}.grid{display:flex}.game-card{grid-template-columns:68px minmax(0,1fr) 38px;padding:16px 2px;gap:0 13px;min-height:112px}.game-logo{width:66px;height:66px;flex-basis:66px;border-radius:16px}.game-title h3{font-size:17px}.region{font-size:13px}.game-card:after{width:36px;height:36px}.game-card.selected .game-logo{width:78px;height:78px;flex-basis:78px}.booster{grid-template-columns:60px 1fr;padding:20px 2px;gap:13px}.booster-logo{width:60px;height:60px}.booster-cta{grid-column:1/-1;max-width:none}.booster ul{display:block}.booster ul li{margin:4px 0}.footer{flex-direction:column}}
 
+
+/* APNA FPS BOOSTER only: Play Store-style screenshot gallery and About this app link */
+.booster-app-card .app-detail-extra{display:none;grid-column:1/-1;min-width:0;width:100%;}
+.booster-app-card.selected .app-detail-extra{display:block;}
+.booster-app-card .app-detail-heading{margin:18px 0 10px;font-size:18px;line-height:1.3;font-weight:700;color:#202124;}
+.booster-app-card .booster-gallery{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 14px;margin:0 -2px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;}
+.booster-app-card .booster-gallery::-webkit-scrollbar{height:4px;}
+.booster-app-card .booster-gallery::-webkit-scrollbar-thumb{background:#dadce0;border-radius:8px;}
+.booster-app-card .booster-shot{flex:0 0 min(72%,260px);min-width:0;margin:0;scroll-snap-align:start;}
+.booster-app-card .booster-shot img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#f1f3f4;border:1px solid #e8eaed;box-shadow:0 1px 3px #00000012;}
+.booster-app-card .booster-shot figcaption{font-size:12px;color:#5f6368;margin:7px 2px 0;}
+.booster-app-card .about-app-link{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;padding:17px 0 5px;border-top:1px solid #eceff1;color:#202124;text-decoration:none;}
+.booster-app-card .about-app-link strong{display:block;font-size:21px;font-weight:700;line-height:1.25;}
+.booster-app-card .about-app-link small{display:block;margin-top:5px;font-size:13px;color:#5f6368;}
+.booster-app-card .about-arrow{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#f1f3f4;color:#5f6368;font-size:23px;}
+.booster-app-card .about-app-link:hover .about-arrow{background:#e8f0fe;color:#1967d2;}
+@media(min-width:700px){.booster-app-card .booster-shot{flex-basis:220px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -83,6 +100,19 @@ footer{border-top:1px solid #e8eaed;color:#5f6368}.footerlinks a:hover{color:#1a
 <p class="game-desc">Download APNA FPS BOOSTER version 5.1.0 for Android from the project’s GitHub release.</p>
 <a class="btn btn-download" href="https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/FPS.Booster_5.1.0.apk" target="_blank" rel="noopener noreferrer" aria-label="Download APNA FPS BOOSTER version 5.1.0 APK">↓ Download APK</a>
 <p class="mini">APK download · Android · Version 5.1.0</p>
+
+<div class="app-detail-extra booster-screenshots" aria-label="APNA FPS BOOSTER screenshots">
+  <h4 class="app-detail-heading">Screenshots</h4>
+  <div class="booster-gallery" role="list" aria-label="App screenshots">
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="bgmi-lobby.jpg" alt="BGMI lobby preview" onerror="this.onerror=null;this.src='./bgmi-lobby.jpg'"><figcaption>BGMI Lobby</figcaption></figure>
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="fps-settings-165.jpg" alt="165 FPS settings preview" onerror="this.onerror=null;this.src='./fps-settings-165.jpg'"><figcaption>FPS Settings</figcaption></figure>
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="gameplay-preview.jpg" alt="Gameplay preview" onerror="this.onerror=null;this.src='./gameplay-preview.jpg'"><figcaption>Gameplay Preview</figcaption></figure>
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="graphics-settings.jpg" alt="Graphics settings preview" onerror="this.onerror=null;this.src='./graphics-settings.jpg'"><figcaption>Graphics Settings</figcaption></figure>
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="graphics-style-settings.jpg" alt="Graphics style settings preview" onerror="this.onerror=null;this.src='./graphics-style-settings.jpg'"><figcaption>Graphics Style</figcaption></figure>
+    <figure class="booster-shot" role="listitem"><img loading="lazy" src="performance-165fps.jpg" alt="165 FPS performance preview" onerror="this.onerror=null;this.src='./performance-165fps.jpg'"><figcaption>165 FPS Performance</figcaption></figure>
+  </div>
+  <a class="about-app-link" href="https://apnafpsbooster.com/features" aria-label="About APNA FPS BOOSTER"> <span><strong>About this app</strong><small>Features, details and supported options</small></span><span class="about-arrow" aria-hidden="true">➜</span></a>
+</div>
 </article>
 
 <article class="game-card">
