@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://apnafpsbooster.com/</loc></url>
-  <url><loc>https://apnafpsbooster.com/screenshots.html</loc></url>
-  <url><loc>https://apnafpsbooster.com/features.html</loc></url>
-  <url><loc>https://apnafpsbooster.com/download.html</loc></url>
-  <url><loc>https://apnafpsbooster.com/videos.html</loc></url>
-  <url><loc>https://apnafpsbooster.com/events.html</loc></url>
+  <url><loc>https://apnafpsbooster.com/screenshots</loc></url>
+  <url><loc>https://apnafpsbooster.com/features</loc></url>
+  <url><loc>https://apnafpsbooster.com/download</loc></url>
+  <url><loc>https://apnafpsbooster.com/videos</loc></url>
 </urlset>
