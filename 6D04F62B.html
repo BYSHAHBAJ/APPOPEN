@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="applicable-device" content="mobile">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="yes" name="mobile-web-app-capable">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="robots" content="all">
+	<meta name="author" content="" />
+	<meta name="Copyright" content="" />
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
+	<title></title>
+	<link rel="stylesheet" type="text/css"
+		href="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/OverlayScrollbars/1.10.0/overlayScrollbars.min.css">
+	<link rel="stylesheet"
+		href="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/animate.min/animate.min.css">
+	<link rel="stylesheet"
+		href="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/Swiper/5.4.5/swiper.min.css">
+	<link href="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/videojs/video-js.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css?v=1.31">
+	<!-- è°·æ­å­ä½ -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Noto+Sans+TC&family=Roboto+Condensed&family=Noto+Sans+Arabic&display=swap"
+		rel="stylesheet">
+	<script>
+		//å±å¹éåº
+		var rem = 1;
+		var fontSize;
+		(function (win, doc) {
+			if (!win.addEventListener) return;
+			var html = document.documentElement;
+			function setFont() {
+				var win = window;
+				var doc = document;
+				var html = doc.documentElement;
+				var ww = win.innerWidth && html.clientWidth ? Math.min(win.innerWidth, html.clientWidth) : win.innerWidth || html.clientWidth || (doc.body && doc.body.clientWidth);
+				var wh = win.innerHeight && html.clientHeight ? Math.min(win.innerHeight, html.clientHeight) : win.innerHeight || html.clientHeight || (doc.body && doc.body.clientHeight);
+
+				if (ww / wh > 1334 / 720) {
+					rem = wh / 780;
+				} else {
+					rem = ww / 1334;
+				}
+				fontSize = rem * 100;
+				html.style.fontSize = fontSize + "px";
+				var g = +win.getComputedStyle(html).fontSize.replace("px", "");
+				if (g !== fontSize) {
+					html.style.fontSize = (fontSize * fontSize) / g + "px"
+				}
+			}
+			function setFontLater() {
+				setTimeout(function () {
+					setFont();
+				}, 300);
+			}
+
+			function resetFont() {
+				setFont();
+				setFontLater();
+			}
+			resetFont();
+			doc.addEventListener("DOMContentLoaded", resetFont, false);
+			win.addEventListener("resize", resetFont, false);
+			win.addEventListener("load", resetFont, false);
+		})(window, document);
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DXNZSWT3Q"></script>
+	<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/milo/milo.es5.js"></script>
+	<script async src="https://www.pubgmobile.com/act/a20200310tag/js/ctag-1.0.3min.js"></script>
+
+	<script>
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) { return pair[1]; }
+			}
+			return (false);
+		}
+
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayerCustom = window.dataLayerCustom || [];
+		function gtag() {
+			dataLayer.push(arguments);
+			dataLayerCustom.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag("config", "G-2DXNZSWT3Q", { "user_id": getQueryVariable("openid") });
+		gtag('custom', {
+			siteId: 917015
+		});
+
+		function gtagReport(click_event) {
+			gtag('event', click_event, {
+				'event_category': 'b94d27b9934d3e08',
+			})
+		}
+	</script>
+</head>
+
+<body>
+	<div class="total">
+		<div class="loading">
+			<div class="load_content flex">
+			   <div class="load_img"></div>
+				<div class="load_text"><span>0</span>%</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="main">
+				
+				<div class="main_lfwrap1">
+					<div class="main_lf">
+						<div id="peot" class="peot"></div>
+						<div class="tipwrap pa tip1">
+                            <div class="tip agb upp">
+                                <p data-lang="lang11"></p>
+                            </div>
+                            <!-- å¼åæ³¨æ è¿éè¿½å ç±»å zs:ç´«è² fs:ç²è² hs:çº¢è² -->
+                            <div class="imgwrap hs flex pa" data-col="hs" data-num="1" data-src="3" data-reverse="reverse4" data-offtop="160" data-offleft="123" data-lan="rew2"><img src="./long_cache_30d/images/GSAKWDQA/icon/3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tipwrap pa tip2">
+                            <div class="tip agb upp">
+                                <p data-lang="lang10"></p>
+                            </div>
+                            <!-- å¼åæ³¨æ è¿éè¿½å ç±»å zs:ç´«è² fs:ç²è² hs:çº¢è² -->
+                            <div class="imgwrap zs flex pa" data-col="zs" data-num="1" data-src="32" data-lan="rew9" data-offtop="0" data-reverse="reverse6" data-offleft="260"><img src="./long_cache_30d/images/GSAKWDQA/icon/32.png" alt="">
+                            </div>
+                        </div>
+                        <div class="tip3 agb upp pa">
+                            <p data-lang="lang7"></p>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="rew pa">
+				<div class="main">
+					<!-- <div class="mask-page">
+						<div></div>
+						<div></div>
+					</div> -->
+					<!-- å¼åæ³¨æ è¿éè¿½å ç±»å fir:ç¬¬ä¸é¨å sec-1:ç¬¬äºé¨å(è´­ä¹°æ®é) sec-2:ç¬¬äºé¨å(è´­ä¹°ç²¾è±) sec-3:ç¬¬äºé¨å(è´­ä¹°1-50)-->
+					<div id="main-page" class="cont fir">
+						<div class="titwrap flex">
+                            <div class="flex">
+                                <a href="javascript:;" onclick="gtagReport('btn_rul')" class="btn_rul"></a>
+                                <div class="datewrap">
+                                    <p class="date"></p>
+                                    <p class="agb" data-lang="lang1"></p>
+                                </div>
+                            </div>
+                            <p class="tit1 agb" data-lang="lang2"></p>
+						</div>
+						<div class="first">
+							<div class="bg_first">
+								<div class="descwrap">
+									<div class="decnor">
+										<div class="xzwrap flex">
+											<div class="xz"></div>
+											<p class="desc_txt upp agb" data-lang="lang137"></p>
+										</div>
+									</div>
+									<a href="javascript:;" onclick="gtagReport('btn_video')" class="btn_video agb flex">
+										<div></div>
+										<p><span data-lang="lang6"></span><i></i></p>
+									</a>
+								</div>
+								<!-- å¼åæ³¨æ è¿éè¿½å ç±»ç® dotï¼çº¢ç¹ -->
+								<div class="xqwrap agb flex dot">
+									<p><span data-lang="lang138"></span></p>
+								</div>
+								<div class="prewrap flex">
+									<div class="get_bot get1">
+										<div class="get_bott flex">
+											<p data-lang="lang139"></p>
+											<a href="javascript:TGDialogS('popDet1');" onclick="gtagReport('btn_more')"
+												class="btn_more dot"><span data-lang="lang87"></span><i></i></a>
+										</div>
+										<div class="rewscro">
+											<ul class="flex">
+												<li class="flex">
+													<div class="imgwrap hs" data-col="hs" data-num="360" data-src="30"
+														data-lan="rew18" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/30.png"
+																alt="">
+															<p class="num">x360</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap hs" data-col="hs" data-num="1" data-src="2"
+														data-lan="rew1" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/2.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap hs" data-col="hs" data-num="1" data-src="1"
+														data-lan="rew0" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/1.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap zs" data-col="zs" data-num="1" data-src="32"
+														data-lan="rew9" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/32.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="7"
+														data-lan="rew7" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/7.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="21"
+														data-lan="rew8" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/21.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="4"
+														data-lan="rew3" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/4.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="5"
+														data-lan="rew4" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/5.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+									<div class="get_bot get2">
+										<div class="get_bott flex">
+											<p data-lang="lang141"></p>
+											<a href="javascript:TGDialogS('popDet2');" onclick="gtagReport('btn_more')"
+												class="btn_more dot"><span data-lang="lang87"></span><i></i></a>
+										</div>
+										<div class="rewscro">
+											<ul class="flex">
+												<li class="flex">
+													<div class="imgwrap hs" data-col="hs" data-num="720" data-src="30"
+														data-lan="rew18" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/30.png"
+																alt="">
+															<p class="num">x720</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap hs" data-col="hs" data-num="1" data-src="3"
+														data-lan="rew2" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/3.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="19"
+														data-lan="rew5" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/19.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="20"
+														data-lan="rew37_1" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/20.png?v=1.0"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="10"
+														data-lan="rew11" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/10.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="43"
+														data-lan="rew38" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/43.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="22"
+														data-lan="rew8_1" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/22.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+												<li class="flex">
+													<div class="imgwrap fs" data-col="fs" data-num="1" data-src="18"
+														data-lan="rew6" data-offtop="8">
+														<div class="inn"><img
+																src="./long_cache_30d/images/GSAKWDQA/icon/18.png"
+																alt="">
+															<p class="num">x1</p>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å jxz:è¿è¡ä¸­ wgm:æªè´­ä¹°-->
+							<div class="buy jxz">
+								<div class="pretipwrap flex">
+									<div>
+										<!-- å¼åæ³¨æ è¿éè¿½å ç±»å dotï¼çº¢ç¹ -->
+										<a href="javascript:TGDialogS('popSure2');" onclick="gtagReport('btn_pretip')"
+											class="btn_pretip agb dot"><span data-lang="lang109"></span></a>
+									</div>
+								</div>
+
+								<a href="javascript:;" onclick="gtagReport('btn_pre')" class="btn_pre flex">
+									<p data-lang="lang13"></p>
+								</a>
+								<a href="javascript:;" onclick="gtagReport('btn_wgm')" class="btn_wgm flex">
+									<p data-lang="lang36"></p>
+								</a>
+
+								<a href="javascript:;" onclick="gtagReport('btn_share')" class="btn_share pa"></a>
+							</div>
+						</div>
+						<div class="second">
+							<a href="javascript:;" onclick="gtagReport('btn_share')" class="btn_share pa"></a>
+							<div class="secwrap secwrap_1">
+								<div class="sec_rew">
+									<p class="sec_rewt upp agb"><span data-lang="lang42"></span></p>
+									<div class="sec_rewb flex">
+										<div class="imgwrap xz" data-col="zs clock" data-num="1" data-src="23"
+											data-lan="rew35" data-offleft="5" data-offtop="10"><img
+												src="./long_cache_30d/images/GSAKWDQA/xz_12.png" alt="">
+										</div>
+										<i class="rew_add"></i>
+										<ul class="flex">
+                                            <li class="flex">
+												<div class="imgwrap zs clock flex" data-col="zs clock" data-num="1" data-src="53"
+													data-lan="rew66" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/53.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="1" data-src="12"
+													data-lan="rew17" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/12.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+
+											</li>
+											<li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="1" data-src="13"
+													data-lan="rew23" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap ls flex clock" data-col="ls clock" data-num="1"
+													data-src="14" data-lan="rew25" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="secwrap secwrap_2">
+								<div class="sec_rew">
+									<p class="sec_rewt upp agb"><span data-lang="lang42"></span></p>
+									<div class="sec_rewb flex">
+										<div class="imgwrap xz" data-col="zs" data-num="1" data-src="24"
+											data-lan="rew36" data-offleft="5" data-offtop="10"><img
+												src="./long_cache_30d/images/GSAKWDQA/xz_22.png" alt="">
+										</div>
+										<i class="rew_add"></i>
+										<ul class="flex">
+                                            <li class="flex">
+												<div class="imgwrap zs clock flex" data-col="zs clock" data-num="1" data-src="53"
+													data-lan="rew66" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/53.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="2" data-src="12"
+													data-lan="rew17" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/12.png" alt="">
+														<p class="num">x2</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="2" data-src="13"
+													data-lan="rew23" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+														<p class="num">x2</p>
+													</div>
+												</div>
+											</li>
+
+											<li class="flex">
+												<div class="imgwrap ls flex clock" data-col="ls clock" data-num="1"
+													data-src="14" data-lan="rew25" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sec_rewbot flex">
+									<div class="ewrew">
+										<p class="ewrew_t upp agb"><span data-lang="lang43"></span></p>
+										<ul class="flex">
+											<li class="flex">
+												<div class="imgwrap fs flex" data-col="fs" data-num="1" data-src="11"
+													data-lan="rew14" data-reverse="reverse7" data-offtop="-225">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/11.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap fs flex" data-col="fs" data-num="1" data-src="15"
+													data-lan="rew13">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/15.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<!-- <li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="1" data-src="16"
+													data-lan="rew16">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/16.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li> -->
+											<li class="flex">
+												<div class="imgwrap fs flex" data-col="fs" data-num="1" data-src="17"
+													data-lan="rew15">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/17.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="secwrap secwrap_3">
+								<div class="sec_rew">
+									<p class="sec_rewt upp agb"><span data-lang="lang42"></span></p>
+									<div class="sec_rewb flex">
+										<div class="imgwrap xz" data-col="zs clock" data-num="1" data-src="48"
+											data-lan="rew35_1" data-offleft="5" data-offtop="10"><img
+												src="./long_cache_30d/images/GSAKWDQA/xz_32.png" alt="">
+										</div>
+										<i class="rew_add"></i>
+										<ul class="flex">
+                                            <li class="flex">
+												<div class="imgwrap zs clock flex" data-col="zs clock" data-num="1" data-src="53"
+													data-lan="rew66" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/53.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap zs flex" data-col="zs" data-num="1" data-src="13"
+													data-lan="rew23" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+											<li class="flex">
+												<div class="imgwrap ls clock flex" data-col="ls clock" data-num="1"
+													data-src="14" data-lan="rew25" data-offleft="20" data-offtop="10">
+													<div class="inn"><img
+															src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+														<p class="num">x1</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="secdes agb flex">
+								<p data-lang="lang60"></p>
+								<p data-lang="lang61"></p>
+								<p data-lang="lang62"></p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swipercont2 pa">
+				<div class="main">
+					<!-- <div class="swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swip1">
+                            <div class="swiper-main">
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide swip2">
+                            <div class="swiper-main">
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide swip3">
+                            <div class="swiper-main">
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide swip4">
+
+                        </div>
+
+                    </div>
+                </div> -->
+				</div>
+			</div>
+			<div>
+				<div class="info reverse7">
+					<div class="gif1">
+						<div class="gifwrap flex">
+							<img src="./long_cache_30d/images/GSAKWDQA/wd.gif?v=1.01" alt="">
+						</div>
+					</div>
+					<div class="gif2">
+						<!-- <img src="./long_cache_30d/images/GSAKWDQA/hb.gif" alt=""> -->
+					</div>
+					<div class="info_top flex">
+						<div class="imgwrap zs flex"><img src="./long_cache_30d/images/GSAKWDQA/icon/1.png" alt="">
+							<p class="num">1</p>
+						</div>
+						<p class="info_name">paint</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- éç¨å¼¹çª -->
+		<div class="pop pop-comm" id="popComm">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p id="pop-text" data-lang="lang38"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- éç¨å¼¹çª -->
+		<div class="pop pop-comm" id="popComm2">
+			<!-- <a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a> -->
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p id="pop-text2" data-lang="lang99"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:goToB();" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- ä½é¢ä¸è¶³å¼¹çª -->
+		<div class="pop pop-comm" id="popComm3">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p data-lang="lang39"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:addUC();" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- æå¼å¼¹çª -->
+		<div class="pop pop-gui" id="popGui">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang153"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont">
+					<div class="swip">
+                        <div class="swiper swiper1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+									<div class="swi-inn flex">
+										<div class="imgwrap">
+											<div class="inn"><img src="./long_cache_30d/images/GSAKWDQA/gui1.png" alt=""><p><span data-lang="lang155"></span></p></div>
+										</div>
+										<div class="imgwrap">
+											<div class="inn"><img src="./long_cache_30d/images/GSAKWDQA/gui2.png" alt=""><p><span data-lang="lang156"></span></p></div>
+										</div>
+									</div>
+                                </div>
+								 <div class="swiper-slide flex gui2">
+									<div class="swi-inn flex">
+										<div class="imgwrap">
+											<div class="inn"><img src="./long_cache_30d/images/GSAKWDQA/gui3.png" alt=""></div>
+											
+										</div>
+										<p class="gui2_txt"><span data-lang="lang157"></span></p>
+									</div>
+                                </div>
+								 <div class="swiper-slide">
+									<div class="swi-inn flex">
+										<div class="imgwrap">
+											<div class="inn"><img src="./long_cache_30d/images/GSAKWDQA/gui4.png" alt=""><p><span data-lang="lang158"></span></p></div>
+											
+										</div>
+										<div class="imgwrap">
+											<div class="inn"><img src="./long_cache_30d/images/GSAKWDQA/gui5.png?v=1.0" alt=""><p><span data-lang="lang159"></span></p></div>
+											
+										</div>
+									</div>
+                                </div>
+                            </div>
+                            <div class="swip_pa">
+                                <div class="swiper-pagination"></div><!--åé¡µå¨ãå¦ææ¾ç½®å¨swiperå¤é¢ï¼éè¦èªå®ä¹æ ·å¼ã-->
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div><!--å·¦ç®­å¤´ãå¦ææ¾ç½®å¨swiperå¤é¢ï¼éè¦èªå®ä¹æ ·å¼ã-->
+                        <div class="swiper-button-next"></div><!--å³ç®­å¤´ãå¦ææ¾ç½®å¨swiperå¤é¢ï¼éè¦èªå®ä¹æ ·å¼ã-->
+                    </div>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- æç¤ºå¼¹çª -->
+		<div class="pop pop-err" id="popErr">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p data-lang="lang81"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- æç¤ºå¼¹çª -->
+		<div class="pop pop-suc" id="popSuc">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p data-lang="lang40"></p>
+					<p class="js-last-buy-yes" data-lang="lang114"></p>
+					<p class="js-last-buy-no" data-lang="lang115"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- è´­ä¹°å¼¹çª -->
+		<div class="pop pop-sure" id="popSure">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<p id="surePrice" data-lang="lang38"></p>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:closeDialog();" onclick="gtagReport('pop-cancel')" class="pop-cancel flex">
+						<p data-lang="lang80"></p>
+					</a>
+					<a href="javascript:buy();" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- è´­ä¹°å¼¹çª -->
+		<div class="pop pop2 pop-sure2" id="popSure2">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<div>
+						<p data-lang="lang105" id="popsure2txt"></p>
+						<p data-lang="lang109" class="agb"></p>
+						<p data-lang="lang120"></p>
+					</div>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:closeDialog();" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- è§åå¼¹çª -->
+		<div class="pop pop2 pop-ruler" id="popRuler">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang21"></p>
+			</div>
+			<div class="pop-contwrap">
+				<ul class="ruler-ul">
+					<!-- <li data-lang="lang21" class="pretit1 agb"></li> -->
+					<li data-lang="lang22"></li>
+					<li data-lang="lang23"></li>
+					<li data-lang="lang24"></li>
+					<li data-lang="lang25"></li>
+					<li data-lang="lang26"></li>
+					<li data-lang="lang109" class="pretit2 agb"></li>
+				</ul>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- è¯¦æé¡µ -->
+		<div class="pop pop-det" id="popDet1">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang140"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶ -->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/33.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew12"></p>
+						</li>
+                        <li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/52.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew12_1"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/26.png" alt="">
+								<div class="num flex">
+									<p>X2</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew22"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/41.png" alt="">
+								<div class="num flex long">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew39"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/25.png" alt="">
+								<div class="num flex long">
+									<p>X340</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew19"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/27.png" alt="">
+								<div class="num flex">
+									<p>X2</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew20"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/9.png" alt="">
+								<div class="num flex">
+									<p>X3</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew21"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+								<div class="num flex long">
+									<p>X36</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew23"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/44.png" alt="">
+								<div class="num flex long">
+									<p>X18</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew24"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/38.png" alt="">
+								<div class="num flex">
+									<p>X3</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew32"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/39.png" alt="">
+								<div class="num flex">
+									<p>X3</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew33"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls clock">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+								<div class="num flex">
+									<p>X5</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew25"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/29.png" alt="">
+								<div class="num flex long">
+									<p>X205</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew27"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/42.png" alt="">
+								<div class="num flex long">
+									<p>X1000</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew28"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/35.png" alt="">
+								<div class="num flex">
+									<p>X3</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew29"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/28.png" alt="">
+								<div class="num flex long">
+									<p>X7500</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew26"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/36.png" alt="">
+								<div class="num flex">
+									<p>X4</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew30"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/37.png" alt="">
+								<div class="num flex long">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew31"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/40.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew34"></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- è¯¦æé¡µ -->
+		<div class="pop pop-det" id="popDet2">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang89"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<div class="elitwrap">
+					<p class="rew_txt" data-lang="lang143"></p>
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs new">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/49.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew57"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/15.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew13"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/11.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew14"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/17.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew15"></p>
+						</li>
+					</ul>
+					</div>
+
+					<p class="rew_txt" data-lang="lang142"></p>
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/34.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew10"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/26.png" alt="">
+								<div class="num flex">
+									<p>X4</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew22"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/41.png" alt="">
+								<div class="num flex long">
+									<p>X12</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew39"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/25.png" alt="">
+								<div class="num flex long">
+									<p>X650</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew19"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/27.png" alt="">
+								<div class="num flex">
+									<p>X5</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew20"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/9.png" alt="">
+								<div class="num flex">
+									<p>X5</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew21"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+								<div class="num flex long">
+									<p>X66</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew23"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/44.png" alt="">
+								<div class="num flex long">
+									<p>X36</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew24"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/38.png" alt="">
+								<div class="num flex">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew32"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/39.png" alt="">
+								<div class="num flex">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew33"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls clock">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+								<div class="num flex">
+									<p>X9</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew25"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/29.png" alt="">
+								<div class="num flex long">
+									<p>X385</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew27"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/42.png" alt="">
+								<div class="num flex long">
+									<p>X4000</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew28"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/35.png" alt="">
+								<div class="num flex">
+									<p>X2</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew29"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/28.png" alt="">
+								<div class="num flex long">
+									<p>X15000</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew26"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/36.png" alt="">
+								<div class="num flex">
+									<p>X8</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew30"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/37.png" alt="">
+								<div class="num flex long">
+									<p>X12</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew31"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/40.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew34"></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- è¯¦æé¡µ -->
+		<div class="pop pop-det" id="popDet3">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang89"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<div class="elitwrap">
+					<p class="rew_txt" data-lang="lang143"></p>
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex hs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/30.png" alt="">
+								<div class="num flex long">
+									<p>X660</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew18"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs new">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/49.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew57"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/15.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew13"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/11.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew14"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/17.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew15"></p>
+						</li>
+					</ul>
+					</div>
+
+					<p class="rew_txt" data-lang="lang142"></p>
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶ -->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/33.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew12"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/26.png" alt="">
+								<div class="num flex">
+									<p>X4</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew22"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/41.png" alt="">
+								<div class="num flex long">
+									<p>X12</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew39"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/25.png" alt="">
+								<div class="num flex long">
+									<p>X650</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew19"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/27.png" alt="">
+								<div class="num flex">
+									<p>X5</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew20"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/9.png" alt="">
+								<div class="num flex">
+									<p>X5</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew21"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+								<div class="num flex long">
+									<p>X66</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew23"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/44.png" alt="">
+								<div class="num flex long">
+									<p>X36</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew24"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/38.png" alt="">
+								<div class="num flex">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew32"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex zs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/39.png" alt="">
+								<div class="num flex">
+									<p>X6</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew33"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls clock">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+								<div class="num flex">
+									<p>X9</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew25"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/29.png" alt="">
+								<div class="num flex long">
+									<p>X385</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew27"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/42.png" alt="">
+								<div class="num flex long">
+									<p>X4000</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew28"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex ls">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/35.png" alt="">
+								<div class="num flex">
+									<p>X2</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew29"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/28.png" alt="">
+								<div class="num flex long">
+									<p>X15000</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew26"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/36.png" alt="">
+								<div class="num flex">
+									<p>X8</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew30"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex lvs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/37.png" alt="">
+								<div class="num flex long">
+									<p>X12</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew31"></p>
+						</li>
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/40.png" alt="">
+								<div class="num flex">
+									<p>X1</p>
+								</div>
+							</div>
+							<p class="item_name" data-lang="rew34"></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- è·å¾å¼¹çª -->
+		<div class="pop pop-get" id="popGet">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang37"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="./long_cache_30d/images/GSAKWDQA/icon/20.png?v=1.0" alt="">
+								<p class="num">1</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- æ´å»å¥å± -->
+		<div class="pop pop-bj" id="popBj">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang113"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont flex">
+					<ul class="flex">
+						<li class="flex">
+							<!-- å¼åæ³¨æ è¿éè¿½å ç±»å ls:èè² hs:çº¢è² fs:ç²è² zs:ç´«è² clock:éæ¶-->
+							<div class="imgwrap flex fs">
+								<img src="long_cache_30d/images/GSAKWDQA/icon/45.png" alt="">
+								<p class="num">1</p>
+							</div>
+							<p class="item_name" data-lang="lang152">xxx</p>
+						</li>
+					</ul>
+				</div>
+				<div class="pop-btn flex">
+					<a href="javascript:goToB();" onclick="gtagReport('pop-bjok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- ææ£å¸ -->
+		<div class="pop pop2 pop-zk" id="popZk">
+			<!-- <a class="pop-clo pa" href="javascript:;" id="jsclear_zknum" onclick="gtagReport('pop-clo')"></a> -->
+			<div class="pop-tit flex">
+				<p data-lang="lang48"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont">
+					<p class="zk_tit" data-lang="lang49"></p>
+					<div id="hasCoupon" class="zk_inp">
+						<div class="select">
+							<p id="selectCoupon" data-lang="lang51"></p>
+						</div>
+						<ul id="couponList" class="list pa"></ul>
+					</div>
+					<div class="zk_spe"><span data-lang="lang50"></span><span data-lang="lang53"></span></div>
+					<ul class="zk_ul flex">
+						<li class="flex">
+							<div class="uc"></div>
+							<div class="zk_cho flex">
+								<a id="sub1" href="javascript:;" onclick="gtagReport('btn_sub')" class="btn_sub"></a>
+								<p id="coupon900" class="flex"><span class="init">0</span>/<span class="sum">0</span>
+								</p>
+								<a id="add1" href="javascript:;" onclick="gtagReport('btn_add')" class="btn_add"></a>
+							</div>
+						</li>
+						<li class="flex">
+							<div class="uc"></div>
+							<div class="zk_cho flex">
+								<a id="sub2" href="javascript:;" onclick="gtagReport('btn_sub')" class="btn_sub"></a>
+								<p id="coupon300" class="flex"><span class="init">0</span>/<span class="sum">0</span>
+								</p>
+								<a id="add2" href="javascript:;" onclick="gtagReport('btn_add')" class="btn_add"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="pop-btn flex">
+					<a id="zkConfirm" href="javascript:;" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang41"></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- è´­ä¹°é¡µé¢ -->
+		<div class="pop pop3 pop-buy" id="popBuy">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="pop-tit flex">
+				<p data-lang="lang31"></p>
+			</div>
+			<div class="pop-contwrap">
+				<div class="pop-cont">
+					<ul class="pop-choose flex">
+						<li class="dia-mk1-box">
+							<div class="li_hed">
+								<p data-lang="lang14_1"></p>
+							</div>
+							<div class="li_cont flex">
+								<div class="zxwrap flex"><img src="./long_cache_30d/images/GSAKWDQA/xz_32.png" alt="">
+								</div>
+								<div class="two_rg">
+									<p data-lang="lang35"></p>
+									<i></i>
+									<div class="item flex">
+                                        <div class="imgwrap flex zs clock">
+                                            <img src="./long_cache_30d/images/GSAKWDQA/icon/53.png?v=1.0" alt="">
+                                        </div>
+                                        <p data-lang="rew66"></p>
+                                    </div>
+									<div class="rwewr">
+										<div class="rew flex">
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+												<p class="num">1</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+												<p class="num">1</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="li_fot flex">
+								<i class="uc"></i>
+								<span>360</span>
+							</div>
+						</li>
+						<li class="dia-mk1-box">
+							<div class="li_hed">
+								<p data-lang="lang14"></p>
+							</div>
+							<div class="li_cont flex">
+								<div class="zxwrap flex"><img src="./long_cache_30d/images/GSAKWDQA/xz_12.png" alt="">
+								</div>
+								<div class="two_rg">
+									<p data-lang="lang35"></p>
+									<i></i>
+									<div class="item flex">
+                                        <div class="imgwrap flex zs clock">
+                                            <img src="./long_cache_30d/images/GSAKWDQA/icon/53.png?v=1.0" alt="">
+                                        </div>
+                                        <p data-lang="rew66"></p>
+                                    </div>
+									<div class="rwewr">
+										<div class="rew flex">
+
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/12.png" alt="">
+												<p class="num">1</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+												<p class="num">1</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+												<p class="num">1</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="li_fot flex">
+								<i class="uc"></i>
+								<span>720</span>
+							</div>
+						</li>
+						<li class="dia-mk1-box">
+							<div class="li_hed">
+								<p data-lang="lang15"></p>
+							</div>
+							<div class="li_cont flex">
+								<div class="zxwrap flex"><img src="./long_cache_30d/images/GSAKWDQA/xz_22.png" alt="">
+								</div>
+								<div class="two_rg">
+									<p data-lang="lang35"></p>
+									<i></i>
+									<div class="item flex">
+                                        <div class="imgwrap flex zs clock">
+                                            <img src="./long_cache_30d/images/GSAKWDQA/icon/53.png?v=1.0" alt="">
+                                        </div>
+                                        <p data-lang="rew66"></p>
+                                    </div>
+									<div class="rwewr">
+										<div class="rew flex">
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/12.png" alt="">
+												<p class="num">2</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/13.png" alt="">
+												<p class="num">2</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/14.png" alt="">
+												<p class="num">1</p>
+											</div>
+										</div>
+										<div class="rew flex rew_add">
+											<!-- <div class="imgwrap fi"><img src="./long_cache_30d/images/GSAKWDQA/icon/8.png" alt="">
+											<p class="num">1</p>
+										</div>
+										<i></i> -->
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/11.png?v=1.0" alt="">
+												<p class="num">1</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/15.png" alt="">
+												<p class="num">1</p>
+											</div>
+											<i></i>
+											<div class="imgwrap"><img
+													src="./long_cache_30d/images/GSAKWDQA/icon/17.png" alt="">
+												<p class="num">1</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="li_fot flex">
+								<i class="uc"></i>
+								<span class="mon">1,920</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- å¼åæ³¨æ è¿éè¿½å ç±»å pur:è´­ä¹° -->
+				<div id="buy-uc" class="pop-btn flex pur">
+					<a href="javascript:TGDialogS('popSure');" onclick="gtagReport('pop-ok')" class="pop-ok flex">
+						<p data-lang="lang36"></p><i></i><span class="needPay">720</span>
+					</a>
+					<div class="uc_zk" onclick="TGDialogS('popZk')">
+						<p data-lang="lang47"></p>
+					</div>
+					<a href="javascript:TGDialogS('popSure');" onclick="gtagReport('btn_buy')" class="btn_buy flex">
+						<p data-lang="lang36"></p><i></i><span class="needPay">720</span>
+					</a>
+					<!-- <a href="javascript:goToB();" onclick="gtagReport('btn_goan')" class="btn_goan flex"><span
+							class="agb" data-lang="lang118"></span></a> -->
+				</div>
+			</div>
+		</div>
+		<!-- è§é¢å¼¹çª -->
+		<div class="pop pop2 pop-video" id="popVideo">
+			<a class="pop-clo pa" href="javascript:;" onclick="gtagReport('pop-clo')"></a>
+			<div class="videoguide">
+				<!-- <video class="video" id="video" controls  preload="auto" width="100%" height="100%">
+				</video> -->
+				<video id="video" class="video video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"
+				data-setup="{}" disablepictureinpicture playsinline webkit-playsinline x5-playsinline>
+				<source src="https://1400251323.vod2.myqcloud.com/a491fbedvodsgp1400251323/af11ab7a1397757886145860565/rhdhyraXMAEA.mp4" />
+			</video>
+			</div>
+		</div>
+		<p class="tips" data-lang="lang79">xxx</p>
+	</div>
+</body>
+<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/callnative/callnative_1.js"></script>
+<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/Swiper/5.4.5/swiper.min.js"></script>
+<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/videojs/video.min.js"></script>
+<script
+	src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/OverlayScrollbars/1.10.0/overlayScrollbars.min.js">
+	</script>
+<script src="https://www.pubgmobile.com/act/resource/long_cache_30d/libs/velocity/velocity.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/language.js?v=1.25"></script>
+<script src="./js/gka.js?v=1.0"></script>
+<script src="./js/index.js?v=1.25"></script>
+<script src="./js/config.js?v=1.01"></script>
+<script src="./js/ideCommon.js"></script>
+<script src="./js/act.js?v=1.01"></script>
+
+</html>
