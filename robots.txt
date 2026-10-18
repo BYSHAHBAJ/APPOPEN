@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /index_devtest.html
-Disallow: /features_devtest.html
-Disallow: /screenshots_devtest.html
-Disallow: /videos_devtest.html
-Disallow: /download_devtest.html
-Disallow: /APP_OPEN.html
-Disallow: /FPSBOOSTER_APP.html
-Disallow: /open.html
-Disallow: /vipkeys.html
 
 Sitemap: https://apnafpsbooster.com/sitemap.xml
