@@ -34,6 +34,14 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdro
 @media(max-width:760px){.layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.sidebar-card{margin:0}.nav{flex-wrap:wrap;padding:10px 0}.navlinks{order:3;width:100%;justify-content:space-between;gap:8px;flex-wrap:wrap}.navlinks a{font-size:11px}.article h1{letter-spacing:-1px}.read-time{margin-left:0}}
 @media(max-width:540px){.container{width:min(100% - 22px,1240px)}.nav{min-height:64px}.brand img{width:34px;height:34px}.brandname{font-size:13px}.navlinks a{font-size:10px}.nav-cta{font-size:10px;padding:9px 11px}.breadcrumb{padding-top:14px;font-size:10px}.article{padding:17px;border-radius:12px}.article h1{font-size:31px}.intro{font-size:14px}.article p,.article li{font-size:14px}.quick-facts{gap:7px}.fact{padding:10px}.fact strong{font-size:12px}.gallery{gap:8px}.gallery figcaption{font-size:10px;padding:7px}.sidebar{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+.article-search-results{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+.article-search-results[hidden]{display:none}
+.article-search-results .search-summary{font-size:12px;color:#64748b;margin:4px 0 8px}
+.article-search-results a{display:block;padding:9px 10px;border-radius:8px;color:#145bd7;font-size:12px;line-height:1.45}
+.article-search-results a:hover,.article-search-results a:focus{background:#f2f7ff;outline:none}
+.article-search-results .search-snippet{display:block;color:#64748b;font-size:11px;margin-top:3px}
+.article-search-results mark{background:#fff0a8;color:#172b4d;border-radius:2px;padding:0 1px}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"BGMI Next Ultimate Set 4.6: Sanguine Sonata, Shinobi Kami & Crimson Nemesis Scar-L","description":"A guide to the new Sanguine Sonata set and the Shinobi Kami M416 and Crimson Nemesis Scar-L return discussion.","mainEntityOfPage":{"@type":"WebPage","@id":"https://apnafpsbooster.com/bgmi-next-ultimate-set-4-6"},"publisher":{"@type":"Organization","name":"Apna FPS Booster","url":"https://apnafpsbooster.com/"}}
@@ -147,7 +155,11 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdro
 </article>
 
 <aside class="sidebar">
-<div class="sidebar-card search-card"><h3>Search Articles</h3><form class="searchbox" action="/search.html" method="get"><input type="search" name="q" placeholder="Search BGMI articles..." aria-label="Search articles"><button type="submit" aria-label="Search">⌕</button></form></div>
+<div class="sidebar-card search-card"><h3>Search Articles</h3><form class="searchbox" id="articleSearchForm" role="search">
+<input id="articleSearchInput" type="search" placeholder="Search this article..." aria-label="Search this article">
+<button type="submit" aria-label="Search this article">⌕</button>
+</form>
+<div id="articleSearchResults" class="article-search-results" aria-live="polite" hidden></div></div>
 <div class="sidebar-card"><h3>Related Topics</h3><div class="related"><span>Sanguine Sonata</span><span>M416 Return</span><span>Scar-L Return</span><span>Gilt Set</span><span>BGMI 4.6</span></div><p>Confirm release dates and regional availability through the official in-game event page.</p></div>
 <div class="sidebar-card"><h3>Quick Navigation</h3><ul><li><a href="#overview">Ultimate Set overview</a></li><li><a href="#sanguine">Sanguine Sonata</a></li><li><a href="#gilt">Gilt Set &amp; DP-28</a></li><li><a href="#shinobi">Shinobi Kami M416</a></li><li><a href="#crimson">Crimson Nemesis Scar-L</a></li><li><a href="#faqs">Frequently asked questions</a></li></ul></div>
 <div class="sidebar-card download-card"><h3>Apna FPS Booster</h3><p>Explore app information, gaming guides, screenshots and updates on the official website.</p><a class="download-link" href="/download.html">Explore Downloads →</a></div>
@@ -163,4 +175,85 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdro
 </div>
 <div class="footer-inner"><div>© 2026 Apna FPS Booster. All rights reserved.</div><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/#official-socials">Official Socials</a><a href="/">Home</a><a href="/events">Events</a><a href="/videos.html">Gaming Posts</a><a href="#top">Back to top ↑</a></div></div>
 </div></footer>
+
+<script>
+(function () {
+  const form = document.getElementById('articleSearchForm');
+  const input = document.getElementById('articleSearchInput');
+  const resultsBox = document.getElementById('articleSearchResults');
+  const article = document.querySelector('main article');
+  if (!form || !input || !resultsBox || !article) return;
+
+  const searchableBlocks = Array.from(article.querySelectorAll('h2, h3, p, li, summary'))
+    .filter(el => !el.closest('.toc'));
+
+  function cleanText(text) {
+    return (text || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function makeSnippet(text, query) {
+    const lower = text.toLowerCase();
+    const index = lower.indexOf(query.toLowerCase());
+    if (index < 0) return text.slice(0, 130) + (text.length > 130 ? '…' : '');
+    const start = Math.max(0, index - 48);
+    const end = Math.min(text.length, index + query.length + 78);
+    return (start ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, char => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[char]));
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const query = cleanText(input.value);
+    resultsBox.innerHTML = '';
+    resultsBox.hidden = false;
+
+    if (query.length < 2) {
+      resultsBox.innerHTML = '<p class="search-summary">Type at least 2 characters to search this article.</p>';
+      return;
+    }
+
+    const matches = searchableBlocks.filter(el =>
+      cleanText(el.textContent).toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (!matches.length) {
+      resultsBox.innerHTML = '<p class="search-summary">No matches found in this article. Try another keyword.</p>';
+      return;
+    }
+
+    const summary = document.createElement('p');
+    summary.className = 'search-summary';
+    summary.textContent = matches.length + ' match' + (matches.length === 1 ? '' : 'es') + ' found in this article';
+    resultsBox.appendChild(summary);
+
+    matches.slice(0, 10).forEach((el, index) => {
+      if (!el.id) el.id = 'article-search-match-' + (index + 1);
+      const link = document.createElement('a');
+      link.href = '#' + el.id;
+      const heading = el.matches('h2,h3,summary') ? cleanText(el.textContent) :
+        (el.closest('section')?.querySelector('h2,h3')?.textContent || 'Article content');
+      const snippet = makeSnippet(cleanText(el.textContent), query);
+      link.innerHTML = '<strong>' + escapeHtml(cleanText(heading)) + '</strong>' +
+        '<span class="search-snippet">' + escapeHtml(snippet) + '</span>';
+      link.addEventListener('click', function () {
+        resultsBox.hidden = true;
+      });
+      resultsBox.appendChild(link);
+    });
+  });
+
+  input.addEventListener('input', function () {
+    if (!input.value.trim()) {
+      resultsBox.hidden = true;
+      resultsBox.innerHTML = '';
+    }
+  });
+})();
+</script>
+
 </body></html>
