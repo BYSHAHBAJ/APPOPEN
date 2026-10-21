@@ -137,3 +137,37 @@ footer{text-align:center;color:#9292a4;font-size:12px;padding:24px 12px;border-t
  .apks-count{font-size:8px;padding:7px}
  .download-row{grid-template-columns:1fr}
 }
+
+/* Final polish: remove duplicate CTA spacing and prevent header branding/nav overlap. */
+.brand{flex:0 0 auto;gap:12px;min-width:0;max-width:310px}
+.brand-copy{display:flex;flex-direction:column;min-width:0;gap:5px}
+.brand-name{display:block;white-space:nowrap;line-height:1.05;font-size:clamp(17px,1.55vw,24px);letter-spacing:-.6px}
+.brand-sub{display:block;white-space:normal;line-height:1.35;letter-spacing:.65px;font-size:clamp(8px,.72vw,10px);max-width:255px;overflow-wrap:normal}
+.nav{flex:1;min-width:0;justify-content:flex-end;gap:4px}
+.nav a{padding:10px 9px;font-size:clamp(11px,.85vw,13px);line-height:1.2}
+.topbar{gap:14px}
+.featured-app-card{grid-template-columns:78px minmax(0,1fr)}
+.featured-app-card:after{right:4%}
+.featured-app-copy{padding-right:4px}
+@media(max-width:1250px){
+ .brand{max-width:255px}
+ .brand-name{font-size:19px}
+ .brand-sub{font-size:8px;max-width:220px}
+ .nav{justify-content:flex-start}
+ .nav a{padding:9px 7px;font-size:11px}
+}
+@media(max-width:800px){
+ .topbar{align-items:flex-start;gap:10px}
+ .brand{max-width:none;width:100%;gap:10px}
+ .brand-copy{gap:4px}
+ .brand-name{font-size:20px;white-space:normal}
+ .brand-sub{font-size:9px;max-width:none;letter-spacing:.6px}
+ .nav{width:100%;flex:0 0 100%;justify-content:flex-start;gap:4px}
+ .nav a{flex:0 0 auto;font-size:12px;padding:9px 10px}
+ .featured-app-card{grid-template-columns:58px minmax(0,1fr)}
+}
+@media(max-width:460px){
+ .brand-name{font-size:18px}
+ .brand-sub{font-size:8px;letter-spacing:.45px}
+ .featured-app-card{grid-template-columns:50px minmax(0,1fr)}
+}
