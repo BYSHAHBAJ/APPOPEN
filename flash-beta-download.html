@@ -90,6 +90,20 @@
 }
 
 
+/* Desktop gallery fix: keep every preview image widescreen (16:9) */
+@media (min-width: 621px) {
+  .gallery .shot { display: block; }
+  .gallery .shot img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-right: 0;
+    border-bottom: 1px solid #12545b;
+  }
+}
+
 /* Click-to-open image viewer */
 .shot img { cursor: zoom-in; }
 .shot img:focus-visible { outline: 3px solid #28f477; outline-offset: -3px; }
