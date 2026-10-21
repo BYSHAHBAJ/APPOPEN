@@ -14,3 +14,29 @@ footer{text-align:center;color:#9292a4;font-size:12px;padding:24px 12px;border-t
 @media(max-width:1250px){.download-row{grid-template-columns:repeat(3,minmax(0,1fr))}.columns{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}.sidebar{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));display:grid}.brand{min-width:240px}.brand-name{font-size:21px}.nav a{padding:10px 9px;font-size:13px}}
 @media(max-width:800px){.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px 4%;gap:8px}.brand{min-width:0}.bolt{font-size:36px}.brand-name{font-size:19px}.brand-sub{font-size:9px}.nav{width:100%;overflow-x:auto;gap:4px;padding-bottom:2px}.nav a{font-size:12px;padding:9px 10px}.search{display:none}.hero{min-height:220px;padding:28px 5%}.hero:after{right:-120px;opacity:.35}.hero p{font-size:13px;max-width:330px;line-height:1.5}.shell{padding:0 3% 25px}.download-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.download-card{padding:8px;gap:8px;min-height:99px}.game-icon{width:43px;height:45px;flex-basis:43px;font-size:24px}.game-info strong{font-size:12px}.game-info small{font-size:10px;margin:4px 0 6px}.download-btn{padding:7px 9px;font-size:10px}.columns{grid-template-columns:1fr}.sidebar{grid-column:auto;grid-template-columns:1fr}.panel{padding:10px}.panel-title{font-size:17px}.video-content{grid-template-columns:1fr;gap:9px}.video-copy h3{margin:2px 0 7px}.thumbnail{max-width:none}.thumb-title{font-size:clamp(32px,9vw,52px)}.thumb-tag{font-size:15px}.thumb-sub{font-size:21px}.checks{font-size:12px}.empty{min-height:125px}}
 @media(min-width:801px) and (max-width:1000px){.columns{grid-template-columns:1fr 1fr}.sidebar{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));display:grid}.video-content{grid-template-columns:1fr}.nav a{padding:9px 7px}.brand{min-width:200px}.brand-name{font-size:18px}}
+
+/* Layout refinements: prevent overlapping text and keep media cards responsive. */
+.download-card{min-width:0;overflow:hidden}
+.game-info{min-width:0;overflow-wrap:anywhere}
+.game-info strong{overflow-wrap:anywhere}
+.download-btn{max-width:100%;white-space:normal;text-align:center;line-height:1.2}
+.video-content{min-width:0}
+.video-copy{min-width:0;overflow-wrap:anywhere}
+.video-copy h3{overflow-wrap:anywhere;word-break:normal}
+.thumbnail.real-thumbnail{padding:0;display:block;background:#0a0a10;isolation:isolate}
+.thumbnail.real-thumbnail img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.thumbnail.real-thumbnail .play{pointer-events:none}
+.panel-head{min-width:0;flex-wrap:wrap}
+.panel-title{min-width:0;overflow-wrap:anywhere}
+.viewall{flex-shrink:0}
+.socials{flex-wrap:wrap}
+.version{min-width:0}
+.version span:nth-child(2){overflow-wrap:anywhere}
+@media(max-width:460px){
+  .download-row{grid-template-columns:1fr}
+  .download-card{min-height:88px}
+  .video-copy h3{font-size:16px}
+  .panel-head{align-items:flex-start}
+  .panel-title{font-size:16px}
+  .hero h1{letter-spacing:-1px}
+}
