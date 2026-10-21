@@ -235,3 +235,24 @@ footer{text-align:center;color:#9292a4;font-size:12px;padding:24px 12px;border-t
  .featured-app-copy h2{font-size:17px}
  .other-apks-heading h2{font-size:18px}
 }
+
+
+/* Embedded real app screenshot in the hero phone position */
+.app-phone-image{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:clamp(190px,23vw,330px);
+  height:auto;
+  max-height:540px;
+  object-fit:contain;
+  border-radius:20px;
+  transform:rotate(3deg);
+  box-shadow:0 22px 50px #0009,0 0 28px #ff284633;
+}
+@media(max-width:900px){
+  .app-phone-image{width:clamp(145px,28vw,230px);max-height:390px}
+}
+@media(max-width:600px){
+  .app-phone-image{display:none}
+}
