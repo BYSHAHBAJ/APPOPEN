@@ -353,3 +353,36 @@ footer{text-align:center;color:#9292a4;font-size:12px;padding:24px 12px;border-t
 @media(max-width:600px){
   .app-phone.phone-device{display:none}
 }
+
+
+/* Final phone-screen fit: preserve the whole UI and prevent sideways clipping */
+.app-phone.phone-device{
+  width:clamp(235px,20vw,292px);
+  height:clamp(485px,42vw,610px);
+  transform:rotate(1.5deg);
+}
+.phone-bezel{padding:10px}
+.phone-screen-real{
+  inset:10px;
+  top:15px;
+  bottom:10px;
+  border-radius:29px;
+}
+.app-phone-image{
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  object-position:center center;
+  border-radius:28px;
+}
+.phone-camera{top:12px}
+@media(max-width:900px){
+  .app-phone.phone-device{
+    width:clamp(175px,27vw,230px);
+    height:clamp(365px,56vw,450px);
+    transform:rotate(1deg);
+  }
+  .phone-bezel{padding:8px}
+  .phone-screen-real{inset:8px;top:12px;bottom:8px;border-radius:24px}
+  .app-phone-image{border-radius:23px}
+}
