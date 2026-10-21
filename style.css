@@ -257,3 +257,99 @@ footer{text-align:center;color:#9292a4;font-size:12px;padding:24px 12px;border-t
 @media(max-width:900px){
   .app-phone-image{width:100%;height:100%;max-height:none}
 }
+
+
+/* Premium phone frame around the embedded app screenshot */
+.app-phone.phone-device{
+  position:relative;
+  z-index:2;
+  width:clamp(235px,22vw,320px);
+  height:clamp(470px,43vw,625px);
+  flex:0 0 auto;
+  display:block;
+  padding:0;
+  border:0;
+  border-radius:42px;
+  overflow:visible;
+  background:linear-gradient(135deg,#5a5864 0%,#17161e 12%,#08080d 44%,#302e38 72%,#09090d 100%);
+  box-shadow:0 26px 54px #0009,0 0 0 1px #ffffff24,0 0 28px #ff284633;
+  transform:rotate(3deg);
+}
+.phone-bezel{
+  position:absolute;
+  inset:0;
+  padding:11px;
+  border-radius:42px;
+  background:linear-gradient(145deg,#55525e,#17161e 19%,#09090e 72%,#45414b);
+  box-shadow:inset 0 0 0 2px #ffffff18,inset 0 0 0 5px #000;
+  overflow:hidden;
+}
+.phone-screen-real{
+  position:absolute;
+  inset:10px;
+  top:13px;
+  bottom:13px;
+  padding:0!important;
+  border-radius:30px;
+  overflow:hidden;
+  background:#07080d;
+  box-shadow:inset 0 0 0 1px #ffffff18;
+}
+.app-phone-image{
+  display:block;
+  width:100%;
+  height:100%;
+  max-height:none;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:29px;
+  transform:none;
+  box-shadow:none;
+}
+.phone-camera{
+  position:absolute;
+  z-index:5;
+  top:14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:66px;
+  height:13px;
+  border-radius:0 0 10px 10px;
+  background:#08080d;
+  box-shadow:0 1px 2px #ffffff10;
+  pointer-events:none;
+}
+.phone-speaker{
+  position:absolute;
+  z-index:6;
+  top:5px;
+  left:50%;
+  transform:translateX(-50%);
+  width:42px;
+  height:4px;
+  border-radius:5px;
+  background:#302e37;
+  margin:0;
+  pointer-events:none;
+}
+.phone-side-button{
+  position:absolute;
+  z-index:1;
+  width:4px;
+  border-radius:3px;
+  background:linear-gradient(90deg,#111,#65616c,#18171d);
+}
+.phone-side-button-one{right:-3px;top:112px;height:62px}
+.phone-side-button-two{left:-3px;top:130px;height:42px}
+@media(max-width:900px){
+  .app-phone.phone-device{
+    width:clamp(175px,29vw,245px);
+    height:clamp(350px,58vw,470px);
+  }
+  .phone-bezel{padding:8px;border-radius:34px}
+  .phone-screen-real{inset:8px;top:10px;bottom:10px;border-radius:25px}
+  .app-phone-image{border-radius:24px}
+}
+@media(max-width:600px){
+  .app-phone.phone-device{display:none}
+}
