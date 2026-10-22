@@ -1047,3 +1047,76 @@ pre, code, table { max-width: 100%; }
   .btn { min-height: 42px; }
   .hero { padding-bottom: 16px !important; }
 }
+
+
+/* v18: true device-width fit for phones; prevent nested container padding and horizontal overflow. */
+@media (max-width: 700px) {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .container,
+  .hero > .container,
+  .section > .container,
+  .download-inner,
+  .footer-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .hero > .container { padding-top: 8px !important; }
+  .hero-content { width: 100%; max-width: 100%; padding: 0 !important; }
+  .hero h1 {
+    font-size: clamp(38px, 10.2vw, 54px) !important;
+    line-height: .98 !important;
+    letter-spacing: -1.7px !important;
+    margin: 12px 0 12px !important;
+    overflow-wrap: normal;
+  }
+  .hero .eyebrow { max-width: 100%; }
+  .hero .lead {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+    margin: 10px 0 14px !important;
+  }
+  .hero .hero-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 8px !important;
+    width: 100%;
+    margin-top: 12px !important;
+  }
+  .hero .hero-actions > * { min-width: 0; max-width: 100%; }
+  .hero .hero-actions .download-hero,
+  .hero .hero-actions > a:first-child {
+    grid-column: 1 / -1;
+    width: 100% !important;
+  }
+  .hero .hero-actions a,
+  .hero .hero-actions button {
+    min-height: 44px !important;
+    padding: 10px 9px !important;
+    font-size: 11px !important;
+    white-space: normal !important;
+    text-align: center;
+    line-height: 1.2 !important;
+  }
+  .section { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .section-head { margin-bottom: 14px !important; }
+  .section-head h2 { font-size: clamp(25px, 7vw, 34px) !important; line-height: 1.12 !important; }
+  .feature-grid, .games-grid, .cards-grid, .events-grid {
+    gap: 10px !important;
+  }
+  .feature, .feature-card, .game-card, .event-card, .info-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+  img, video, iframe, canvas { max-width: 100%; }
+  .top-preview-strip { width: 100%; max-width: 100%; overflow: hidden; }
+  .preview-track { max-width: none; }
+}
