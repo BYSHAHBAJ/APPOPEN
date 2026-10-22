@@ -921,3 +921,27 @@ pre, code, table { max-width: 100%; }
   .preview-track { animation:none !important; }
   .preview-window { overflow-x:auto !important; }
 }
+
+
+/* Final responsive spacing and carousel artifact fixes */
+.top-preview-strip { margin:0 !important; }
+.top-preview-inner { min-width:0; }
+.preview-track { white-space:normal; }
+.preview-card span { white-space:normal !important; }
+.hero > .container { padding-top:clamp(12px, 1.4vw, 22px) !important; }
+.hero { padding-top:0 !important; }
+@media (max-width:700px) {
+  .top-preview-strip { padding:8px 0 9px !important; }
+  .top-preview-heading { margin-bottom:7px !important; }
+  .hero > .container { padding-top:10px !important; }
+  .hero-content { padding-top:0 !important; }
+  .eyebrow { margin-top:0 !important; }
+  h1 { margin-top:15px !important; margin-bottom:13px !important; }
+  .hero .lead { margin-top:12px !important; margin-bottom:18px !important; line-height:1.65 !important; }
+  .hero-actions { margin-top:16px !important; }
+  .hero .download-hero { min-height:52px; }
+  .hero { padding-bottom:24px !important; }
+}
+@media (min-width:701px) {
+  .hero > .container { padding-top:18px !important; }
+}
