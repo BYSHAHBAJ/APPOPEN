@@ -1,6 +1,14 @@
-APNA FPS BOOSTER website source
+APNA FPS BOOSTER — GitHub Pages flat-file package
 
-Files: index.html, style.css, script.js, ads.txt
-The original black/red site design and existing app-first homepage were retained.
-Added screenshot gallery with lightbox, FPS/GFX feature cards, FPS comparison strip, creator-space panel, app download callout, supported game regions, performance/lag-fix guide, FPS comparison table, FAQ, social/footer links and structured FAQ data.
-Update image files and destination pages/links on the server if any referenced asset/page is not published.
+Upload these files directly to the ROOT of the GitHub repository:
+- index.html
+- style.css
+- main.js
+
+The HTML references:
+- https://apnafpsbooster.com/style.css
+- https://apnafpsbooster.com/main.js
+
+Do not put these three files inside a new folder. Keep your existing image/media files in their current paths, because this package only contains the HTML/CSS/JS files.
+
+After uploading, wait for GitHub Pages to deploy, then hard-refresh the page with Ctrl+Shift+R. If your live page uses a different HTML filename/path (for example /index-new), make sure that page is the updated index.html content too.
