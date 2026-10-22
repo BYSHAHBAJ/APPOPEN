@@ -945,3 +945,19 @@ pre, code, table { max-width: 100%; }
 @media (min-width:701px) {
   .hero > .container { padding-top:18px !important; }
 }
+
+
+/* Clean homepage: the top carousel is the only screenshot strip */
+#screenshots.gallery-wrap, .gallery-wrap#screenshots { display:none !important; }
+.hero > .container { padding-top:clamp(12px, 1.4vw, 20px) !important; }
+.hero { padding-bottom:30px !important; }
+.hero-content { min-width:0; }
+.hero .hero-actions { margin-top:20px; }
+.hero .download-hero { white-space:normal; }
+@media (max-width:700px) {
+  .hero > .container { padding-top:10px !important; }
+  .hero { padding-bottom:20px !important; }
+  .hero h1 { margin-top:15px !important; }
+  .hero .lead { margin-bottom:16px !important; }
+  .hero .hero-actions { margin-top:14px !important; }
+}
