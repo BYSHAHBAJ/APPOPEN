@@ -967,3 +967,23 @@ pre, code, table { max-width: 100%; }
 @media (max-width: 700px) {
   .hero-logo { display: none !important; }
 }
+
+
+/* Mobile compact layout: reduce the feature section's vertical footprint. */
+@media (max-width: 700px) {
+  #features.section { padding: 24px 0 28px !important; }
+  #features .section-head { margin: 0 0 16px !important; }
+  #features .section-head .kicker { padding: 7px 12px !important; font-size: 10px !important; letter-spacing: 1.5px !important; }
+  #features .section-head h2 { font-size: clamp(25px, 6.3vw, 31px) !important; line-height: 1.12 !important; letter-spacing: -1px !important; margin: 10px 0 9px !important; }
+  #features .section-head .sub { font-size: 14px !important; line-height: 1.55 !important; margin: 0 !important; }
+  #features .feature-grid { gap: 10px !important; }
+  #features .feature { padding: 13px 12px !important; border-radius: 14px !important; min-height: 0 !important; }
+  #features .feature-icon { width: 32px !important; height: 32px !important; font-size: 17px !important; margin-bottom: 9px !important; border-radius: 10px !important; }
+  #features .feature h3 { font-size: 13px !important; line-height: 1.25 !important; margin: 0 0 8px !important; }
+  #features .feature p { font-size: 12px !important; line-height: 1.55 !important; }
+  #features .fps-strip { margin-top: 12px !important; padding: 12px !important; gap: 8px !important; }
+  #features .fps-strip strong { font-size: 11px !important; }
+  #features .fps-strip p { font-size: 10px !important; line-height: 1.45 !important; margin: 4px 0 0 !important; }
+  #features .fps-pills { gap: 5px !important; flex-wrap: wrap !important; }
+  #features .fps-pills span { padding: 5px 7px !important; font-size: 10px !important; }
+}
