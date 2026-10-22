@@ -272,3 +272,34 @@ footer{background:#fff;border-top-color:#e1e8f2;color:#66758b}
 @media(prefers-color-scheme:dark){
  /* Keep the site's intentional bright, high-contrast brand palette consistent across devices. */
 }
+
+
+/* Theme system: follows the device preference until the visitor chooses manually. */
+:root{color-scheme:light;--page-bg:#f7f9fd;--surface:#fff;--surface-soft:#f1f5fc;--text-main:#17243a;--text-muted:#62718a;--line:#e1e8f2;--accent:#245cff;--card-shadow:0 12px 34px rgba(25,45,80,.07)}
+html{color-scheme:light;background:var(--page-bg)}
+body{background:var(--page-bg);color:var(--text-main);transition:background-color .25s ease,color .25s ease}
+.theme-toggle{width:42px;height:42px;flex:0 0 42px;display:inline-flex;align-items:center;justify-content:center;margin-left:10px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text-main);font-size:25px;line-height:1;cursor:pointer;box-shadow:0 5px 16px rgba(20,40,80,.08);transition:transform .2s ease,background-color .25s ease,border-color .25s ease}
+.theme-toggle:hover{transform:rotate(-12deg) scale(1.05);border-color:var(--accent)}
+.theme-toggle:focus-visible{outline:3px solid rgba(36,92,255,.35);outline-offset:3px}
+.theme-icon{display:block;transform:translateY(-1px)}
+html[data-theme="dark"]{color-scheme:dark;--page-bg:#0b1220;--surface:#111c2e;--surface-soft:#16243a;--text-main:#edf3ff;--text-muted:#aab8ce;--line:#293a54;--accent:#79a5ff;--card-shadow:0 14px 38px rgba(0,0,0,.24);background:var(--page-bg)}
+html[data-theme="dark"] body{background:var(--page-bg);color:var(--text-main)}
+html[data-theme="dark"] header,html[data-theme="dark"] .site-header{background:rgba(11,18,32,.94);border-color:var(--line);backdrop-filter:blur(16px)}
+html[data-theme="dark"] .brandname,html[data-theme="dark"] .navlinks a,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] .ng-home-copy h3,html[data-theme="dark"] .seo-faq-list summary{color:var(--text-main)}
+html[data-theme="dark"] p,html[data-theme="dark"] .lead,html[data-theme="dark"] .ng-home-copy p,html[data-theme="dark"] .game small,html[data-theme="dark"] .trust,html[data-theme="dark"] .disclaimer,html[data-theme="dark"] .seo-faq-list details p{color:var(--text-muted)}
+html[data-theme="dark"] .feature,html[data-theme="dark"] .game,html[data-theme="dark"] .trust,html[data-theme="dark"] .disclaimer,html[data-theme="dark"] .seo-faq-list details,html[data-theme="dark"] #imageLightbox,html[data-theme="dark"] .download-panel{background:var(--surface);border-color:var(--line);color:var(--text-main);box-shadow:var(--card-shadow)}
+html[data-theme="dark"] .ng-home-card{background:radial-gradient(circle at 0 0,#26304e 0,transparent 45%),linear-gradient(130deg,#111c2e,#0e1727);border-color:var(--line);box-shadow:var(--card-shadow)}
+html[data-theme="dark"] .ng-tags span{background:#18263b;color:#dce7fb;border-color:var(--line)}
+html[data-theme="dark"] .footer-social a,html[data-theme="dark"] #lightboxClose{background:#18263b;color:var(--text-main);border-color:var(--line)}
+html[data-theme="dark"] footer{background:#0a101c;border-top-color:var(--line);color:var(--text-muted)}
+html[data-theme="dark"] .navlinks{background:rgba(17,28,46,.98);border-color:var(--line)}
+html[data-theme="dark"] .navlinks a{border-color:#25364e}
+html[data-theme="dark"] .hero-bg{opacity:.35}
+html[data-theme="dark"] .eyebrow{color:#c7d8f5}
+html[data-theme="dark"] .game b{color:#edf3ff}
+html[data-theme="dark"] .seo-faq-list summary::marker{color:var(--accent)}
+html[data-theme="dark"] a:not(.nav-cta):not(.button):not(.btn){color:var(--accent)}
+html[data-theme="dark"] .nav-cta,html[data-theme="dark"] .button,html[data-theme="dark"] .btn{color:#fff}
+html[data-theme="dark"] #imageLightbox::backdrop{background:rgba(0,0,0,.82)}
+@media(max-width:700px){.theme-toggle{width:38px;height:38px;flex-basis:38px;margin-left:auto;margin-right:8px}.nav-cta{max-width:46vw}}
+@media(prefers-reduced-motion:reduce){body,.theme-toggle{transition:none}}
