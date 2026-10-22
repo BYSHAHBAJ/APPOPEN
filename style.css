@@ -341,3 +341,131 @@ html[data-theme="light"] .footer-social a{background:#fff;color:#36506f;border-c
 .theme-toggle:focus-visible{outline:3px solid rgba(50,117,255,.42);outline-offset:3px}
 @media(max-width:700px){.theme-toggle{width:38px;height:38px;flex-basis:38px;margin-left:auto;margin-right:8px}}
 @media(prefers-reduced-motion:reduce){body,.theme-toggle{transition:none}}
+
+
+/* FINAL DARK THEME CONSISTENCY PASS — v5 */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --apna-bg:#080d18;
+  --apna-surface:#101b2d;
+  --apna-surface-alt:#142238;
+  --apna-fg:#f2f6ff;
+  --apna-muted:#a9bad2;
+  --apna-line:#263953;
+}
+html[data-theme="dark"] body,
+html[data-theme="dark"] main,
+html[data-theme="dark"] section,
+html[data-theme="dark"] article,
+html[data-theme="dark"] aside{
+  background-color:transparent;
+  color:var(--apna-fg);
+}
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .hero-section,
+html[data-theme="dark"] .hero-content,
+html[data-theme="dark"] .content-section,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .container-card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .fps-card,
+html[data-theme="dark"] .version-card,
+html[data-theme="dark"] .download-card,
+html[data-theme="dark"] .cta,
+html[data-theme="dark"] .cta-section,
+html[data-theme="dark"] .callout,
+html[data-theme="dark"] .highlight-box,
+html[data-theme="dark"] .table-wrap,
+html[data-theme="dark"] .table-container,
+html[data-theme="dark"] .compatibility-table,
+html[data-theme="dark"] .spec-table,
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .faq-card,
+html[data-theme="dark"] .seo-faq-list details,
+html[data-theme="dark"] .feature,
+html[data-theme="dark"] .game,
+html[data-theme="dark"] .trust,
+html[data-theme="dark"] .disclaimer,
+html[data-theme="dark"] .download-panel{
+  background-color:var(--apna-surface);
+  color:var(--apna-fg);
+  border-color:var(--apna-line);
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+html[data-theme="dark"] .cta,
+html[data-theme="dark"] .cta-section,
+html[data-theme="dark"] .highlight-box,
+html[data-theme="dark"] .download-panel{
+  background:linear-gradient(135deg,#111e32,#122640);
+}
+html[data-theme="dark"] p,
+html[data-theme="dark"] li,
+html[data-theme="dark"] label,
+html[data-theme="dark"] small,
+html[data-theme="dark"] td,
+html[data-theme="dark"] th,
+html[data-theme="dark"] figcaption,
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] .section-description{
+  color:var(--apna-muted);
+}
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] strong,
+html[data-theme="dark"] b,
+html[data-theme="dark"] summary{
+  color:var(--apna-fg);
+}
+html[data-theme="dark"] table{
+  background:var(--apna-surface);
+  color:var(--apna-fg);
+  border-color:var(--apna-line);
+}
+html[data-theme="dark"] thead,
+html[data-theme="dark"] th{
+  background:#17263d;
+  color:#f2f6ff;
+}
+html[data-theme="dark"] tr,
+html[data-theme="dark"] tbody tr,
+html[data-theme="dark"] td{
+  border-color:var(--apna-line);
+}
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select{
+  background:#0b1423;
+  color:var(--apna-fg);
+  border-color:#344966;
+}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder{color:#91a3bc}
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code{background:#0b1423;color:#d9e8ff;border-color:var(--apna-line)}
+html[data-theme="dark"] hr{border-color:var(--apna-line)}
+html[data-theme="dark"] .ng-tags span,
+html[data-theme="dark"] .tag,
+html[data-theme="dark"] .badge{background:#17263d;color:#d9e8ff;border-color:#2a3d58}
+html[data-theme="dark"] .hero-bg{
+  background:radial-gradient(ellipse at 78% 24%,rgba(25,111,220,.15),transparent 36%),linear-gradient(135deg,#0a1323,#0b1020 60%,#100d20);
+}
+html[data-theme="dark"] .hero-bg:before,
+html[data-theme="dark"] .hero-bg:after{opacity:.16}
+html[data-theme="dark"] .ng-home-card{background:linear-gradient(145deg,#111d30,#0e1828)}
+html[data-theme="dark"] .navlinks a,
+html[data-theme="dark"] .footer-social a{color:#c8dcff}
+html[data-theme="dark"] .footer-social a{background:#132138;border-color:#263953}
+html[data-theme="dark"] .btn-ghost,
+html[data-theme="dark"] .secondary-button{background:#111e31;color:#eaf2ff;border-color:#344a68}
+html[data-theme="dark"] .theme-toggle{background:#142238;color:#f4f7ff;border-color:#304766}
+html[data-theme="dark"] img,
+html[data-theme="dark"] video,
+html[data-theme="dark"] iframe,
+html[data-theme="dark"] canvas{background-color:transparent}
