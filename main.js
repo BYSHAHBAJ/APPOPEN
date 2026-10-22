@@ -58,3 +58,22 @@ imageLightbox.addEventListener('close',()=>{lightboxImage.src='';});
     else if(systemDark.addListener) systemDark.addListener(onSystemChange);
   }
 })();
+
+
+// FAQ: keep the page compact by showing three questions initially.
+const faqList = document.querySelector('.seo-faq-list');
+const faqMoreToggle = document.getElementById('faqMoreToggle');
+if (faqList && faqMoreToggle) {
+  const faqItems = faqList.querySelectorAll(':scope > details');
+  if (faqItems.length <= 3) {
+    faqMoreToggle.hidden = true;
+  } else {
+    faqMoreToggle.addEventListener('click', () => {
+      const expanded = faqList.classList.toggle('faq-expanded');
+      faqMoreToggle.setAttribute('aria-expanded', String(expanded));
+      faqMoreToggle.innerHTML = expanded
+        ? 'Show fewer FAQs <span aria-hidden="true">⌃</span>'
+        : 'Show more FAQs <span aria-hidden="true">⌄</span>';
+    });
+  }
+}

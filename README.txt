@@ -1,12 +1,9 @@
-APNA FPS BOOSTER — Android Mobile Width Fix
+APNA FPS BOOSTER — FAQ SHOW MORE PATCH
 
-This is a CSS-only patch for the existing GitHub root-file website.
+Files included: index.html, style.css, main.js.
 
-1. Replace the current root style.css with the style.css in this package.
-2. Keep index.html and main.js unchanged.
-3. Confirm index.html loads /style.css (or the same stylesheet path used by your site).
-4. Wait for GitHub Pages deployment, then clear browser cache / hard refresh.
+Behavior: only the first 3 FAQ questions are visible by default. The “Show more FAQs” button reveals the rest; “Show fewer FAQs” collapses them again. Existing FAQ content is preserved.
 
-The patch constrains the page and common layout children to the mobile viewport, allows grid/flex children to shrink, and preserves intentional horizontal scrolling only for wide tables.
+GitHub: upload these three files to the same repository root where your current index.html, style.css, and main.js live, replacing those files. Keep all existing image/assets files and paths unchanged.
 
-Note: The supplied screenshots show the symptom, but I cannot verify the live page in a real Android browser from this CSS-only package. If a specific element still overflows, inspect that element's computed width in DevTools.
+After deployment, hard-refresh the page (Ctrl+Shift+R on desktop). On Android, reload after clearing the site cache if the old CSS/JS remains cached.
