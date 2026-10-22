@@ -71,3 +71,4 @@ dialog{border:0;padding:0;background:var(--panel);color:var(--ink);border-radius
 .more>summary:after{content:none}.more .c,.more[open] .o{display:none}.more[open] .c{display:inline}
 .art{margin-top:28px;padding-top:8px;border-top:1px solid var(--line)}.art h4{font:600 21px "Chakra Petch",sans-serif;margin:30px 0 8px}
 .art p{padding:0;color:var(--ink)}
+.legal{padding:48px 0 64px}.legal h1{font-size:clamp(30px,4vw,44px)}.legal h2{font-size:24px;margin:34px 0 8px}
