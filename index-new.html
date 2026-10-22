@@ -27,7 +27,7 @@
 <link rel="canonical" href="https://apnafpsbooster.com/">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <title>BGMI &amp; PUBG MOBILE Lag Fix &amp; FPS Guide | APNA FPS BOOSTER</title>
-<link rel="stylesheet" href="/style.css?v=3">
+<link rel="stylesheet" href="/style.css?v=10">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -584,7 +584,7 @@
       <h2 id="faq">BGMI, PUBG MOBILE &amp; APNA FPS BOOSTER FAQ</h2>
       <p class="sub">Answers about BGMI lag fix, PUBG MOBILE FPS graphics, 60/90/120/165 FPS, low-end phones and the APNA FPS BOOSTER UNLOCK FPS feature.</p>
     </div>
-    <div class="seo-faq-list" aria-label="BGMI, PUBG MOBILE and APNA FPS BOOSTER frequently asked questions">
+    <div class="seo-faq-list" id="seoFaqList" aria-label="BGMI, PUBG MOBILE and APNA FPS BOOSTER frequently asked questions">
       <details><summary>What is APNA FPS BOOSTER?</summary><p>APNA FPS BOOSTER is an Android app promoted on this website for exploring supported FPS options, graphics-related tools and gaming resources for BGMI and PUBG MOBILE. Features can vary by app release and device.</p></details>
       <details><summary>How do I download APNA FPS BOOSTER?</summary><p>Use the Download App button on this page or visit the website&#x27;s Download page. The current APK link shown on this page is https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/APNA.FPS.BOOSTER_5.2.0.apk. Review the source and Android permissions before installing.</p></details>
       <details><summary>What is the UNLOCK FPS feature in APNA FPS BOOSTER?</summary><p>UNLOCK FPS is a feature in APNA FPS BOOSTER that lets users explore FPS options offered by the app for supported configurations. The available choices depend on device, game version and compatibility.</p></details>
@@ -623,7 +623,7 @@
     </div>
 
     <div class="faq-more-wrap">
-      <button class="faq-more-btn" id="faqMoreToggle" type="button" aria-expanded="false" aria-controls="faq">Show more FAQs <span aria-hidden="true">⌄</span></button>
+      <button class="faq-more-btn" id="faqMoreToggle" type="button" aria-expanded="false" aria-controls="seoFaqList">Show more FAQs <span aria-hidden="true">⌄</span></button>
     </div>
     <div class="fps-strip" style="margin-top:24px">
       <div><strong>READY TO EXPLORE UNLOCK FPS?</strong><p>Download APNA FPS BOOSTER and check the supported PUBG MOBILE and BGMI FPS options for your device.</p></div>
@@ -649,6 +649,36 @@
   <div class="lightbox-top"><span>SCREENSHOT PREVIEW</span><button id="lightboxClose" type="button" aria-label="Close screenshot preview">×</button></div>
   <img decoding="async" id="lightboxImage" src="" alt="Expanded screenshot preview">
 </dialog>
-<script src="/main.js" defer></script>
+<script src="/main.js?v=10" defer></script>
+<style id="faq-toggle-critical-style">
+/* FAQ toggle: enforce the collapsed state and keep the control visible on all themes. */
+.seo-faq-list > details:nth-of-type(n+4) { display: none !important; }
+.seo-faq-list.faq-expanded > details:nth-of-type(n+4) { display: block !important; }
+.faq-more-wrap { display: flex !important; justify-content: center; width: 100%; margin: 22px auto 0; }
+#faqMoreToggle { display: inline-flex !important; visibility: visible !important; opacity: 1 !important; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 12px 22px; border: 1px solid #287bff; border-radius: 999px; background: linear-gradient(110deg,#1769ff,#08a9c8); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+#faqMoreToggle[hidden] { display: none !important; }
+</style>
+<script>
+(function () {
+  function initFaqToggle() {
+    var list = document.getElementById('seoFaqList') || document.querySelector('.seo-faq-list');
+    var button = document.getElementById('faqMoreToggle');
+    if (!list || !button || button.dataset.faqReady === '1') return;
+    button.dataset.faqReady = '1';
+    var items = list.querySelectorAll(':scope > details');
+    if (items.length <= 3) { button.hidden = true; return; }
+    list.classList.remove('faq-expanded');
+    button.hidden = false;
+    button.setAttribute('aria-expanded', 'false');
+    button.innerHTML = 'Show more FAQs <span aria-hidden="true">⌄</span>';
+    button.addEventListener('click', function () {
+      var expanded = list.classList.toggle('faq-expanded');
+      button.setAttribute('aria-expanded', String(expanded));
+      button.innerHTML = expanded ? 'Show fewer FAQs <span aria-hidden="true">⌃</span>' : 'Show more FAQs <span aria-hidden="true">⌄</span>';
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFaqToggle); else initFaqToggle();
+})();
+</script>
 </body>
 </html>
