@@ -1,16 +1,9 @@
-APNA FPS BOOSTER — GitHub Pages flat-file package (Dark/Light mode)
+APNA FPS BOOSTER — GitHub Pages flat-file package (refined themes)
 
-Upload these files directly to the ROOT of your GitHub repository:
-- index.html
-- style.css
-- main.js
-
-The page references /style.css and /main.js on your domain. Do not place these files inside a new folder.
-Theme behavior:
-- First visit follows the device/browser dark or light preference.
-- The moon/sun button in the header lets visitors switch manually.
-- Manual preference is saved in localStorage on that device/browser.
-To reset to device-following behavior, clear the site's local storage key `apnafps-theme`.
-Keep existing image/media files in their current paths. This package does not include those assets.
-After GitHub Pages deploys, hard-refresh with Ctrl+Shift+R.
-If the live page is /index-new, update that page's HTML too so it includes the theme toggle and /style.css + /main.js references.
+Upload index.html, style.css, and main.js directly to the ROOT of the GitHub repository.
+The HTML references /style.css and /main.js on the domain.
+Dark mode retains the original gaming-style navy/black palette with cyan and blue accents.
+Light mode uses cool white surfaces and soft blue accents.
+First visit follows the device preference; the moon/sun button switches manually and saves the choice in this browser.
+Keep existing image/media files in their current paths. After deployment, hard-refresh with Ctrl+Shift+R.
+If the live page is /index-new, update that HTML page too with the same theme button and file references.
