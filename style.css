@@ -813,3 +813,33 @@ pre, code, table { max-width: 100%; }
   .menu-toggle { padding: 7px; }
   .hero-actions .btn { overflow-wrap: anywhere; }
 }
+
+
+/* FINAL MOBILE HEADER / HAMBURGER VISIBILITY FIX */
+*, *::before, *::after { box-sizing: border-box; }
+@media (max-width: 700px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden !important; }
+  .topbar { left: 0; right: 0; width: 100%; max-width: 100%; }
+  .nav {
+    width: 100%; max-width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 6px; padding: 0 10px; margin: 0;
+  }
+  .brand { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+  .brand img { flex: 0 0 auto; }
+  .brandname { min-width: 0; white-space: nowrap; }
+  .brand small { white-space: nowrap; }
+  .nav-cta { flex: 0 1 auto; min-width: 0; max-width: 34vw; padding: 9px 7px; font-size: 8px; overflow: hidden; text-overflow: ellipsis; }
+  .theme-toggle { flex: 0 0 34px; width: 34px; height: 34px; margin: 0; padding: 0; }
+  .menu-toggle { display: flex; flex: 0 0 36px; width: 36px; height: 36px; align-items: center; justify-content: center; padding: 0; margin: 0; }
+  .navlinks { left: 0; right: 0; width: 100%; max-width: 100%; }
+}
+@media (max-width: 430px) {
+  .nav { gap: 5px; padding-inline: 7px; }
+  .brand img { width: 29px; height: 29px; }
+  .brandname { font-size: 11px; letter-spacing: 0; }
+  .brand small { font-size: 6px; letter-spacing: .8px; }
+  .nav-cta { max-width: 29vw; font-size: 7px; padding: 8px 5px; }
+  .theme-toggle { flex-basis: 31px; width: 31px; height: 31px; }
+  .menu-toggle { flex-basis: 34px; width: 34px; height: 34px; }
+}
