@@ -961,3 +961,9 @@ pre, code, table { max-width: 100%; }
   .hero .lead { margin-bottom:16px !important; }
   .hero .hero-actions { margin-top:14px !important; }
 }
+
+
+/* Keep the large hero logo on desktop; hide it on mobile to prevent excessive vertical height. */
+@media (max-width: 700px) {
+  .hero-logo { display: none !important; }
+}
