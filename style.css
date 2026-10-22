@@ -855,3 +855,15 @@ pre, code, table { max-width: 100%; }
 .faq-more-btn span { color:var(--cyan, #38e6f2); font-size:1.2em; line-height:1; }
 .seo-faq-list.faq-expanded + .faq-more-wrap .faq-more-btn span { transform:rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { .faq-more-btn { transition:none; } }
+
+
+/* SEO keyword library: visible, accessible and user-expandable */
+.seo-keyword-library{padding:clamp(24px,5vw,56px) 16px;margin:28px auto;max-width:1100px;color:var(--text-color,inherit)}
+.seo-keyword-library-inner{max-width:960px;margin:0 auto}
+.seo-keyword-library h2{margin:0 0 10px;font-size:clamp(1.35rem,3vw,2rem);line-height:1.25}
+.seo-keyword-library p{line-height:1.65;opacity:.88;margin:0 0 18px}
+.seo-keyword-group{margin:10px 0;border:1px solid rgba(128,128,128,.28);border-radius:12px;padding:12px 16px;background:rgba(128,128,128,.045)}
+.seo-keyword-group summary{cursor:pointer;font-weight:650;line-height:1.5}
+.seo-keyword-group ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:8px 22px;padding-left:22px;margin:14px 0 4px}
+.seo-keyword-group li{overflow-wrap:anywhere;line-height:1.5}
+@media(max-width:600px){.seo-keyword-library{padding-left:14px;padding-right:14px}.seo-keyword-group{padding:11px 12px}}
