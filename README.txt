@@ -1,10 +1,9 @@
-APNA FPS BOOSTER — GitHub Pages flat-file package (dark theme consistency v5)
+APNA FPS BOOSTER — GitHub Pages dark-mode deep audit patch v6
 
-Upload index.html, style.css, and main.js directly to the ROOT of your GitHub repository.
-This update adds a final dark-theme CSS pass for common cards, CTA panels, tables, FAQ,
-forms, headings, body text, and other elements that can otherwise retain white backgrounds.
-The light theme and saved device/manual preference remain supported.
-Keep existing image/media files. After GitHub Pages deploys, hard-refresh with Ctrl+Shift+R.
-If the live page is /index-new, update that HTML page too if it is a separate file.
-
-Targeted fix: dark mode now explicitly styles the FPS options strip and FPS comparison table, including table headers/cells that previously retained pale backgrounds with pale text.
+Files are flat: upload index.html, style.css, and main.js directly into the repository root.
+This patch was built after auditing the current HTML classes and CSS. It explicitly addresses
+the actual FPS strip, FPS comparison table, feature/game cards, FAQ, guide/TOC/steps blocks,
+download panels, section labels, lightbox, mobile navigation, form controls, and footer.
+The dark selectors support data-theme on either <html> or <body>. Existing media assets stay
+unchanged. After deploying, hard-refresh with Ctrl+Shift+R. The current browser route shown
+in the screenshots is /index-new; ensure that page loads this same style.css file.

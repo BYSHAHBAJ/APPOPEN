@@ -535,3 +535,204 @@ html[data-theme="dark"] .fps-table th:first-child,
 html[data-theme="dark"] .fps-table td:first-child {
   color: #edf4ff !important;
 }
+
+
+/* ===== DEEP DARK MODE AUDIT PATCH v6 =====
+   Targets the actual page components, including comparison tables, content
+   panels, FAQ, guide blocks, cards, CTA areas, lightbox, and mobile nav.
+   Both html[data-theme] and body[data-theme] are supported.
+*/
+html[data-theme="dark"], body[data-theme="dark"] {
+  color-scheme: dark !important;
+  --bg: #080d18 !important;
+  --surface: #101b2d !important;
+  --surface2: #142238 !important;
+  --ink: #f2f6ff !important;
+  --muted: #a9bad2 !important;
+  --line: #263953 !important;
+  --apna-bg: #080d18 !important;
+  --apna-surface: #101b2d !important;
+  --apna-surface-alt: #142238 !important;
+  --apna-fg: #f2f6ff !important;
+  --apna-muted: #a9bad2 !important;
+  --apna-line: #263953 !important;
+}
+html[data-theme="dark"] body,
+body[data-theme="dark"] {
+  background: #080d18 !important;
+  color: #f2f6ff !important;
+}
+html[data-theme="dark"] .section,
+body[data-theme="dark"] .section {
+  background: transparent !important;
+  color: #f2f6ff !important;
+}
+html[data-theme="dark"] .fps-strip,
+html[data-theme="dark"] .download-panel,
+html[data-theme="dark"] .game,
+html[data-theme="dark"] .feature,
+html[data-theme="dark"] .trust,
+html[data-theme="dark"] .disclaimer,
+html[data-theme="dark"] .ng-home-card,
+html[data-theme="dark"] .seo-faq-list details,
+html[data-theme="dark"] .quick-answer,
+html[data-theme="dark"] .toc,
+html[data-theme="dark"] .steps,
+html[data-theme="dark"] .table-wrap,
+html[data-theme="dark"] .download-band,
+body[data-theme="dark"] .fps-strip,
+body[data-theme="dark"] .download-panel,
+body[data-theme="dark"] .game,
+body[data-theme="dark"] .feature,
+body[data-theme="dark"] .trust,
+body[data-theme="dark"] .disclaimer,
+body[data-theme="dark"] .ng-home-card,
+body[data-theme="dark"] .seo-faq-list details,
+body[data-theme="dark"] .quick-answer,
+body[data-theme="dark"] .toc,
+body[data-theme="dark"] .steps,
+body[data-theme="dark"] .table-wrap,
+body[data-theme="dark"] .download-band {
+  background: linear-gradient(145deg, #111e32 0%, #0d1727 100%) !important;
+  background-color: #101b2d !important;
+  color: #f2f6ff !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-strip strong,
+html[data-theme="dark"] .fps-pills span,
+html[data-theme="dark"] .game b,
+html[data-theme="dark"] .trust b,
+html[data-theme="dark"] .quick-answer strong,
+html[data-theme="dark"] .toc a,
+html[data-theme="dark"] .steps strong,
+body[data-theme="dark"] .fps-strip strong,
+body[data-theme="dark"] .fps-pills span,
+body[data-theme="dark"] .game b,
+body[data-theme="dark"] .trust b,
+body[data-theme="dark"] .quick-answer strong,
+body[data-theme="dark"] .toc a,
+body[data-theme="dark"] .steps strong {
+  color: #f2f6ff !important;
+}
+html[data-theme="dark"] .fps-strip p,
+html[data-theme="dark"] .feature p,
+html[data-theme="dark"] .game small,
+html[data-theme="dark"] .game p,
+html[data-theme="dark"] .trust,
+html[data-theme="dark"] .disclaimer,
+html[data-theme="dark"] .sub,
+html[data-theme="dark"] .guide-p,
+html[data-theme="dark"] .seo-help,
+html[data-theme="dark"] .quick-answer p,
+html[data-theme="dark"] .steps p,
+body[data-theme="dark"] .fps-strip p,
+body[data-theme="dark"] .feature p,
+body[data-theme="dark"] .game small,
+body[data-theme="dark"] .game p,
+body[data-theme="dark"] .trust,
+body[data-theme="dark"] .disclaimer,
+body[data-theme="dark"] .sub,
+body[data-theme="dark"] .guide-p,
+body[data-theme="dark"] .seo-help,
+body[data-theme="dark"] .quick-answer p,
+body[data-theme="dark"] .steps p {
+  color: #b5c4d9 !important;
+}
+
+/* Comparison table: force every table layer to use dark surfaces and readable text. */
+html[data-theme="dark"] .table-wrap,
+html[data-theme="dark"] table,
+html[data-theme="dark"] .fps-table,
+body[data-theme="dark"] .table-wrap,
+body[data-theme="dark"] table,
+body[data-theme="dark"] .fps-table {
+  background: #0e192a !important;
+  color: #eaf2ff !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table thead,
+html[data-theme="dark"] .fps-table thead tr,
+html[data-theme="dark"] .fps-table thead th,
+body[data-theme="dark"] .fps-table thead,
+body[data-theme="dark"] .fps-table thead tr,
+body[data-theme="dark"] .fps-table thead th {
+  background: #17263d !important;
+  color: #f5f8ff !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table tbody,
+html[data-theme="dark"] .fps-table tbody tr,
+html[data-theme="dark"] .fps-table tbody th,
+html[data-theme="dark"] .fps-table tbody td,
+body[data-theme="dark"] .fps-table tbody,
+body[data-theme="dark"] .fps-table tbody tr,
+body[data-theme="dark"] .fps-table tbody th,
+body[data-theme="dark"] .fps-table tbody td {
+  background: #101b2d !important;
+  color: #c8d7ec !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table tbody tr:nth-child(even) th,
+html[data-theme="dark"] .fps-table tbody tr:nth-child(even) td,
+body[data-theme="dark"] .fps-table tbody tr:nth-child(even) th,
+body[data-theme="dark"] .fps-table tbody tr:nth-child(even) td {
+  background: #142238 !important;
+}
+html[data-theme="dark"] .fps-table th:first-child,
+html[data-theme="dark"] .fps-table td:first-child,
+body[data-theme="dark"] .fps-table th:first-child,
+body[data-theme="dark"] .fps-table td:first-child {
+  color: #f2f6ff !important;
+}
+
+/* White backgrounds hard-coded on common semantic and custom panel elements. */
+html[data-theme="dark"] .section-head .kicker,
+html[data-theme="dark"] .feature-icon,
+html[data-theme="dark"] .btn-ghost,
+html[data-theme="dark"] #imageLightbox,
+html[data-theme="dark"] #lightboxClose,
+body[data-theme="dark"] .section-head .kicker,
+body[data-theme="dark"] .feature-icon,
+body[data-theme="dark"] .btn-ghost,
+body[data-theme="dark"] #imageLightbox,
+body[data-theme="dark"] #lightboxClose {
+  background-color: #142238 !important;
+  color: #eaf2ff !important;
+  border-color: #344b6b !important;
+}
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select,
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] select {
+  color-scheme: dark;
+  background: #0b1423 !important;
+  color: #edf4ff !important;
+  border-color: #344966 !important;
+}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder,
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+  color: #91a3bc !important;
+}
+html[data-theme="dark"] .navlinks {
+  background: rgba(10,18,33,.99) !important;
+  border-color: #263953 !important;
+}
+html[data-theme="dark"] .navlinks a { color: #d7e4f8 !important; }
+html[data-theme="dark"] footer,
+body[data-theme="dark"] footer {
+  background: #070c15 !important;
+  color: #a9bad2 !important;
+  border-color: #263953 !important;
+}
+
+/* Preserve original image/video colors; only remove accidental white surface fills. */
+html[data-theme="dark"] img,
+html[data-theme="dark"] video,
+html[data-theme="dark"] iframe,
+html[data-theme="dark"] canvas {
+  background-color: transparent !important;
+}
