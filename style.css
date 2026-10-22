@@ -469,3 +469,69 @@ html[data-theme="dark"] img,
 html[data-theme="dark"] video,
 html[data-theme="dark"] iframe,
 html[data-theme="dark"] canvas{background-color:transparent}
+
+
+/* Targeted repair for remaining light-theme components while dark mode is active */
+html[data-theme="dark"] .fps-strip,
+html[data-theme="dark"] .fps-strip *,
+html[data-theme="dark"] .fps-table,
+html[data-theme="dark"] .fps-table caption,
+html[data-theme="dark"] .fps-table thead,
+html[data-theme="dark"] .fps-table tbody,
+html[data-theme="dark"] .fps-table tr,
+html[data-theme="dark"] .fps-table th,
+html[data-theme="dark"] .fps-table td {
+  color: #edf4ff;
+}
+html[data-theme="dark"] .fps-strip {
+  background: linear-gradient(110deg, #111e32, #0d1728) !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-strip p {
+  color: #a9bad2 !important;
+}
+html[data-theme="dark"] .fps-pills span {
+  background: #17263d !important;
+  border-color: #344b6b !important;
+  color: #dce9ff !important;
+}
+html[data-theme="dark"] .table-wrap {
+  background: #0e192a !important;
+  border: 1px solid #2a3c55 !important;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+html[data-theme="dark"] .fps-table {
+  width: 100%;
+  background: #0e192a !important;
+  color: #edf4ff !important;
+  border-collapse: collapse;
+}
+html[data-theme="dark"] .fps-table thead th {
+  background: #17263d !important;
+  color: #f5f8ff !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table tbody th {
+  background: #142238 !important;
+  color: #eaf2ff !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table tbody td {
+  background: #0e192a !important;
+  color: #c8d7ec !important;
+  border-color: #2b405c !important;
+}
+html[data-theme="dark"] .fps-table tbody tr:nth-child(even) td,
+html[data-theme="dark"] .fps-table tbody tr:nth-child(even) th {
+  background: #111f33 !important;
+}
+html[data-theme="dark"] .fps-table th,
+html[data-theme="dark"] .fps-table td {
+  border: 1px solid #2b405c !important;
+  padding: 15px 17px;
+}
+html[data-theme="dark"] .fps-table th:first-child,
+html[data-theme="dark"] .fps-table td:first-child {
+  color: #edf4ff !important;
+}

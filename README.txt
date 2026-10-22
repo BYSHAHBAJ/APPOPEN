@@ -6,3 +6,5 @@ forms, headings, body text, and other elements that can otherwise retain white b
 The light theme and saved device/manual preference remain supported.
 Keep existing image/media files. After GitHub Pages deploys, hard-refresh with Ctrl+Shift+R.
 If the live page is /index-new, update that HTML page too if it is a separate file.
+
+Targeted fix: dark mode now explicitly styles the FPS options strip and FPS comparison table, including table headers/cells that previously retained pale backgrounds with pale text.
