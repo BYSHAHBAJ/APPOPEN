@@ -1,39 +1,27 @@
-/* Small progressive enhancements for the Miravix article. */
-(() => {
-  'use strict';
-  const progress = document.createElement('div');
-  progress.className = 'reading-progress';
-  progress.setAttribute('role', 'progressbar');
-  progress.setAttribute('aria-label', 'Article reading progress');
-  progress.setAttribute('aria-valuemin', '0');
-  progress.setAttribute('aria-valuemax', '100');
-  progress.setAttribute('aria-valuenow', '0');
-  document.body.prepend(progress);
+// APNA FPS BOOSTER — website interactions
+// Edit navigation and screenshot-preview behavior here.
 
-  const topButton = document.createElement('button');
-  topButton.className = 'back-to-top';
-  topButton.type = 'button';
-  topButton.textContent = '↑';
-  topButton.setAttribute('aria-label', 'Back to top');
-  topButton.hidden = true;
-  document.body.append(topButton);
-  topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+const menuToggle=document.getElementById('menuToggle');
+const navlinks=document.getElementById('navlinks');
+menuToggle.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+// Internal page links intentionally use the current tab, preserving normal browser Back navigation.
+const imageLightbox=document.getElementById('imageLightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+const lightboxClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.image-preview').forEach(link=>{
+  link.addEventListener('click',event=>{
+    event.preventDefault();
+    const img=link.querySelector('img');
+    lightboxImage.src=img.currentSrc||img.src;
+    lightboxImage.alt=img.alt||'Screenshot preview';
+    if(typeof imageLightbox.showModal==='function') imageLightbox.showModal();
+  });
+});
+lightboxClose.addEventListener('click',()=>imageLightbox.close());
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape' && imageLightbox.open) imageLightbox.close();
+});
 
-  let scheduled = false;
-  const update = () => {
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const percent = maxScroll > 0 ? Math.round((window.scrollY / maxScroll) * 100) : 0;
-    progress.style.width = percent + '%';
-    progress.setAttribute('aria-valuenow', String(percent));
-    topButton.hidden = window.scrollY < 500;
-    scheduled = false;
-  };
-  window.addEventListener('scroll', () => {
-    if (!scheduled) {
-      scheduled = true;
-      window.requestAnimationFrame(update);
-    }
-  }, { passive: true });
-  window.addEventListener('resize', update, { passive: true });
-  update();
-})();
+imageLightbox.addEventListener('click',event=>{if(event.target===imageLightbox) imageLightbox.close();});
+imageLightbox.addEventListener('close',()=>{lightboxImage.src='';});
