@@ -736,3 +736,80 @@ html[data-theme="dark"] iframe,
 html[data-theme="dark"] canvas {
   background-color: transparent !important;
 }
+
+/* MOBILE VIEWPORT FIT PATCH — APNA FPS BOOSTER */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-right: 0;
+  overflow-x: clip;
+}
+body, main, header, footer, section, article, nav, .topbar, .hero, .section,
+.container, .hero > .container, .download-band, .download-inner, .footer-inner {
+  max-width: 100%;
+  min-width: 0;
+}
+img, video, iframe, canvas, svg { max-width: 100%; }
+.container, .hero > .container, .section > .container { min-width: 0; }
+.feature-grid > *, .game-grid > *, .gallery > *, .download-inner > *,
+.ng-home-card > *, .hero > .container > *, .hero-content > *, .fps-strip > * {
+  min-width: 0;
+  max-width: 100%;
+}
+pre, code, table { max-width: 100%; }
+
+@media (max-width: 700px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: clip !important;
+  }
+  .topbar, header, .site-header, .nav {
+    width: 100%;
+    max-width: 100%;
+  }
+  .nav {
+    display: flex;
+    gap: 6px;
+    padding-inline: 10px;
+    min-width: 0;
+  }
+  .brand { flex: 0 1 auto; min-width: 0; }
+  .brandname { min-width: 0; }
+  .nav-cta { flex: 0 1 auto; max-width: 42vw; white-space: nowrap; }
+  .theme-toggle { flex: 0 0 38px; }
+  .menu-toggle { flex: 0 0 auto; }
+  .container, .hero > .container, .section > .container {
+    width: calc(100% - 30px) !important;
+    max-width: calc(100% - 30px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero, .hero-bg, main, .section, footer { max-width: 100%; }
+  .hero-content, .lead, .section-head, .sub, .quick-answer, .guide-p,
+  .footer-note, .footer-note p { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  .hero-stats { width: 100%; max-width: 100%; }
+  .stat { min-width: 0; }
+  .gallery, .feature-grid, .game-grid, .trust-row { width: 100%; min-width: 0; }
+  .gallery > *, .feature-grid > *, .game-grid > *, .trust-row > * { min-width: 0; }
+  .fps-strip { width: 100%; min-width: 0; }
+  .fps-pills { max-width: 100%; }
+  .download-band, .download-inner, .download-panel, .ng-home-card { min-width: 0; max-width: 100%; }
+  .table-wrap { max-width: 100%; overflow-x: auto; }
+  .footer-inner, .footer-links { min-width: 0; max-width: 100%; }
+}
+
+@media (max-width: 390px) {
+  .nav { gap: 5px; padding-inline: 7px; }
+  .brand { gap: 5px; }
+  .brand img { width: 30px; height: 30px; }
+  .brandname { font-size: 12px; }
+  .brand small { letter-spacing: 1.2px; }
+  .nav-cta { max-width: 38vw; padding: 8px 6px; font-size: 8px; }
+  .theme-toggle { width: 34px; height: 34px; flex-basis: 34px; margin-right: 2px; }
+  .menu-toggle { padding: 7px; }
+  .hero-actions .btn { overflow-wrap: anywhere; }
+}
