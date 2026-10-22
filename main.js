@@ -85,4 +85,26 @@
       else if (systemDark.addListener) systemDark.addListener(onSystemChange);
     }
   }
+
+
+  // Seamless auto-scroll for the compact preview strip. Reuses existing image URLs.
+  const previewTrack = document.getElementById('topPreviewTrack');
+  const previewWindow = document.getElementById('topPreviewWindow');
+  if (previewTrack && previewWindow && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const originals = Array.from(previewTrack.children);
+    originals.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.setAttribute('tabindex', '-1');
+      clone.querySelectorAll('img').forEach((img) => { img.alt = ''; img.loading = 'lazy'; });
+      previewTrack.appendChild(clone);
+    });
+    // Keep the animation seamless if the visitor resizes the browser.
+    const refreshPreviewAnimation = () => {
+      previewTrack.style.animation = 'none';
+      void previewTrack.offsetWidth;
+      previewTrack.style.animation = '';
+    };
+    window.addEventListener('resize', refreshPreviewAnimation, { passive: true });
+  }
 })();
