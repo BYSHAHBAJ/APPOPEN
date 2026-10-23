@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#eef1f5">
-<meta name="description" content="APNA FPS BOOSTER Creator Partnership Program information, video requirements, VIP rewards, and submission details.">
+<meta name="description" content="APNA FPS BOOSTER Creator Partnership Program. Creators of all sizes and content types can apply, with no minimum follower requirement.">
 <title>Creator Partnership Program | APNA FPS BOOSTER</title>
 <style>
-:root{color-scheme:light;--page:#eef1f5;--text:#151922;--muted:#596477;--line:#d8dee7;--link:#245db5}
-[data-theme="dark"]{color-scheme:dark;--page:#11151b;--text:#edf1f7;--muted:#b0bac8;--line:#303947;--link:#8ab4ff}
+:root{color-scheme:light;--page:#eef1f5;--text:#151922;--muted:#596477;--line:#d8dee7;--link:#245db5;--surface:#fff}
+[data-theme="dark"]{color-scheme:dark;--page:#11151b;--text:#edf1f7;--muted:#b0bac8;--line:#303947;--link:#8ab4ff;--surface:#171d26}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--page);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.75}
@@ -18,19 +18,29 @@ header{border-bottom:1px solid var(--line)}
 .brand img{width:48px;height:48px;object-fit:contain}
 .brand small{display:block;font-size:11px;letter-spacing:.06em;color:var(--muted);font-weight:400}
 .theme{border:1px solid var(--line);background:transparent;color:var(--text);width:44px;height:44px;border-radius:7px;font-size:20px;cursor:pointer}
-main{width:min(960px,calc(100% - 40px));margin:56px auto 80px}
+main{width:min(960px,calc(100% - 40px));margin:48px auto 80px}
 h1{font-size:clamp(34px,4vw,48px);line-height:1.2;letter-spacing:-.035em;margin:0 0 18px;font-weight:750}
 .updated{color:var(--muted);font-size:15px;margin-bottom:10px}
 p{margin:0 0 18px}
-h2{font-size:24px;line-height:1.35;font-weight:700;margin:38px 0 10px;letter-spacing:-.02em}
+h2{font-size:24px;line-height:1.35;font-weight:700;margin:34px 0 10px;letter-spacing:-.02em}
 h3{font-size:18px;line-height:1.4;font-weight:700;margin:23px 0 7px}
 a{color:var(--link);text-underline-offset:3px}
 ul,ol{padding-left:25px;margin:8px 0 20px}
 li{padding-left:3px;margin:5px 0}
-.callout{margin:22px 0;padding:0 0 0 16px;border-left:3px solid var(--line);color:var(--muted)}
 footer{border-top:1px solid var(--line);padding:22px 20px;color:var(--muted);font-size:13px}
 .footer-inner{width:min(1180px,100%);margin:auto;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media(max-width:600px){.nav{min-height:72px;width:calc(100% - 24px)}.brand{font-size:16px}.brand img{width:40px;height:40px}.brand small{font-size:9px}main{width:calc(100% - 32px);margin:36px auto 56px}h2{font-size:21px;margin-top:30px}body{font-size:15px}}
+.lang-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:20px}
+.lang-dialog{width:min(430px,100%);background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:25px;box-shadow:0 18px 60px rgba(0,0,0,.25)}
+.lang-dialog h2{font-size:23px;margin:0 0 8px}
+.lang-dialog p{font-size:14px;color:var(--muted);margin:0 0 18px}
+.lang-buttons{display:flex;gap:10px}
+.lang-buttons button{flex:1;min-height:46px;border:1px solid var(--line);border-radius:7px;background:var(--page);color:var(--text);font-weight:700;font-size:15px;cursor:pointer}
+.lang-buttons button:hover{border-color:var(--link)}
+.lang-note{font-size:11px;color:var(--muted);margin-top:13px}
+.language-switch{font-size:12px;margin:0 0 24px;display:flex;align-items:center;gap:8px;color:var(--muted)}
+.language-switch button{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:5px;padding:5px 9px;cursor:pointer}
+[hidden]{display:none!important}
+@media(max-width:600px){.nav{min-height:72px;width:calc(100% - 24px)}.brand{font-size:16px}.brand img{width:40px;height:40px}.brand small{font-size:9px}main{width:calc(100% - 32px);margin:32px auto 56px}h2{font-size:21px;margin-top:29px}body{font-size:15px}.lang-dialog{padding:21px}}
 </style>
 </head>
 <body>
@@ -38,86 +48,140 @@ footer{border-top:1px solid var(--line);padding:22px 20px;color:var(--muted);fon
   <div class="nav">
     <a class="brand" href="https://apnafpsbooster.com">
       <img src="https://apnafpsbooster.com/favicon.ico" alt="APNA FPS BOOSTER logo" onerror="this.style.display='none'">
-      <span>APNA FPS BOOSTER<small>Creator Partnership Program</small></span>
+      <span>APNA FPS BOOSTER<small data-i18n="brandSub">Creator Partnership Program</small></span>
     </a>
     <button class="theme" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch light/dark theme">☾</button>
   </div>
 </header>
+
+<div class="lang-overlay" id="languagePrompt" role="dialog" aria-modal="true" aria-labelledby="languagePromptTitle" hidden>
+  <div class="lang-dialog">
+    <h2 id="languagePromptTitle">Choose your language</h2>
+    <p id="languagePromptText">Which language would you prefer to read this page in?</p>
+    <div class="lang-buttons">
+      <button type="button" data-choose-lang="en">English</button>
+      <button type="button" data-choose-lang="hi">हिन्दी</button>
+    </div>
+    <div class="lang-note" id="languagePromptNote">You can change the language later from the page.</div>
+  </div>
+</div>
+
 <main>
-  <h1>APNA FPS BOOSTER Creator Partnership Program</h1>
-  <div class="updated">Program details and participation requirements</div>
-  <p>Welcome to the APNA FPS BOOSTER Creator Partnership Program. If you create BGMI, PUBG MOBILE, gaming, or technology content on YouTube, you can make a promotional video for APNA FPS BOOSTER and apply for VIP Channel Access as a reward.</p>
+  <div class="language-switch"><span data-i18n="languageLabel">Language:</span><button type="button" data-set-lang="en">English</button><button type="button" data-set-lang="hi">हिन्दी</button></div>
+  <h1 data-i18n="title">APNA FPS BOOSTER Creator Partnership Program</h1>
+  <div class="updated" data-i18n="subtitle">Program details and participation requirements</div>
+  <p data-i18n="intro">Welcome to the APNA FPS BOOSTER Creator Partnership Program. Creators of all types and sizes can apply, including YouTubers, Instagram creators, Facebook creators, gaming creators, and tech content creators. There is no minimum subscriber or follower requirement — the minimum is 0. Create an eligible promotional video and apply for VIP Channel Access.</p>
 
-  <h2>How to Create Your Video</h2>
-  <h3>1. Watch the Reference Demo Video</h3>
-  <p>Watch our reference video to understand how to present the FPS unlock options and demonstrate the process.</p>
-  <p><strong>Reference Video:</strong> <a href="https://youtu.be/X7FsFahn5uo" target="_blank" rel="noopener noreferrer">https://youtu.be/X7FsFahn5uo</a></p>
-
-  <h3>2. Create Your Promotional Video</h3>
-  <p>You can choose either of the following methods:</p>
+  <h2 data-i18n="eligibilityHeading">Who Can Participate?</h2>
+  <p data-i18n="eligibilityText">All types of creators are welcome, regardless of platform, niche, or audience size. You do not need any minimum number of subscribers or followers to apply. Just create your promotional video and submit the form.</p>
   <ul>
-    <li><strong>Option A — Create Your Own Video:</strong> Record your screen, explain the available FPS unlock options, and demonstrate the process.</li>
-    <li><strong>Option B — Use Our Demo Video:</strong> Use our demo footage and add your own voice-over, AI voice-over, commentary, captions, or meaningful editing.</li>
-  </ul>
-  <p>You do not need to explain every feature of APNA FPS BOOSTER. Focus mainly on the FPS unlock options and show how the process works.</p>
-
-  <h3>3. Test It in the Game</h3>
-  <p>After demonstrating the FPS unlock process, launch the supported game and show the selected FPS option in the game's settings. If possible, demonstrate gameplay to show that the selected option is available on your device.</p>
-  <p>Do not make fake performance claims or show results you have not verified. FPS availability and performance may vary depending on the device and game version.</p>
-
-  <h3>4. Publish Your Video</h3>
-  <ul>
-    <li>Upload the video to your YouTube channel.</li>
-    <li>Keep the video <strong>Public and accessible</strong> during the review process.</li>
-    <li>Include our official website link in the video description: <a href="https://apnafpsbooster.com" target="_blank" rel="noopener noreferrer">https://apnafpsbooster.com</a></li>
-    <li>Submit your published YouTube video URL through the application form.</li>
-  </ul>
-  <p><strong>Application Form:</strong> <a href="https://forms.gle/x81FgQozYadUnhMB6" target="_blank" rel="noopener noreferrer">https://forms.gle/x81FgQozYadUnhMB6</a></p>
-
-  <h2>VIP Reward System</h2>
-  <h3>Regular YouTube Videos</h3>
-  <ul>
-    <li><strong>Reward:</strong> 1 Month of VIP Channel Access.</li>
-    <li>Your video must meet the program requirements and pass verification.</li>
+    <li data-i18n="eligible1">YouTube, YouTube Shorts, Instagram Reels, Facebook, and other creator platforms are welcome.</li>
+    <li data-i18n="eligible2">Minimum subscribers/followers required: <strong>0</strong>.</li>
+    <li data-i18n="eligible3">Your submission must still meet the video requirements below and pass review.</li>
   </ul>
 
-  <h3>YouTube Shorts</h3>
+  <h2 data-i18n="howHeading">How to Create Your Video</h2>
+  <h3 data-i18n="step1Heading">1. Watch the Reference Demo Video</h3>
+  <p data-i18n="step1Text">Watch our reference video to understand how to present the FPS unlock options and demonstrate the process.</p>
+  <p><strong data-i18n="referenceLabel">Reference Video:</strong> <a href="https://youtu.be/X7FsFahn5uo" target="_blank" rel="noopener noreferrer">https://youtu.be/X7FsFahn5uo</a></p>
+
+  <h3 data-i18n="step2Heading">2. Create Your Promotional Video</h3>
+  <p data-i18n="step2Intro">You can choose either of the following methods:</p>
   <ul>
-    <li><strong>Standard Reward:</strong> 7 Days of VIP Channel Access.</li>
-    <li>If your Short achieves good views and engagement, you may qualify for 1 Month of VIP Channel Access, subject to review and approval.</li>
+    <li data-i18n="optionA"><strong>Option A — Create Your Own Video:</strong> Record your screen, explain the available FPS unlock options, and demonstrate the process.</li>
+    <li data-i18n="optionB"><strong>Option B — Use Our Demo Video:</strong> Use our demo footage and add your own voice-over, AI voice-over, commentary, captions, or meaningful editing.</li>
   </ul>
+  <p data-i18n="focusText">You do not need to explain every feature of APNA FPS BOOSTER. Focus mainly on the FPS unlock options and show how the process works.</p>
 
-  <h3>Renewing Your VIP Access</h3>
-  <p>After your current VIP plan expires, you may create and publish another new, eligible promotional video and submit it for review. If approved, you may receive VIP access again. Each repeat reward requires a new eligible video and is subject to verification and approval.</p>
+  <h3 data-i18n="step3Heading">3. Test It in the Game</h3>
+  <p data-i18n="step3Text">After demonstrating the FPS unlock process, launch the supported game and show the selected FPS option in the game's settings. If possible, demonstrate gameplay to show that the selected option is available on your device.</p>
+  <p data-i18n="truthText">Do not make fake performance claims or show results you have not verified. FPS availability and performance may vary depending on the device and game version.</p>
 
-  <h2>Important Rules</h2>
+  <h3 data-i18n="step4Heading">4. Publish Your Video</h3>
+  <ul>
+    <li data-i18n="publish1">Upload the video to your chosen creator platform.</li>
+    <li data-i18n="publish2">Keep the video Public and accessible during the review process.</li>
+    <li data-i18n="publish3">Include our official website link in the video description or post where links are supported.</li>
+    <li data-i18n="publish4">Submit your published video URL through the application form.</li>
+  </ul>
+  <p><strong data-i18n="websiteLabel">Official Website:</strong> <a href="https://apnafpsbooster.com" target="_blank" rel="noopener noreferrer">https://apnafpsbooster.com</a></p>
+  <p><strong data-i18n="formLabel">Application Form:</strong> <a href="https://forms.gle/x81FgQozYadUnhMB6" target="_blank" rel="noopener noreferrer">https://forms.gle/x81FgQozYadUnhMB6</a></p>
+
+  <h2 data-i18n="rewardsHeading">VIP Reward System</h2>
+  <h3 data-i18n="regularHeading">Regular YouTube Videos</h3>
+  <ul>
+    <li data-i18n="regularReward"><strong>Reward:</strong> 1 Month of VIP Channel Access.</li>
+    <li data-i18n="regularCondition">Your video must meet the program requirements and pass verification.</li>
+  </ul>
+  <h3 data-i18n="shortsHeading">YouTube Shorts</h3>
+  <ul>
+    <li data-i18n="shortsReward"><strong>Standard Reward:</strong> 7 Days of VIP Channel Access.</li>
+    <li data-i18n="shortsCondition">If your Short achieves good views and engagement, you may qualify for 1 Month of VIP Channel Access, subject to review and approval.</li>
+  </ul>
+  <p data-i18n="otherPlatformsReward">Creators on other platforms are welcome to apply. The reward format and eligibility will be assessed during review.</p>
+
+  <h3 data-i18n="renewHeading">Renewing Your VIP Access</h3>
+  <p data-i18n="renewText">After your current VIP plan expires, you may create and publish another new, eligible promotional video and submit it for review. If approved, you may receive VIP access again. Each repeat reward requires a new eligible video and is subject to verification and approval.</p>
+
+  <h2 data-i18n="rulesHeading">Important Rules</h2>
   <ol>
-    <li>Your video must promote APNA FPS BOOSTER and explain the FPS unlock options.</li>
-    <li>You must demonstrate the actual process. In-game testing is strongly expected.</li>
-    <li>You may use your own footage or our demo footage with your own voice-over, AI voice-over, commentary, captions, or editing.</li>
-    <li>Simply re-uploading our demo without meaningful changes is not eligible.</li>
-    <li>Your video must remain Public and accessible during the review process.</li>
-    <li>The official website link must be included in the video description.</li>
-    <li>Submit the correct YouTube video URL and accurate details.</li>
-    <li>VIP access is not automatic. Every submission is subject to verification and approval.</li>
-    <li>Reward eligibility may depend on video quality, compliance with the requirements, and performance where applicable.</li>
-    <li>Repeat rewards require a new eligible promotional video after the previous VIP plan expires.</li>
+    <li data-i18n="rule1">Your content must promote APNA FPS BOOSTER and explain its FPS unlock options.</li>
+    <li data-i18n="rule2">Demonstrate the actual process. In-game testing is strongly expected.</li>
+    <li data-i18n="rule3">You may use your own footage or our demo footage with your own voice-over, AI voice-over, commentary, captions, or editing.</li>
+    <li data-i18n="rule4">Simply re-uploading our demo without meaningful changes is not eligible.</li>
+    <li data-i18n="rule5">Your post or video must remain public and accessible during review, where the platform supports public posts.</li>
+    <li data-i18n="rule6">Include the official website link in the description or post where links are supported.</li>
+    <li data-i18n="rule7">Submit the correct content URL and accurate details.</li>
+    <li data-i18n="rule8">VIP access is not automatic. Every submission is subject to verification and approval.</li>
+    <li data-i18n="rule9">Reward eligibility may depend on content quality, compliance with the requirements, and performance where applicable.</li>
+    <li data-i18n="rule10">Repeat rewards require new eligible promotional content after the previous VIP plan expires.</li>
   </ol>
 
-  <h2>Ready to Participate?</h2>
-  <p>Watch the reference video, create your promotional video, publish it publicly, add our official website link to the description, and submit your video through the form below.</p>
-  <p><strong>Submit Your Video:</strong> <a href="https://forms.gle/x81FgQozYadUnhMB6" target="_blank" rel="noopener noreferrer">https://forms.gle/x81FgQozYadUnhMB6</a></p>
-  <p><strong>Official Website:</strong> <a href="https://apnafpsbooster.com" target="_blank" rel="noopener noreferrer">https://apnafpsbooster.com</a></p>
+  <h2 data-i18n="readyHeading">Ready to Participate?</h2>
+  <p data-i18n="readyText">All creators are welcome, even if you have 0 subscribers or followers. Create your promotional video, publish it, add our official website link where possible, and submit your content through the form below.</p>
+  <p><strong data-i18n="submitLabel">Submit Your Video:</strong> <a href="https://forms.gle/x81FgQozYadUnhMB6" target="_blank" rel="noopener noreferrer">https://forms.gle/x81FgQozYadUnhMB6</a></p>
+  <p><strong data-i18n="websiteLabel2">Official Website:</strong> <a href="https://apnafpsbooster.com" target="_blank" rel="noopener noreferrer">https://apnafpsbooster.com</a></p>
 </main>
-<footer><div class="footer-inner"><span>© <span id="year"></span> APNA FPS BOOSTER</span><span>Creator Partnership Program</span></div></footer>
+
+<footer><div class="footer-inner"><span>© <span id="year"></span> APNA FPS BOOSTER</span><span data-i18n="footerText">Creator Partnership Program</span></div></footer>
+
 <script>
+const translations={
+en:{
+brandSub:"Creator Partnership Program",title:"APNA FPS BOOSTER Creator Partnership Program",subtitle:"Program details and participation requirements",
+intro:"Welcome to the APNA FPS BOOSTER Creator Partnership Program. Creators of all types and sizes can apply, including YouTubers, Instagram creators, Facebook creators, gaming creators, and tech content creators. There is no minimum subscriber or follower requirement — the minimum is 0. Create an eligible promotional video and apply for VIP Channel Access.",
+eligibilityHeading:"Who Can Participate?",eligibilityText:"All types of creators are welcome, regardless of platform, niche, or audience size. You do not need any minimum number of subscribers or followers to apply. Just create your promotional video and submit the form.",
+eligible1:"YouTube, YouTube Shorts, Instagram Reels, Facebook, and other creator platforms are welcome.",eligible2:'Minimum subscribers/followers required: <strong>0</strong>.',eligible3:"Your submission must still meet the video requirements below and pass review.",
+howHeading:"How to Create Your Video",step1Heading:"1. Watch the Reference Demo Video",step1Text:"Watch our reference video to understand how to present the FPS unlock options and demonstrate the process.",referenceLabel:"Reference Video:",step2Heading:"2. Create Your Promotional Video",step2Intro:"You can choose either of the following methods:",optionA:"<strong>Option A — Create Your Own Video:</strong> Record your screen, explain the available FPS unlock options, and demonstrate the process.",optionB:"<strong>Option B — Use Our Demo Video:</strong> Use our demo footage and add your own voice-over, AI voice-over, commentary, captions, or meaningful editing.",focusText:"You do not need to explain every feature of APNA FPS BOOSTER. Focus mainly on the FPS unlock options and show how the process works.",step3Heading:"3. Test It in the Game",step3Text:"After demonstrating the FPS unlock process, launch the supported game and show the selected FPS option in the game's settings. If possible, demonstrate gameplay to show that the selected option is available on your device.",truthText:"Do not make fake performance claims or show results you have not verified. FPS availability and performance may vary depending on the device and game version.",step4Heading:"4. Publish Your Video",publish1:"Upload the video to your chosen creator platform.",publish2:"Keep the video Public and accessible during the review process.",publish3:"Include our official website link in the video description or post where links are supported.",publish4:"Submit your published video URL through the application form.",websiteLabel:"Official Website:",formLabel:"Application Form:",rewardsHeading:"VIP Reward System",regularHeading:"Regular YouTube Videos",regularReward:"<strong>Reward:</strong> 1 Month of VIP Channel Access.",regularCondition:"Your video must meet the program requirements and pass verification.",shortsHeading:"YouTube Shorts",shortsReward:"<strong>Standard Reward:</strong> 7 Days of VIP Channel Access.",shortsCondition:"If your Short achieves good views and engagement, you may qualify for 1 Month of VIP Channel Access, subject to review and approval.",otherPlatformsReward:"Creators on other platforms are welcome to apply. The reward format and eligibility will be assessed during review.",renewHeading:"Renewing Your VIP Access",renewText:"After your current VIP plan expires, you may create and publish another new, eligible promotional video and submit it for review. If approved, you may receive VIP access again. Each repeat reward requires a new eligible video and is subject to verification and approval.",rulesHeading:"Important Rules",rule1:"Your content must promote APNA FPS BOOSTER and explain its FPS unlock options.",rule2:"Demonstrate the actual process. In-game testing is strongly expected.",rule3:"You may use your own footage or our demo footage with your own voice-over, AI voice-over, commentary, captions, or editing.",rule4:"Simply re-uploading our demo without meaningful changes is not eligible.",rule5:"Your post or video must remain public and accessible during review, where the platform supports public posts.",rule6:"Include the official website link in the description or post where links are supported.",rule7:"Submit the correct content URL and accurate details.",rule8:"VIP access is not automatic. Every submission is subject to verification and approval.",rule9:"Reward eligibility may depend on content quality, compliance with the requirements, and performance where applicable.",rule10:"Repeat rewards require new eligible promotional content after the previous VIP plan expires.",readyHeading:"Ready to Participate?",readyText:"All creators are welcome, even if you have 0 subscribers or followers. Create your promotional video, publish it, add our official website link where possible, and submit your content through the form below.",submitLabel:"Submit Your Video:",websiteLabel2:"Official Website:",footerText:"Creator Partnership Program",languageLabel:"Language:"
+},
+hi:{
+brandSub:"क्रिएटर पार्टनरशिप प्रोग्राम",title:"APNA FPS BOOSTER क्रिएटर पार्टनरशिप प्रोग्राम",subtitle:"प्रोग्राम की जानकारी और भाग लेने के नियम",
+intro:"APNA FPS BOOSTER क्रिएटर पार्टनरशिप प्रोग्राम में आपका स्वागत है। YouTube, Instagram, Facebook, गेमिंग और टेक्नोलॉजी सहित हर तरह के क्रिएटर आवेदन कर सकते हैं। सब्सक्राइबर या फॉलोअर्स की कोई न्यूनतम शर्त नहीं है — न्यूनतम संख्या 0 है। एक योग्य प्रमोशनल वीडियो बनाएं और VIP Channel Access के लिए आवेदन करें।",
+eligibilityHeading:"कौन भाग ले सकता है?",eligibilityText:"हर तरह के क्रिएटर का स्वागत है, चाहे उनका प्लेटफॉर्म, कंटेंट का विषय या ऑडियंस कितनी भी छोटी हो। आवेदन करने के लिए सब्सक्राइबर या फॉलोअर्स की कोई न्यूनतम संख्या जरूरी नहीं है। बस अपना प्रमोशनल वीडियो बनाएं और फॉर्म सबमिट करें।",
+eligible1:"YouTube, YouTube Shorts, Instagram Reels, Facebook और अन्य क्रिएटर प्लेटफॉर्म के क्रिएटर आवेदन कर सकते हैं।",eligible2:"न्यूनतम सब्सक्राइबर/फॉलोअर्स: <strong>0</strong>।",eligible3:"फिर भी आपका वीडियो नीचे दिए गए नियमों के अनुसार होना चाहिए और समीक्षा में पास होना चाहिए।",
+howHeading:"अपना वीडियो कैसे बनाएं",step1Heading:"1. रेफरेंस डेमो वीडियो देखें",step1Text:"FPS अनलॉक विकल्पों को सही तरीके से दिखाने और प्रक्रिया समझने के लिए हमारा रेफरेंस वीडियो देखें।",referenceLabel:"रेफरेंस वीडियो:",step2Heading:"2. अपना प्रमोशनल वीडियो बनाएं",step2Intro:"आप नीचे दिए गए दो तरीकों में से कोई एक चुन सकते हैं:",optionA:"<strong>विकल्प A — अपना वीडियो बनाएं:</strong> स्क्रीन रिकॉर्ड करें, उपलब्ध FPS अनलॉक विकल्प समझाएं और पूरी प्रक्रिया दिखाएं।",optionB:"<strong>विकल्प B — हमारा डेमो इस्तेमाल करें:</strong> हमारे डेमो फुटेज में अपनी वॉइस-ओवर, AI वॉइस, कमेंट्री, कैप्शन या अच्छी एडिटिंग जोड़ें।",focusText:"APNA FPS BOOSTER के हर फीचर को समझाना जरूरी नहीं है। मुख्य रूप से FPS अनलॉक विकल्पों और उनकी प्रक्रिया पर ध्यान दें।",step3Heading:"3. गेम में टेस्ट करके दिखाएं",step3Text:"FPS अनलॉक प्रक्रिया दिखाने के बाद सपोर्टेड गेम खोलें और गेम की सेटिंग्स में चुना गया FPS विकल्प दिखाएं। संभव हो तो अपने डिवाइस पर गेमप्ले भी दिखाएं।",truthText:"गलत परफॉर्मेंस दावे न करें और ऐसा रिजल्ट न दिखाएं जिसे आपने खुद टेस्ट नहीं किया है। FPS विकल्प और परफॉर्मेंस डिवाइस तथा गेम वर्जन के अनुसार अलग हो सकते हैं।",step4Heading:"4. अपना वीडियो पब्लिश करें",publish1:"वीडियो अपने चुने हुए क्रिएटर प्लेटफॉर्म पर अपलोड करें।",publish2:"समीक्षा के दौरान वीडियो को Public और उपलब्ध रखें।",publish3:"जहां लिंक जोड़ने की सुविधा हो, वीडियो के डिस्क्रिप्शन या पोस्ट में हमारी आधिकारिक वेबसाइट का लिंक दें।",publish4:"अपना पब्लिश किया हुआ वीडियो URL आवेदन फॉर्म में सबमिट करें।",websiteLabel:"आधिकारिक वेबसाइट:",formLabel:"आवेदन फॉर्म:",rewardsHeading:"VIP रिवॉर्ड सिस्टम",regularHeading:"सामान्य YouTube वीडियो",regularReward:"<strong>रिवॉर्ड:</strong> 1 महीने का VIP Channel Access।",regularCondition:"आपके वीडियो को प्रोग्राम के नियम पूरे करने होंगे और वेरिफिकेशन पास करना होगा।",shortsHeading:"YouTube Shorts",shortsReward:"<strong>सामान्य रिवॉर्ड:</strong> 7 दिनों का VIP Channel Access।",shortsCondition:"अगर आपके Short पर अच्छे व्यूज और एंगेजमेंट आते हैं, तो समीक्षा और मंजूरी के बाद 1 महीने का VIP Channel Access मिल सकता है।",otherPlatformsReward:"दूसरे प्लेटफॉर्म के क्रिएटर भी आवेदन कर सकते हैं। रिवॉर्ड और पात्रता की समीक्षा के दौरान जांच की जाएगी।",renewHeading:"VIP Access दोबारा कैसे पाएं?",renewText:"आपका मौजूदा VIP प्लान खत्म होने के बाद आप एक नया योग्य प्रमोशनल वीडियो बनाकर समीक्षा के लिए सबमिट कर सकते हैं। मंजूरी मिलने पर दोबारा VIP Access मिल सकता है। हर बार नया वीडियो और वेरिफिकेशन जरूरी है।",rulesHeading:"जरूरी नियम",rule1:"आपके कंटेंट में APNA FPS BOOSTER का प्रमोशन और FPS अनलॉक विकल्पों की जानकारी होनी चाहिए।",rule2:"वास्तविक प्रक्रिया दिखाएं। गेम में टेस्ट करके दिखाना बहुत जरूरी माना जाएगा।",rule3:"आप अपना फुटेज या हमारा डेमो इस्तेमाल कर सकते हैं, लेकिन उसमें अपनी वॉइस-ओवर, AI वॉइस, कमेंट्री, कैप्शन या एडिटिंग जोड़ें।",rule4:"बिना किसी खास बदलाव के हमारा डेमो दोबारा अपलोड करना योग्य नहीं है।",rule5:"जहां प्लेटफॉर्म अनुमति देता है, आपका वीडियो या पोस्ट समीक्षा के दौरान Public और उपलब्ध रहना चाहिए।",rule6:"जहां लिंक की सुविधा हो, डिस्क्रिप्शन या पोस्ट में आधिकारिक वेबसाइट लिंक जोड़ें।",rule7:"सही कंटेंट URL और सही जानकारी सबमिट करें।",rule8:"VIP Access अपने-आप नहीं मिलेगा। हर आवेदन की जांच और मंजूरी जरूरी है।",rule9:"रिवॉर्ड का फैसला कंटेंट की क्वालिटी, नियमों के पालन और जहां लागू हो, परफॉर्मेंस के आधार पर हो सकता है।",rule10:"दोबारा रिवॉर्ड पाने के लिए पिछला VIP प्लान खत्म होने के बाद नया योग्य प्रमोशनल कंटेंट सबमिट करना होगा।",readyHeading:"भाग लेने के लिए तैयार हैं?",readyText:"हर क्रिएटर का स्वागत है, चाहे आपके 0 सब्सक्राइबर या फॉलोअर्स ही क्यों न हों। अपना प्रमोशनल वीडियो बनाएं, पब्लिश करें, जहां संभव हो हमारी वेबसाइट का लिंक जोड़ें और नीचे दिए गए फॉर्म में सबमिट करें।",submitLabel:"अपना वीडियो सबमिट करें:",websiteLabel2:"आधिकारिक वेबसाइट:",footerText:"क्रिएटर पार्टनरशिप प्रोग्राम",languageLabel:"भाषा:"
+}
+};
+function applyLanguage(lang){
+const dict=translations[lang]||translations.en;
+document.documentElement.lang=lang;
+document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.innerHTML=dict[key]});
+try{localStorage.setItem('apna-language',lang)}catch(e){}
+}
+document.querySelectorAll('[data-choose-lang],[data-set-lang]').forEach(btn=>btn.addEventListener('click',()=>{
+const lang=btn.getAttribute('data-choose-lang')||btn.getAttribute('data-set-lang');
+applyLanguage(lang);
+document.getElementById('languagePrompt').hidden=true;
+}));
 (function(){
 const root=document.documentElement,button=document.getElementById('themeToggle');
-let saved=null;try{saved=localStorage.getItem('apna-theme')}catch(e){}
+let savedTheme=null,savedLang=null;try{savedTheme=localStorage.getItem('apna-theme');savedLang=localStorage.getItem('apna-language')}catch(e){}
 const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
 function setTheme(theme){root.setAttribute('data-theme',theme);button.textContent=theme==='dark'?'☀':'☾';button.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');try{localStorage.setItem('apna-theme',theme)}catch(e){}}
-setTheme(saved||(prefersDark?'dark':'light'));button.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+setTheme(savedTheme||(prefersDark?'dark':'light'));
+button.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
 document.getElementById('year').textContent=new Date().getFullYear();
+if(savedLang==='en'||savedLang==='hi'){applyLanguage(savedLang)}else{document.getElementById('languagePrompt').hidden=false}
 })();
 </script>
 </body>
