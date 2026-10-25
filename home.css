@@ -72,3 +72,7 @@ dialog{border:0;padding:0;background:var(--panel);color:var(--ink);border-radius
 .art{margin-top:28px;padding-top:8px;border-top:1px solid var(--line)}.art h4{font:600 21px "Chakra Petch",sans-serif;margin:30px 0 8px}
 .art p{padding:0;color:var(--ink)}
 .legal{padding:48px 0 64px}.legal h1{font-size:clamp(30px,4vw,44px)}.legal h2{font-size:24px;margin:34px 0 8px}
+.crumbs{font-size:14px;margin:0 0 18px}.crumbs ol{display:flex;flex-wrap:wrap;gap:4px 8px;list-style:none;margin:0;padding:0;color:var(--mute)}.crumbs li+li:before{content:"/";margin-right:8px}.crumbs a{color:var(--mute)}
+.guide .lead{max-width:68ch}.guide ul{max-width:68ch;padding-left:22px;margin:0 0 1em}.guide li{margin-bottom:8px}.guide h3{margin-top:28px}
+.guide figure{margin:24px 0}.guide figure img{display:block;width:100%;max-width:520px;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid var(--line)}.guide figcaption{font-size:14px;color:var(--mute);margin-top:8px;max-width:68ch}
+.guide .meta{margin:0 0 14px}
