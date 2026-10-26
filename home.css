@@ -107,3 +107,8 @@ h2{font-size:clamp(22px,2.6vw,30px)}section{padding:48px 0}
 .info .app{padding-top:0}
 .app h1{font-size:clamp(30px,3.4vw,42px)}
 }
+
+/* v7 */
+.h1s{display:block;margin-top:8px;font:600 clamp(14px,1.5vw,17px)/1.4 ui-sans-serif,system-ui,sans-serif;color:var(--mute);letter-spacing:0}
+#hinglish h3{font-size:18px;margin:22px 0 6px}#hinglish p{color:var(--mute)}
+#app-details th{width:34%;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:600;color:var(--mute)}

@@ -1,0 +1,11 @@
+# APNA FPS BOOSTER
+> Free Android FPS unlocker app and guides for BGMI and PUBG MOBILE. Updated for game versions 4.6 and 4.7. Used by 36,000+ players (developer figure).
+
+Key facts: Android only (not iPhone) · App version 5.2.0 · Free · Developer: WILDSOUL FURY · Last updated 27 October 2026.
+What it does: shows and applies FPS options (up to 165 FPS where the device and game support them) and graphics options, plus lag-fix guides.
+Limits: it cannot raise a screen's refresh rate or guarantee any frame rate. It is independent and not affiliated with KRAFTON, Tencent or Level Infinite. Game publishers set their own terms, so use at your own risk.
+
+## Pages
+- [Home, app details and FAQ](https://apnafpsbooster.com/): what the app is, supported games, lag-fix steps, FAQ
+- [How to unlock 120 FPS in BGMI and PUBG MOBILE 4.6 / 4.7](https://apnafpsbooster.com/bgmi-pubg-mobile-120-fps-unlock.html): requirements, steps, checks, troubleshooting
+- [About](https://apnafpsbooster.com/about.html) · [Contact](https://apnafpsbooster.com/contact.html) · [Disclaimer](https://apnafpsbooster.com/disclaimer.html) · [Privacy Policy](https://apnafpsbooster.com/privacy-policy.html)
