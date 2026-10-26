@@ -95,3 +95,15 @@ h2{font-size:clamp(22px,2.6vw,30px)}section{padding:48px 0}
 .dl{border-radius:var(--r)}
 @media(max-width:860px){.split,.how{grid-template-columns:1fr}.banner{aspect-ratio:16/9}.app-icon{width:80px;height:80px;border-radius:19px}.app{gap:14px}.facts b{font-size:15px}.btn{flex:1;justify-content:center}section{padding:36px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* v6: desktop store header */
+.banner{aspect-ratio:16/9;max-height:none}.banner img{object-fit:contain}.banner:after{display:none}
+.store .wrap{display:grid;grid-template-columns:1fr;gap:8px}
+.info .app{padding-top:18px}.info .facts{margin:16px 0}
+@media(min-width:861px){
+.store{padding:36px 0 24px}
+.store .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);column-gap:48px;align-items:center}
+.info{order:1}.banner{order:2}
+.info .app{padding-top:0}
+.app h1{font-size:clamp(30px,3.4vw,42px)}
+}
