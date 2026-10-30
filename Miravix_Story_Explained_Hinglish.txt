@@ -1,0 +1,314 @@
+MIRAVIX X-SUIT — POORI KAHANI AUR EVENT DETAILS
+Based on: Localization_Ultra_Dump_SHAHBAJ.txt
+Language: Hinglish (reader-friendly storytelling)
+
+============================================================
+INTRODUCTION: MIRAVIX KYA HAI?
+============================================================
+
+Socho, ek aisa X-Suit collection jisme sirf ek outfit nahi, balki teen alag forms, unke star upgrades, special animations, exclusive cosmetics aur ek dedicated weapon collection bhi ho. Localization dump mein isi collection ka naam “Miravix X-Suit” diya gaya hai.
+
+Is collection ke andar teen forms ke naam milte hain:
+
+1. Cascade Miravix
+2. Aether Miravix
+3. Prism Miravix
+
+Dump in teeno ko Miravix X-Suit ke forms ke roop mein refer karta hai. Isliye inhe teen alag-alag random outfits samajhne ke bajay ek hi Miravix X-Suit collection ke teen selectable forms ke roop mein samajhna zyada sahi hai. Collection System se Miravix X-Suit obtain karne ka text bhi diya gaya hai.
+
+Yahan ek important baat: localization text in forms ke naam aur collection mechanics confirm karta hai, lekin unka complete character-lore, powers, gameplay stats ya exact visual design explain nahi karta. Is kahani mein wahi bataya gaya hai jo dump ke text se support hota hai.
+
+============================================================
+TEEN FORMS AUR UNKA STAR-UPGRADE SYSTEM
+============================================================
+
+Miravix collection ka central feature uske star levels hain. Dump mein Cascade Miravix, Aether Miravix aur Prism Miravix — teeno ke 1-Star se lekar 7-Star tak ke entries milte hain.
+
+Yaani har form ke liye alag star progression listed hai:
+
+• Cascade Miravix: 1-Star, 2-Star, 3-Star, 4-Star, 5-Star, 6-Star aur 7-Star.
+• Aether Miravix: 1-Star, 2-Star, 3-Star, 4-Star, 5-Star, 6-Star aur 7-Star.
+• Prism Miravix: 1-Star, 2-Star, 3-Star, 4-Star, 5-Star, 6-Star aur 7-Star.
+
+Ek mission-style line mein “Obtain any 1 Miravix X-Suit (1-Star)” bhi likha hai. Isse pata chalta hai ki kam se kam ek 1-Star Miravix X-Suit obtain karna event ya progression objective ka hissa tha.
+
+Dump mein ek aur special unlock condition di gayi hai: “Unlocked after all 3 Miravix X-Suits are upgraded to 7-Star.” Is line se clear hai ki kisi reward ya feature ko unlock karne ke liye teeno forms ko 7-Star tak upgrade karna zaroori hai. Lekin us sentence mein reward ka naam nahi diya gaya, isliye us unlock ko kisi specific item ya feature ka naam dena sahi nahi hoga.
+
+Star level badhane ke liye Miravix-exclusive upgrade material bhi listed hai. Us material ka description batata hai ki woh X-Suit ka star level upgrade karne ke kaam aata hai aur specifically Miravix X-Suit ke star upgrades ke liye exclusive hai. Iske saath “Starforge Stone (Miravix-Exclusive)” aur “Star Fragment (Miravix-Exclusive)” ke naam bhi dump mein milte hain.
+
+============================================================
+6-STAR PAR ACE ELIMINATOR BROADCAST
+============================================================
+
+Miravix ke star progression mein 6-Star ka bhi ek khaas reward connection diya gaya hai.
+
+• Cascade Miravix ko 6-Star karne par Cascade Miravix Ace Eliminator Broadcast unlock hota hai.
+• Aether Miravix ko 6-Star karne par Aether Miravix Ace Eliminator Broadcast unlock hota hai.
+• Prism Miravix ko 6-Star karne par Prism Miravix Ace Eliminator Broadcast unlock hota hai.
+
+In broadcasts ko Lab mein equip karne ka text diya gaya hai. Description ke mutabik, jab player Ace Eliminator banta hai ya Ace Eliminator ko eliminate karta hai, tab current elimination count ke hisaab se special Ace Eliminator broadcast play hota hai.
+
+Iska matlab hai ki 6-Star par har form ka apna named broadcast reward listed hai. Ye sirf naam ki listing nahi hai; localization mein unlock condition aur broadcast ka use bhi explain kiya gaya hai.
+
+============================================================
+MIRAVIX X-SUIT KA COLLECTION SYSTEM
+============================================================
+
+Miravix X-Suit ko “Miravix X-Suit Collection System” se obtain karne ka reference diya gaya hai. Isi Collection System se forms ke alternate colors, emote colors aur kuch special cosmetics bhi mil sakte hain.
+
+Dump mein alag-alag forms ke liye ye cosmetic options mention hain:
+
+• Default colors for Cascade, Aether aur Prism Miravix.
+• Alternate colors for Cascade, Aether aur Prism Miravix.
+• Alternate sprint-emote colors for teeno forms.
+• Default sprint-emote colors for teeno forms.
+• Default Spectacular Arrival emote colors for teeno forms.
+• Aether aur Cascade ke alternate Spectacular Arrival emote colors; Prism ke liye bhi alternate Spectacular Arrival emote color listed hai.
+• Cascade, Aether aur Prism ke default orbiter cosmetics.
+• Miravix ke liye ek advanced orbiter cosmetic.
+• Miravix ke liye ek ultimate alternate color.
+
+Kuch descriptions seedha kehti hain ki alternate colors ya emote colors Miravix X-Suit Collection System se obtain kiye ja sakte hain. Isliye Collection System ka role sirf suit unlock karne tak limited nahi dikhta; yahan forms ke appearance aur emote-related cosmetics bhi listed hain.
+
+Yahan names ko simple rakhein: “default” ka matlab listed default cosmetic/color option hai, aur “alternate” ka matlab uska additional variant. Dump in sabke exact visual appearance ko describe nahi karta.
+
+============================================================
+SPECIAL PARACHUTES AUR PROFILE COSMETICS
+============================================================
+
+Miravix ke saath parachute cosmetics bhi listed hain:
+
+• Aether Miravix ke liye exclusive premium parachute.
+• Cascade Miravix ke liye exclusive premium parachute.
+• Prism Miravix ke liye exclusive premium parachute.
+• Miravix X-Suit ke liye ek basic parachute.
+
+Teeno premium parachutes ke descriptions kehte hain ki unhe Miravix X-Suit Collection System se obtain kiya ja sakta hai.
+
+Iske alawa Miravix collection ke naam par kuch profile aur social cosmetics bhi milte hain:
+
+• Miravix Avatar Frame.
+• Miravix Chat Bubble.
+• Miravix Dynamic Nickname.
+• Miravix Space Gift.
+• Miravix X-Suit ka ek symbol, jo Collection System se obtain kiya ja sakta hai.
+
+Yaani dump mein Miravix ka content sirf character suit tak nahi rukta. Uske saath profile presentation, chat identity, social gift aur parachute cosmetics bhi listed hain.
+
+============================================================
+EVENT KA DRAW SYSTEM: ENERGY AUR MIRAVIX TOKENS
+============================================================
+
+Ab aate hain event ke draw system par. Localization ke mutabik, event ke kisi bhi prize pool se draw karne par player ko 1 se 3 Energy mil sakti hai. Jaise-jaise Energy collect hoti hai, progress bar fill hota hai.
+
+Jab total 300 Energy ho jaati hai, tab progress bar ka Energy reward 1,000 Miravix Tokens bataya gaya hai.
+
+Ye Miravix Tokens event ke Reward Redemption section mein items redeem karne ke kaam aate hain. Is tarah draw karne se sirf prize milne ka chance hi nahi, balki Energy progress ke through token reward tak pahunchne ka system bhi listed hai.
+
+Dhyan rahe: text har draw ki fixed Energy quantity nahi batata. Sirf itna kehta hai ki ek draw par 1–3 Energy mil sakti hai. Isliye har baar 3 Energy milne ka claim nahi karna chahiye.
+
+============================================================
+MIRAVIX X-SUIT SELECTION CRATE
+============================================================
+
+Miravix X-Suit Prize Pool se “Miravix X-Suit Selection Crate” mil sakta hai. Crate obtain karne ke baad player ko teen alag Miravix X-Suit forms mein se ek choose karne ka option diya gaya hai:
+
+1. Cascade Miravix
+2. Aether Miravix
+3. Prism Miravix
+
+Ek aur description crate ke use ko aur clearly explain karti hai: crate open karke Miravix X-Suit choose kiya ja sakta hai. Lekin agar player pehle hi Miravix X-Suit ke teeno forms own karta hai, toh crate open karne ka reward items mein dismantle ho jayega.
+
+Duplicate system bhi listed hai. Agar player ko repeat X-Suit form milta hai, toh woh specified quantity of Miravix Tokens mein convert ho sakta hai. Ek separate line yeh bhi batati hai ki jab player teeno Miravix X-Suit forms pehle hi obtain kar chuka ho, toh uske baad milne wale duplicates automatically specified items mein dismantle ho jaate hain.
+
+Isliye collection ke perspective se crate ka main purpose teen forms mein se missing form choose karna hai. Teeno forms mil jaane ke baad repeat crate ya duplicate form ka result alag conversion/dismantling system ke through handle hota hai.
+
+============================================================
+DUPLICATE REWARDS AUR 10X TOKEN BONUS
+============================================================
+
+Miravix event ke rules mein sirf X-Suit duplicates hi nahi, doosre repeat rewards ka conversion bhi diya gaya hai.
+
+Agar draw mein doosre rewards repeat milte hain, toh woh bhi ek certain amount of Miravix Tokens mein convert ho sakte hain. Conversion ke dauraan surprise bonus milne ka chance bhi mention hai, jisme 10x token amount mil sakta hai.
+
+Yeh 10x bonus ek possible surprise bonus ke roop mein likha gaya hai; dump ise guaranteed reward nahi batata.
+
+Miravix Tokens ko Event ke Reward Redemption section mein use karne ka instruction hai. Ek warning bhi di gayi hai: expiry ke baad Miravix Tokens mail ke through dismantle ho jayenge, isliye expiry se pehle Reward Redemption mein items redeem kar lene chahiye.
+
+============================================================
+PRIZE POOLS: X-SUIT, M249 AUR GUARDIAN SETS
+============================================================
+
+Miravix ke liye kam se kam do named prize-pool entries milti hain:
+
+• Miravix X-Suit Prize Pool.
+• Miravix - M249 Prize Pool.
+
+Ek description batati hai ki prize pool mein Miravix X-Suit Selection Crate, Miravix - M249 aur Guardian Sets shamil hain. Yaani Miravix event ke reward pool mein outfit collection ke saath weapon aur Guardian Sets ka content bhi listed hai.
+
+Dump exact full probability table, har item ka draw chance ya complete prize order nahi deta. Isliye kisi reward ki drop rate ya guaranteed draw count yahan se confirm nahi hota.
+
+============================================================
+MIRAVIX — M249 WEAPON COLLECTION
+============================================================
+
+Miravix collection ke saath “Miravix - M249” naam ki weapon finish bhi listed hai. Iske multiple level entries dump mein milte hain, jinmein Level 1, Level 2, Level 3, Level 5, Level 6 aur Level 7 ke labels shamil hain.
+
+M249 ke saath ek exclusive attachment finish ka bhi mention hai. Description kehti hai ki ye attachment finish sirf Miravix - M249 ke saath use ki ja sakti hai.
+
+Ek Miravix - M249-exclusive throwable bhi listed hai. Uska description kehta hai ki woh matching firearm finish ke unlocked elimination effects ko trigger kar sakta hai. Iska matlab throwable ka visual/effect interaction Miravix M249 ke unlocked elimination effects ke saath connected hai.
+
+Miravix weapon line-up ke saath alag se ye items bhi listed hain:
+
+• Miravix Grenade.
+• Miravix Molotov Cocktail.
+• Starforge Stone (Miravix-Exclusive).
+• Star Fragment (Miravix-Exclusive).
+
+Localization dump M249 ke complete damage stats, firing rate, recoil, exact level-wise appearance changes ya upgrade material cost nahi batata. Isliye in details ko confirm nahi maana ja sakta.
+
+============================================================
+HELMET, BACKPACK AUR DOOSRE ITEMS
+============================================================
+
+Miravix-themed wearable items ke naam bhi extract hue hain:
+
+• Miravix Helmet.
+• Miravix Helmet (Lv. 1).
+• Miravix Helmet (Lv. 3).
+• Miravix Backpack.
+• Miravix Backpack (Lv. 1).
+• Miravix Backpack (Lv. 2).
+• Miravix Backpack (Lv. 3).
+
+In level labels se helmet aur backpack ke multiple listed variants ka pata chalta hai. Lekin dump in items ke exact stats ya unke appearance differences explain nahi karta.
+
+Iske alawa Miravix Avatar Frame, Miravix Chat Bubble, Miravix Dynamic Nickname aur Miravix Space Gift jaise reward labels bhi milte hain. Collection ko complete karne wale players ke liye ye extra themed rewards ho sakte hain, lekin in sabki acquisition conditions har item ke liye separately explain nahi ki gayi hain.
+
+============================================================
+VOUCHERS AUR EXPIRY WARNINGS
+============================================================
+
+Miravix event ke liye kai voucher labels listed hain:
+
+• Miravix Voucher (50 UC).
+• Miravix Voucher (40 UC).
+• Miravix Voucher (30 UC).
+• Miravix Draw 10 Voucher (300 UC).
+• Exclusive voucher that can only be used in the Miravix X-Suit event.
+
+Exclusive voucher ke description mein clearly diya gaya hai ki woh sirf Miravix X-Suit event mein use ho sakta hai. Ek related description kehti hai ki expiry ke baad voucher automatically dismantle ho jayega; isliye use time par karna chahiye.
+
+Miravix X-Suit event se milne wale ek token/currency description mein bhi likha hai ki use Event Shop mein rare items ke liye exchange kiya ja sakta hai. Yeh currency expiry ke baad mail ke through dismantle ho jayegi, isliye samay rehte use karne ki warning di gayi hai.
+
+Important: voucher labels mein UC values di gayi hain, lekin dump ke in text lines se har voucher ka complete purchase flow, exact event pricing structure ya availability period establish nahi hota.
+
+============================================================
+SPAWN ISLAND AUR CHEER PARK SUMMON FEATURE
+============================================================
+
+Miravix X-Suit ke liye ek special stand ka bhi reference diya gaya hai. Description ke mutabik, player Spawn Island aur Cheer Park mein X-Suit exclusive stand ka use karke Miravix X-Suit summon kar sakta hai.
+
+Saath hi ek caution bhi diya gaya hai: summon effects device performance ke hisaab se vary kar sakte hain. Yaani effect ka experience har device par bilkul same ho, iski guarantee localization text nahi deta.
+
+============================================================
+POORI MIRAVIX COLLECTION KO EK SAATH SAMJHEIN
+============================================================
+
+Agar poore Miravix content ko ek sequence mein samjhein, toh sabse pehle player ke saamne Miravix X-Suit collection aata hai, jisme Cascade, Aether aur Prism — teen forms hain. Har form ka 1-Star se 7-Star tak progression listed hai. Star upgrade ke liye Miravix-exclusive material ka reference hai, aur 6-Star par har form ke liye apna Ace Eliminator Broadcast unlock hota hai.
+
+Collection System ke through suit forms ke alag colors, sprint emote colors, Spectacular Arrival emote colors, orbiter cosmetics aur premium parachutes obtain karne ke options diye gaye hain. Miravix-themed avatar frame, chat bubble, dynamic nickname aur Space Gift jaise additional cosmetics bhi list mein hain.
+
+Event ke draw system mein prize pool se 1–3 Energy mil sakti hai. 300 Energy complete karne par 1,000 Miravix Tokens ka reward diya gaya hai. Miravix X-Suit Prize Pool se Selection Crate mil sakta hai, jisse teen forms mein se ek choose hota hai. Repeat forms aur repeat rewards tokens ya specified items mein convert/dismantle ho sakte hain; kuch repeat rewards ke conversion par 10x token bonus ka surprise chance bhi mention hai.
+
+Isi prize-pool ecosystem mein Miravix - M249 aur Guardian Sets bhi listed hain. M249 ke multiple levels, exclusive attachment finish aur M249-exclusive throwable ka reference hai. Miravix Grenade, Molotov, helmet, backpack aur exclusive upgrade materials is collection ko aur expand karte hain.
+
+Aakhir mein, event tokens aur exclusive vouchers ke expiry rules ko dhyan rakhna zaroori hai, kyunki kuch currencies/vouchers expiry ke baad mail ke through dismantle ho jaate hain. Isliye dump repeatedly players ko timely redemption aur voucher use karne ki warning deta hai.
+
+============================================================
+KYA CONFIRM HAI AUR KYA ABHI CONFIRM NAHI HAI?
+============================================================
+
+Localization dump se confirm hone wali baatein:
+
+• Miravix X-Suit ke teen forms hain: Cascade, Aether aur Prism.
+• Teeno forms ke 1-Star se 7-Star tak entries hain.
+• Har form ka 6-Star Ace Eliminator Broadcast unlock listed hai.
+• Ek unlock condition teeno forms ko 7-Star karne se linked hai, lekin us reward ka naam line mein nahi diya gaya.
+• Draws se 1–3 Energy aur 300 Energy par 1,000 Miravix Tokens ka reward listed hai.
+• Selection Crate se teen forms mein se ek choose kiya ja sakta hai.
+• Repeats ke liye token conversion/dismantling rules listed hain.
+• Miravix - M249, Guardian Sets aur multiple Miravix-themed cosmetics/items listed hain.
+• Spawn Island aur Cheer Park ke exclusive stand se suit summon karne ka text diya gaya hai.
+
+Is extracted text se confirm NAHI hota:
+
+• Miravix event ki exact launch date ya return date.
+• Event kitne din chalega.
+• Har draw ki exact UC cost ya complete probability/rate table.
+• X-Suit ke actual abilities, damage, speed ya gameplay advantage.
+• Cascade, Aether aur Prism ke complete visual design/lore.
+• Har cosmetic ke unlock karne ka exact cost ya full step-by-step requirement.
+• Teeno 7-Star forms ke baad unlock hone wale unnamed reward ka exact naam.
+
+Isliye Miravix ko ek three-form X-Suit collection, draw-and-token event, M249 weapon set aur associated cosmetics ke roop mein describe karna source ke hisaab se sahi hai. Lekin exact return date, drop rates aur unlisted abilities ko confirmed news ki tarah publish nahi karna chahiye.
+
+============================================================
+SOURCE REFERENCE — IMPORTANT LOCALIZATION IDs
+============================================================
+
+MAIN FORMS / COLLECTION
+57411 — Cascade Miravix
+57436 — Aether Miravix
+57450 — Prism Miravix
+58163 — Miravix X-Suit
+58201 — Obtain in the Miravix X-Suit Collection System
+
+EVENT / DRAW / TOKEN / CRATE
+58359 — 1–3 Energy per draw; 300 Energy gives 1,000 Miravix Tokens
+58370 — Selection Crate; choose 1 of 3 forms
+58380 — Repeat X-Suit forms converted to Miravix Tokens
+58448 — Repeat rewards converted to tokens; possible 10x bonus
+58470 — Miravix X-Suit Prize Pool
+58487 — Miravix - M249 Prize Pool
+58488 — Miravix Tokens dismantled via mail on expiry
+58566 — Prize pool includes Selection Crate, M249 and Guardian Sets
+58437 — Obtain any 1 Miravix X-Suit (1-Star)
+59314 — All three forms obtained; duplicates dismantled
+59437 — Unlock condition after all 3 forms reach 7-Star (reward unnamed)
+60079 — Summon at exclusive stand in Spawn Island and Cheer Park
+
+M249 / MATERIALS / GEAR
+110348 — Miravix - M249 (Lv. 2)
+110382 — Miravix - M249 (Lv. 3)
+111312 — Miravix - M249 (Lv. 1)
+110629 — Miravix - M249 (Lv. 5)
+110644 — Miravix - M249 (Lv. 6)
+110993 — Miravix - M249 (Lv. 7)
+110481 — Starforge Stone (Miravix-Exclusive)
+110748 — Star Fragment (Miravix-Exclusive)
+110483 — Miravix Grenade
+110881 — Miravix Molotov Cocktail
+110651 / 111219 / 111320 — Miravix Helmet variants
+110900 / 110954 / 111201 / 111288 — Miravix Backpack variants
+110505 — Miravix Avatar Frame
+
+COSMETICS / REWARDS
+116462 / 116464 / 116467 / 116474 / 116483 / 116489 / 116492 / 116499 / 116502 / 116506 / 116508 / 116512 / 116524 / 116525 / 116526 / 116527 / 116532 / 116533 / 116537 / 116538 / 116540 / 116546 — Form colors, emote colors and orbiter cosmetics
+116551 — M249-exclusive attachment finish
+116554 — M249-exclusive throwable and elimination-effect interaction
+116556 — Miravix X-Suit symbol
+116560 — Miravix Chat Bubble
+116566 — Miravix Dynamic Nickname
+116575 / 116715 — Miravix event currency/token descriptions and expiry warning
+116578 — Miravix X-Suit event-exclusive voucher
+116730 — Miravix Draw 10 Voucher (300 UC)
+116869 / 117293 — Miravix X-Suit Selection Crate
+117203 — Miravix-exclusive X-Suit star-upgrade material description
+117275 / 117280 / 117281 / 117284 / 117285 — 6-Star Ace Eliminator Broadcast unlocks/names
+117355 — Miravix Space Gift
+117642 / 117643 / 117655 — Premium parachutes for Aether, Cascade and Prism
+117651 — Basic Miravix X-Suit parachute
+117671 — Ultimate alternate color for Miravix
+
+END OF STORY
