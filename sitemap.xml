@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://apnafpsbooster.com/</loc><lastmod>2026-10-27</lastmod><image:image><image:loc>https://apnafpsbooster.com/gameplay-preview.webp</image:loc></image:image><image:image><image:loc>https://apnafpsbooster.com/bgmi-lobby.webp</image:loc></image:image><image:image><image:loc>https://apnafpsbooster.com/performance-165fps.webp</image:loc></image:image><image:image><image:loc>https://apnafpsbooster.com/fps-settings-165.webp</image:loc></image:image><image:image><image:loc>https://apnafpsbooster.com/graphics-style-settings.webp</image:loc></image:image><image:image><image:loc>https://apnafpsbooster.com/graphics-settings.webp</image:loc></image:image></url>
-  <url><loc>https://apnafpsbooster.com/bgmi-pubg-mobile-120-fps-unlock.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/about.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/contact.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/privacy-policy.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/disclaimer.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/terms-of-service.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/bgmi-120-fps-unlock-guide.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/about-us.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/contact-us.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/privacy-notice.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/app-disclaimer.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/unlock-120-fps-bgmi.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/who-we-are.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/get-in-touch.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/data-privacy.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/legal-notice.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/index-app</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://apnafpsbooster.com/index-app-bgmi</loc><lastmod>2026-10-29</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://apnafpsbooster.com/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://apnafpsbooster.com/gameplay-preview.webp</image:loc>
+      <image:title>APNA FPS UNLOCKER 120 FPS BGMI Preview</image:title>
+      <image:caption>BGMI 4.7 Update 120 FPS Gameplay and Graphics Unlocker Preview</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apnafpsbooster.com/fps-settings-165.webp</image:loc>
+      <image:title>FPS Settings 165 FPS Option</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apnafpsbooster.com/performance-165fps.webp</image:loc>
+      <image:title>Performance HUD Real-time FPS</image:title>
+    </image:image>
+  </url>
 </urlset>
