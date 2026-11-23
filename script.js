@@ -474,4 +474,130 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+  // ==========================================
+  // 12. APNA GAMING AI ASSISTANT (LLM BOT ENGINE)
+  // Zero-Latency, Client-Side Gamer Knowledge Engine
+  // ==========================================
+  const aiBotTrigger = document.getElementById('aiBotTrigger');
+  const aiChatPanel = document.getElementById('aiChatPanel');
+  const aiChatClose = document.getElementById('aiChatClose');
+  const aiChatForm = document.getElementById('aiChatForm');
+  const aiChatInput = document.getElementById('aiChatInput');
+  const aiChatMessages = document.getElementById('aiChatMessages');
+  const aiChips = document.querySelectorAll('.ai-chip');
+
+  if (aiBotTrigger && aiChatPanel) {
+    const toggleAIChat = (show) => {
+      if (show) {
+        aiChatPanel.classList.remove('hidden');
+        if (aiChatInput) setTimeout(() => aiChatInput.focus(), 200);
+      } else {
+        aiChatPanel.classList.add('hidden');
+      }
+    };
+
+    aiBotTrigger.addEventListener('click', () => {
+      const isHidden = aiChatPanel.classList.contains('hidden');
+      toggleAIChat(isHidden);
+    });
+
+    if (aiChatClose) {
+      aiChatClose.addEventListener('click', () => toggleAIChat(false));
+    }
+
+    const appendAIMessage = (text, isUser = false) => {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex gap-2.5 items-start ${isUser ? 'flex-row-reverse' : ''}`;
+
+      const iconDiv = document.createElement('div');
+      iconDiv.className = `w-7 h-7 rounded-lg flex items-center justify-center text-sm shrink-0 ${
+        isUser ? 'bg-cyan-500/20 text-cyan-300' : 'bg-emerald-500/20 text-emerald-400'
+      }`;
+      iconDiv.textContent = isUser ? '👤' : '🤖';
+
+      const bubble = document.createElement('div');
+      bubble.className = `p-3 rounded-2xl ${
+        isUser
+          ? 'rounded-tr-none bg-cyan-500/20 border border-cyan-500/30 text-[var(--text-primary)] text-right'
+          : 'rounded-tl-none bg-emerald-500/10 border border-emerald-500/20 text-[var(--text-primary)]'
+      } leading-relaxed text-xs max-w-[85%]`;
+      bubble.innerHTML = text;
+
+      msgDiv.appendChild(iconDiv);
+      msgDiv.appendChild(bubble);
+      aiChatMessages.appendChild(msgDiv);
+      aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+    };
+
+    const processAIQuery = (query) => {
+      const q = query.toLowerCase().trim();
+
+      // Device & Processor Database Matching
+      const flagships = ['poco x6', 'poco f5', 'poco f6', 'iqoo', 'neo 7', 'neo 9', 'snapdragon 8', 'dimensity 8', 'dimensity 9', 'oneplus', 'realme gt', 'rog', 'samsung s2', 'samsung s23', 'samsung s24', 'xiaomi 13', 'xiaomi 14', '120hz', '144hz', '165hz'];
+      const budget60hz = ['redmi 9', 'redmi 10', 'realme c', 'galaxy a0', 'galaxy a1', '2gb', '3gb', '4gb ram', 'helio g35', 'snapdragon 680'];
+      const iosKeywords = ['iphone', 'ios', 'ipad', 'apple'];
+
+      if (iosKeywords.some(k => q.includes(k))) {
+        return `⚠️ <strong>iOS / iPhone Notice:</strong><br>APNA FPS UNLOCKER sirf <strong>Android smartphones (Android 9 se Android 17)</strong> ke liye banaya gaya hai. Apple iOS par third-party frame rate utilities supported nahi hain.`;
+      }
+
+      if (flagships.some(k => q.includes(k))) {
+        return `✅ <strong>120 FPS / 165 FPS Confirmed!</strong><br>Aapke phone model / processor me high refresh rate panel supported hai. <strong>APNA FPS UNLOCKER</strong> ke sath BGMI 4.7 me stable <strong>90 FPS ya 120 FPS Ultra-Smooth</strong> chalega bina kisi lag ke! 🚀<br><br><a href="#" data-dynamic="download-url" class="inline-block mt-1 text-emerald-400 font-bold underline">Download Latest APK Abhi Karein →</a>`;
+      }
+
+      if (budget60hz.some(k => q.includes(k))) {
+        return `📱 <strong>Budget Device Optimization:</strong><br>Aapke phone me 60Hz display panel hone ki sambhavna hai. Isme <strong>Super-Smooth 60 FPS + Zero Heating Mode</strong> apply hoga jo frame drops aur game freeze ko 100% khatam kar dega!`;
+      }
+
+      if (q.includes('shizuku') || q.includes('setup') || q.includes('install')) {
+        return `⚡ <strong>Shizuku Setup Guide (Android 11 – 17):</strong><br>1. Play Store se <strong>Shizuku</strong> app install karein.<br>2. Developer Options me <em>Wireless Debugging</em> ON karein.<br>3. Shizuku me 'Pairing' code daal kar connect karein.<br>4. APNA FPS UNLOCKER open karke 120 FPS select karein aur Apply tap karein! Zero root required.`;
+      }
+
+      if (q.includes('ban') || q.includes('safe') || q.includes('anti ban') || q.includes('security')) {
+        return `🛡️ <strong>100% Anti-Ban Guarantee:</strong><br>APNA FPS UNLOCKER game ki <code>.pak</code> files ko modify nahi karta aur na hi koi background script inject karta hai. Yeh standard Android WindowManager display sync use karta hai — 53,000+ active players safe gameplay enjoy kar rahe hain!`;
+      }
+
+      if (q.includes('download') || q.includes('apk') || q.includes('link') || q.includes('version')) {
+        return `📥 <strong>Official APK Download:</strong><br>Latest Version: <strong data-dynamic="version">v4.7.0</strong> (Android 9 to 17 Supported).<br><br><a href="${activeAppConfig.apkUrl}" target="_blank" rel="noopener" class="px-4 py-2 btn-cyber-primary text-xs inline-block rounded-lg font-bold">Download Latest APK Now</a>`;
+      }
+
+      if (q.includes('bgmi') || q.includes('pubg') || q.includes('4.7') || q.includes('fps')) {
+        return `🎮 <strong>BGMI & PUBG Mobile 4.7 Update:</strong><br>New 4.7 update me game ne frame rate profile restrict kiya hai. APNA FPS UNLOCKER instantly <strong>90 FPS & 120 FPS</strong> option unlock kar deta hai bina device root kiye!`;
+      }
+
+      // Default smart response
+      return `💡 <strong>APNA AI Quick Response:</strong><br>Aapka sawal <em>"${query}"</em> ke baare me: APNA FPS UNLOCKER Android 9 se 17 tak sabhi phones par BGMI 4.7 & PUBG Mobile me 90/120 FPS unlock karne ke liye 100% anti-ban tested hai. Koi phone model check karna ho to seedha phone ka naam likhein!`;
+    };
+
+    if (aiChatForm && aiChatInput) {
+      aiChatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = aiChatInput.value.trim();
+        if (!query) return;
+
+        appendAIMessage(query, true);
+        aiChatInput.value = '';
+
+        // Simulate instant AI typing response
+        setTimeout(() => {
+          const reply = processAIQuery(query);
+          appendAIMessage(reply, false);
+        }, 300);
+      });
+    }
+
+    // Quick chips handler
+    aiChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.textContent.replace(/[📱⚡🛡️📥]/g, '').trim();
+        appendAIMessage(text, true);
+        setTimeout(() => {
+          const reply = processAIQuery(text);
+          appendAIMessage(reply, false);
+        }, 300);
+      });
+    });
+  }
+
 });

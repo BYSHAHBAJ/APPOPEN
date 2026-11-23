@@ -3,21 +3,29 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://apnafpsbooster.com/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://apnafpsbooster.com/gameplay-preview.webp</image:loc>
+      <image:loc>https://apnafpsbooster.com/og-preview.jpg</image:loc>
       <image:title>APNA FPS UNLOCKER 120 FPS BGMI Preview</image:title>
       <image:caption>BGMI 4.7 Update 120 FPS Gameplay and Graphics Unlocker Preview</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://apnafpsbooster.com/fps-settings-165.webp</image:loc>
-      <image:title>FPS Settings 165 FPS Option</image:title>
     </image:image>
     <image:image>
       <image:loc>https://apnafpsbooster.com/performance-165fps.webp</image:loc>
       <image:title>Performance HUD Real-time FPS</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://apnafpsbooster.com/llms.txt</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apnafpsbooster.com/llms-full.txt</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

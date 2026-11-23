@@ -518,3 +518,30 @@ html, body {
     top: 6px;
   }
 }
+
+
+/* AI Chat Assistant Enhancements */
+#aiChatPanel {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 102, 0.2);
+}
+
+.ai-chip {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+}
+
+.ai-chip:hover {
+  background: rgba(0, 255, 102, 0.1);
+  color: var(--accent-green);
+}
+
+#aiChatMessages::-webkit-scrollbar {
+  width: 5px;
+}
+#aiChatMessages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
