@@ -545,3 +545,49 @@ html, body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
 }
+
+
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeInMsg 0.25s ease-out forwards;
+}
+
+#aiChatReset:hover {
+  transform: rotate(180deg);
+  transition: transform 0.35s ease;
+}
+
+/* In-Page Jump Glow Animation & AI Interactive Buttons */
+.section-highlight-glow {
+  box-shadow: 0 0 35px rgba(0, 255, 102, 0.5), inset 0 0 20px rgba(0, 255, 102, 0.15) !important;
+  border-color: rgba(0, 255, 102, 0.8) !important;
+  transition: all 0.4s ease-in-out;
+  animation: glowPulse 2.2s ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { transform: scale(1); filter: brightness(1); }
+  30% { transform: scale(1.008); filter: brightness(1.15); box-shadow: 0 0 45px rgba(0, 255, 102, 0.6); }
+  70% { transform: scale(1.004); filter: brightness(1.08); box-shadow: 0 0 30px rgba(0, 255, 102, 0.4); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.ai-jump-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  background: rgba(0, 255, 102, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.25);
+  transition: all 0.2s ease;
+}
+
+.ai-jump-btn:hover {
+  background: rgba(0, 255, 102, 0.2);
+  border-color: rgba(0, 255, 102, 0.6);
+  transform: translateY(-1px);
+}

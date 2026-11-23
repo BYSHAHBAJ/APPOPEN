@@ -1,0 +1,6 @@
+# Local backup directories & reference files
+assets_original/
+original_site.html
+.DS_Store
+Thumbs.db
+*.log

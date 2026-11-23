@@ -1468,9 +1468,14 @@
           <div class="text-[10px] theme-text-muted">Instant Game &amp; Device Knowledge Engine</div>
         </div>
       </div>
-      <button id="aiChatClose" type="button" aria-label="Close AI Chat" class="text-slate-400 hover:text-emerald-400 text-xl font-bold p-1 transition-colors">
-        ✕
-      </button>
+      <div class="flex items-center gap-2">
+        <button id="aiChatReset" type="button" title="Clear Chat" class="text-slate-400 hover:text-cyan-400 text-sm p-1.5 rounded-lg border theme-border hover:border-cyan-400/50 transition-colors">
+          🔄
+        </button>
+        <button id="aiChatClose" type="button" aria-label="Close AI Chat" class="text-slate-400 hover:text-emerald-400 text-xl font-bold p-1 transition-colors">
+          ✕
+        </button>
+      </div>
     </div>
 
     <!-- Message History Area -->
@@ -1487,8 +1492,8 @@
       </div>
     </div>
 
-    <!-- Quick Prompt Suggestions -->
-    <div class="px-4 py-2 border-t theme-border flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap scrollbar-none">
+    <!-- Dynamic Contextual Follow-up Chips Container -->
+    <div id="aiChipsContainer" class="px-4 py-2 border-t theme-border flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap scrollbar-none">
       <button type="button" class="ai-chip px-2.5 py-1 rounded-full border theme-border hover:border-emerald-400 hover:text-emerald-400 transition-colors">📱 Check Device</button>
       <button type="button" class="ai-chip px-2.5 py-1 rounded-full border theme-border hover:border-emerald-400 hover:text-emerald-400 transition-colors">⚡ Shizuku Setup</button>
       <button type="button" class="ai-chip px-2.5 py-1 rounded-full border theme-border hover:border-emerald-400 hover:text-emerald-400 transition-colors">🛡️ Anti-Ban Safe?</button>
@@ -1505,6 +1510,6 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
