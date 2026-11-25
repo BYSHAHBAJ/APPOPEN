@@ -2,11 +2,20 @@
   "version": "4.7.0",
   "versionCode": 261113,
   "apkUrl": "https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/APNA.FPS.UNLOCKER_1.4.0.apk",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wildsoulfury.shahbaj",
+  "packageName": "com.wildsoulfury.shahbaj",
   "forceUpdate": true,
+  "playStoreStats": {
+    "downloads": "5+",
+    "rating": null,
+    "ratingCount": 0,
+    "reviews": []
+  },
   "changelog": [
-    "Performance improvements",
-    "Bug fixes",
-    "New features",
-    "4.7 Update Supported"
+    "Google Play Store official certified release (Play Protect safe)",
+    "Real-time Play Store stats synchronization",
+    "Performance improvements & 120 FPS ultra-low latency engine",
+    "BGMI 4.7 Update Support & PUBG Mobile regional compatibility",
+    "Bug fixes, zero thermal throttling, and battery drain reduction"
   ]
 }
