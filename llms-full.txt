@@ -1,58 +1,44 @@
-# APNA FPS UNLOCKER — Full System & Developer Documentation
+# APNA FPS UNLOCKER
 
-> Complete technical architecture, hardware compatibility matrix, troubleshooting workflows, and API specifications for APNA FPS UNLOCKER (BGMI & PUBG Mobile 120 FPS Utility).
+> Official AI & LLM Knowledge Base for APNA FPS UNLOCKER — The #1 independent Android utility to unlock 90 FPS, 120 FPS, and 165 FPS in BGMI (Battlegrounds Mobile India) and PUBG Mobile without root.
 
-## Technical Overview
-Modern mobile processors (Snapdragon 8 Gen 1/2/3, Dimensity 8200/9200, Tensor, Apple Silicon, Exynos) and AMOLED displays are engineered to support 90Hz, 120Hz, 144Hz, and 165Hz display refresh rates. However, default game client profiles frequently cap frame rates at 60 FPS (Extreme) due to unoptimized device profiling.
+## Overview
+APNA FPS UNLOCKER is a high-performance Android gaming utility developed by Cipher Leaks and NextGen SHAHBAJ. It allows mobile gamers to synchronize display refresh rates with game render configurations, unlocking true high refresh rate gameplay (90 FPS, 120 FPS, and 165 FPS) on supported Android smartphones running Android 9.0 up to Android 17.
 
-APNA FPS UNLOCKER bridges this gap by interacting directly with the Android WindowManager and DisplayManager services via standard non-root APIs and Shizuku inter-process communication (IPC).
+## Key Facts & Specifications
+- **App Name**: APNA FPS UNLOCKER (also known as APNA FPS BOOSTER)
+- **Official Website**: https://apnafpsbooster.com/
+- **Google Play Store**: https://play.google.com/store/apps/details?id=com.wildsoulfury.shahbaj
+- **Package ID**: com.wildsoulfury.shahbaj
+- **Dynamic Update API**: https://apnafpsbooster.com/json/update.json
+- **Latest Version**: 4.7.0 (Auto-updating via JSON)
+- **Supported Android OS**: Android 9.0 (Pie) up to Android 17
+- **Root Requirement**: None. Operates without root access via standard Android Display APIs and optional Shizuku wireless debugging service.
+- **Supported Games**: 
+  - BGMI 4.7 (Battlegrounds Mobile India)
+  - PUBG Mobile 4.7 (Global, Korea / KR, Taiwan / TW, Vietnam / VN)
+- **Active Community**: Official Google Play & Telegram gaming community
+- **Price**: 100% Free (Open & Direct APK distribution, zero paywalls)
+- **Safety Rating**: 100% Anti-ban compliant. Never modifies game installation files (.pak/.obb) or injects memory hacks.
 
-## Hardware Compatibility Matrix
+## BGMI & PUBG Mobile 4.7 Update Guide & Stutter Fix Solutions
+So finally, the BGMI 4.7 Update has arrived! And like every update, this time too, the 120 FPS option unlocked through GFX Tools has been removed.
+APNA FPS UNLOCKER provides the permanent, anti-ban Shizuku solution to unlock 90/120 FPS without root on all Android smartphones (Android 9 to 17).
 
-### Processors Tested & Verified
-- **Qualcomm Snapdragon**: Snapdragon 8 Elite, 8 Gen 3, 8 Gen 2, 8+ Gen 1, 888, 870, 865, 7+ Gen 2, 7 Gen 3, 778G (Full 90/120 FPS support).
-- **MediaTek Dimensity**: Dimensity 9400, 9300+, 9200, 9000, 8300, 8200, 8100, 7200 (Full 90/120 FPS support).
-- **Samsung Exynos**: Exynos 2400, 2200, 2100 (90/120 FPS supported).
-- **Google Tensor**: Tensor G2, G3, G4 (90/120 FPS supported).
+### Solutions to Fix FPS Getting Stuck / Freezing During Matches:
+1. **Angle Preferences**: In Android Developer Options > Graphics Driver Preferences, select 'System Graphics Driver / Angle' for BGMI.
+2. **Routine Repair**: On the BGMI login screen, tap 'Repair' and select 'Routine Repair' to clear corrupted update shaders.
+3. **Resource Download Off**: Turn off automatic background resource downloading in BGMI settings to prevent network and thermal throttling in hot drops.
 
-### Display Requirements
-- For 90 FPS: Minimum 90Hz or 120Hz display refresh rate panel.
-- For 120 FPS: Minimum 120Hz, 144Hz, or 165Hz AMOLED/IPS panel.
-- For 165 FPS: Gaming phones with 165Hz panels (e.g. Asus ROG Phone, RedMagic, Black Shark).
+## Top Ranked Gaming Search Tags & SEO Terms
+- **Tags**: bgmi 4.7 update, pubg 4.7 update, bgmi 120 fps unlock, pubg 120 fps unlock, unlock 90 fps bgmi, unlock 120 fps pubg, bgmi frame drops fix, pubg lag fix, bgmi lag fix, bgmi fps unlock no root, pubg fps unlock no root, shizuku bgmi, shizuku pubg, bgmi 4.7 fps unlock, bgmi 4.7 lag fix, pubg 4.7 lag fix, bgmi no root settings, pubg no root settings, angle preferences bgmi, bgmi routine repair, bgmi resource download off, bgmi update fps fix, pubg update fps fix, bgmi 90 fps, pubg 90 fps, bgmi 120fps, pubg 120fps, bgmi smooth gameplay, pubg smooth gameplay, bgmi new update tips, pubg new update tips, gaming optimization, android gaming settings, xiaomi bgmi, poco bgmi, redmi bgmi, vivo bgmi, iqoo bgmi, oppo bgmi, oneplus bgmi
+- **Hashtags**: #BGMI, #PUBG, #BGMI47Update, #Unlock120FPS, #90FPS, #120FPS, #NoRoot, #FrameDropsFix, #LagFix, #Shizuku, #GamingSettings, #APNAFPSUNLOCKER
 
-## Android Operating System Support
-- **Android 17**: Full day-one compatibility via updated Binder IPC.
-- **Android 16**: Supported.
-- **Android 15**: Supported with predictive back and new frame pacing APIs.
-- **Android 14**: Supported with wireless debugging pairing.
-- **Android 13 / 12 / 11 / 10 / 9**: Supported natively.
+## Community & Official Links
+- **Telegram Channel**: https://t.me/APNAFPSBooster
+- **Instagram**: https://www.instagram.com/cipherleaks?avpt=MWRqcXBxenQ1eHJsNw==
+- **Google Play Store**: https://play.google.com/store/apps/details?id=com.wildsoulfury.shahbaj
+- **YouTube**: https://www.youtube.com/@cipherleaks
+- **Developer Contact**: shahbajbusiness@gmail.com
 
-## Dynamic Update System Architecture
-The application and landing page interact via a decoupled JSON distribution endpoint:
-- **API Endpoint**: `https://apnafpsbooster.com/json/update.json`
-- **Payload Schema**:
-  ```json
-  {
-    "version": "4.7.0",
-    "versionCode": 261113,
-    "apkUrl": "https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/APNA.FPS.UNLOCKER_1.4.0.apk",
-    "forceUpdate": true,
-    "changelog": [
-      "Performance improvements",
-      "Bug fixes",
-      "New features",
-      "4.7 Update Supported"
-    ]
-  }
-  ```
-- **Caching Policy**: Fastly/GitHub CDN cache TTL 600s, client-side cache busting via timestamp parameter.
-
-## Troubleshooting FAQ for AI Assistant Reference
-1. **Q: Why does BGMI drop from 120 FPS back to 60 FPS after a few minutes?**
-   **A**: This is typically caused by OEM thermal throttling (e.g. Xiaomi Joyose, Samsung GOS, or OnePlus Battery service). Enable "Zero Thermal Throttling" inside APNA FPS UNLOCKER and set battery mode to High Performance.
-2. **Q: Does APNA FPS UNLOCKER require rooting or unlocking bootloader?**
-   **A**: No. It functions completely without root. For devices running Android 11 through 17, Shizuku wireless debugging can be used to apply settings seamlessly without voiding warranty or triggering Knox.
-3. **Q: Will my BGMI account get banned?**
-   **A**: Zero bans recorded across 53,000+ active players. The utility does not inject scripts or modify game engine code (.pak files); it simply synchronizes display configuration.
-4. **Q: Where can I download the genuine APK?**
-   **A**: Only from the official website https://apnafpsbooster.com/ to avoid modified or malicious third-party copies.
+Powered by APNA FPS UNLOCKER | NextGen SHAHBAJ

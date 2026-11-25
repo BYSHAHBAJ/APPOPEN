@@ -137,15 +137,14 @@ html, body {
    4. HARDWARE-ACCELERATED ZERO-LAG SCROLL REVEALS
    ========================================================================== */
 .reveal {
-  opacity: 0;
-  transform: translate3d(0, 26px, 0);
-  will-change: opacity, transform;
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .reveal.active {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Stagger animation delays for high-end look */
@@ -263,6 +262,74 @@ html, body {
 .btn-cyber-cyan:hover {
   transform: scale(1.03);
   box-shadow: 0 0 35px rgba(0, 229, 255, 0.75);
+}
+
+/* Google Play Store Cyber Button & Badges */
+.btn-playstore {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(16, 23, 38, 0.95) 0%, rgba(11, 15, 25, 0.98) 100%);
+  border: 1.5px solid rgba(0, 229, 255, 0.35);
+  color: #FFFFFF !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 15px rgba(0, 229, 255, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.btn-playstore::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.btn-playstore:hover::after {
+  left: 130%;
+  transition: left 0.75s ease-in-out;
+}
+
+.btn-playstore:hover {
+  transform: scale(1.03);
+  border-color: #00E5FF;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4), 0 0 15px rgba(0, 255, 102, 0.2);
+  filter: brightness(1.05);
+}
+
+.light .btn-playstore,
+[data-theme="light"] .btn-playstore {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%);
+  border: 1.5px solid rgba(15, 23, 42, 0.2);
+  color: #0F172A !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.light .btn-playstore:hover,
+[data-theme="light"] .btn-playstore:hover {
+  border-color: #0284C7;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.25);
+}
+
+.badge-playprotect {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00E5FF;
+}
+
+.light .badge-playprotect,
+[data-theme="light"] .badge-playprotect {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.3);
+  color: #0284C7;
 }
 
 /* ==========================================================================
@@ -590,4 +657,232 @@ html, body {
   background: rgba(0, 255, 102, 0.2);
   border-color: rgba(0, 255, 102, 0.6);
   transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   11. LIVE GOOGLE PLAY REVIEWS & RATINGS SHOWCASE
+   ========================================================================== */
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: #00E5FF;
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.15);
+}
+
+.review-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #05160C;
+  background: linear-gradient(135deg, #00FF66 0%, #00E5FF 100%);
+  box-shadow: 0 4px 15px rgba(0, 255, 102, 0.3);
+  flex-shrink: 0;
+}
+
+.review-filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.review-filter-btn:hover {
+  border-color: #00E5FF;
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.review-filter-btn.active {
+  background: linear-gradient(135deg, #00E5FF 0%, #0099FF 100%);
+  color: #031422 !important;
+  border-color: #00E5FF;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.live-sync-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  color: #00FF66;
+}
+
+.light .live-sync-pill,
+[data-theme='light'] .live-sync-pill {
+  background: rgba(5, 150, 105, 0.1);
+  border-color: rgba(5, 150, 105, 0.3);
+  color: #059669;
+}
+
+
+/* ==========================================================================
+   12. INTERACTIVE DEVICE COMPATIBILITY SEARCH & ROG GAMING HUD
+   ========================================================================== */
+.fps-live-hud {
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 12px rgba(0, 255, 102, 0.55);
+}
+
+.screenshot-tab-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.screenshot-tab-btn:hover {
+  border-color: #00FF66;
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.screenshot-tab-btn.active {
+  background: linear-gradient(135deg, rgba(0, 255, 102, 0.2) 0%, rgba(0, 229, 255, 0.2) 100%);
+  border-color: #00FF66;
+  color: #00FF66 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.25);
+}
+
+.quick-chip {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-chip:hover {
+  transform: translateY(-1px);
+}
+
+.compare-card-danger {
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.08) 0%, rgba(17, 23, 34, 0.8) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.compare-card-safe {
+  background: linear-gradient(180deg, rgba(0, 255, 102, 0.08) 0%, rgba(17, 23, 34, 0.9) 100%);
+  border: 2px solid rgba(0, 255, 102, 0.45);
+  box-shadow: 0 15px 35px rgba(0, 255, 102, 0.12);
+}
+
+.device-result-box {
+  animation: deviceFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes deviceFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   SEO TAG CLOUD & 4.7 UPDATE GUIDE STYLES
+   ========================================== */
+.seo-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(0, 234, 86, 0.25);
+  color: #94a3b8;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.seo-tag-chip:hover {
+  border-color: #00ea56;
+  color: #00ea56;
+  background: rgba(0, 234, 86, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 234, 86, 0.2);
+}
+
+.seo-tag-chip.hashtag {
+  border-color: rgba(0, 195, 255, 0.3);
+  color: #38bdf8;
+  background: rgba(0, 195, 255, 0.05);
+}
+
+.seo-tag-chip.hashtag:hover {
+  border-color: #00c3ff;
+  color: #ffffff;
+  background: rgba(0, 195, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 195, 255, 0.25);
+}
+
+.guide-step-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-step-card:hover {
+  border-color: rgba(0, 234, 86, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 234, 86, 0.15);
+}
+
+.guide-step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00ea56, #00c3ff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.guide-step-card:hover::before {
+  opacity: 1;
 }

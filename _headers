@@ -1,6 +1,23 @@
-# Cloudflare Pages Bandwidth Optimization Headers
+# ==========================================================================
+# Cloudflare Pages & Netlify - Aggressive Edge & Browser Caching Headers
+# Lowers Server Bandwidth Cost to Virtually Zero
+# ==========================================================================
 
+# 1-Year Immutable Caching for Static Images, Fonts, Styles & Scripts
 /assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
   Cache-Control: public, max-age=31536000, immutable
 
 /*.css
@@ -9,5 +26,18 @@
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
+# Dynamic JSON Updates API (Cached at Edge for 30 min)
+/json/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=3600
+  Access-Control-Allow-Origin: *
+
+/api/*
+  Cache-Control: public, max-age=1800, stale-while-revalidate=3600
+  Access-Control-Allow-Origin: *
+
+# HTML Pages (Edge cached with 1-hour freshness)
 /*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/
   Cache-Control: public, max-age=3600, must-revalidate
