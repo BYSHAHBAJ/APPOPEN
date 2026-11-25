@@ -1,0 +1,17 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wildsoulfury.shahbaj",
+      "sha256_cert_fingerprints": [
+        "A6:88:DE:DB:83:AF:EF:55:CC:92:6C:C6:88:0A:7F:03:73:8E:6E:C9:6B:FC:E0:04:0F:9B:24:7E:1C:4F:B9:56",
+        "70:B8:63:C2:29:3C:24:96:DE:48:DF:20:36:43:5B:91:43:3D:D4:8A:49:32:8F:8D:AC:95:4C:72:4E:FB:B9:61",
+        "47:88:F2:57:48:05:99:E2:12:8F:A6:21:76:47:2B:57:EC:C2:11:90:17:73:CA:B9:12:A1:36:28:AF:96:8F:86"
+      ]
+    }
+  }
+]
