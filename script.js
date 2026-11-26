@@ -356,9 +356,9 @@ document.addEventListener('DOMContentLoaded', () => {
     packageName: "com.wildsoulfury.shahbaj",
     forceUpdate: true,
     playStoreStats: {
-      downloads: "5+",
-      rating: null,
-      ratingCount: 0,
+      downloads: "100+",
+      rating: 4.4,
+      ratingCount: 12,
       reviews: []
     },
     changelog: [
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (cached) {
         const parsed = JSON.parse(cached);
         // Clear old cached fake numbers
-        if (parsed.playStoreStats && (parsed.playStoreStats.ratingCount === 53120 || parsed.playStoreStats.downloads === "53,000+")) {
+        if (parsed.playStoreStats && (parsed.playStoreStats.downloads === "5+" || parsed.playStoreStats.downloads === "5" || parsed.playStoreStats.ratingCount === 53120 || parsed.playStoreStats.downloads === "53,000+")) {
           parsed.playStoreStats = DEFAULT_APP_CONFIG.playStoreStats;
         }
         return parsed;
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const parsePlayStoreHtmlClient = (html) => {
     if (!html || typeof html !== 'string') return null;
     const res = {
-      downloads: '5+',
+      downloads: '100+',
       rating: null,
       ratingCount: 0,
       reviews: []
@@ -729,7 +729,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (liveData && (liveData.downloads || liveData.reviews !== undefined)) {
               activeAppConfig.playStoreStats = {
-                downloads: liveData.downloads || "5+",
+                downloads: liveData.downloads || "100+",
                 rating: liveData.rating || null,
                 ratingCount: liveData.ratingCount || 0,
                 reviews: Array.isArray(liveData.reviews) ? liveData.reviews : []
@@ -931,7 +931,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Live In-Page Content Extractor: Syncs AI with actual DOM content
     const getWebsiteLiveContext = () => {
       const stats = {
-        users: activeAppConfig.playStoreStats?.downloads || document.getElementById('heroActiveGamers')?.textContent || '5+',
+        users: activeAppConfig.playStoreStats?.downloads || document.getElementById('heroActiveGamers')?.textContent || '100+',
         rating: activeAppConfig.playStoreStats?.rating ? `${activeAppConfig.playStoreStats.rating} ★` : 'New',
         version: activeAppConfig.version || '4.7.0',
         apkUrl: activeAppConfig.apkUrl || 'https://github.com/BYSHAHBAJ/APPOPEN/releases/download/120FPS/APNA.FPS.UNLOCKER_1.4.0.apk',
@@ -1311,7 +1311,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (['review', 'rating', 'feedback', 'kya rating', 'stars', 'comments', 'public kya bolti', 'kaisa app', 'public review'].some(w => rawQ.includes(w))) {
         conversationContext.lastTopic = 'reviews';
         const stats = activeAppConfig.playStoreStats || DEFAULT_APP_CONFIG.playStoreStats;
-        const downloads = stats.downloads || '5+';
+        const downloads = stats.downloads || '100+';
         const reviewCount = (stats.reviews && stats.reviews.length) || 0;
         const ratingStr = stats.rating ? `${stats.rating} ★` : 'New Release';
         return {
