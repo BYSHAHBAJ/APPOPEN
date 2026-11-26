@@ -6,16 +6,17 @@
   "packageName": "com.wildsoulfury.shahbaj",
   "forceUpdate": true,
   "playStoreStats": {
-    "downloads": "5+",
-    "rating": null,
-    "ratingCount": 0,
+    "downloads": "100+",
+    "rating": 4.4,
+    "ratingCount": 12,
     "reviews": []
   },
   "changelog": [
     "Google Play Store official certified release (Play Protect safe)",
-    "Real-time Play Store stats synchronization",
+    "Real-time Play Store stats synchronization (100+ Active Players)",
     "Performance improvements & 120 FPS ultra-low latency engine",
     "BGMI 4.7 Update Support & PUBG Mobile regional compatibility",
+    "Android 17 & Shizuku seamless service synchronization",
     "Bug fixes, zero thermal throttling, and battery drain reduction"
   ]
 }
